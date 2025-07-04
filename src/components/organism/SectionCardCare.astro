@@ -1,0 +1,12 @@
+---
+import CardSimple from "../molecule/CardSimple.astro";
+import { CARDS_BENEFICTS } from "../../consts";
+---
+
+<section class="container mx-auto grid grid-cols-2 gap-[60px] py-[80px]">
+  {
+    CARDS_BENEFICTS.map((card) => {
+      return <CardSimple title={card.title} description={card.description} />;
+    })
+  }
+</section>

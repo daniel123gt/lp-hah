@@ -1,0 +1,29 @@
+---
+import Avatar from "../atom/Avatar.astro";
+const { name, rol, audio, avatar } = Astro.props;
+---
+
+<article
+  class="w-[324px] h-full rounded-xl overflow-hidden shadow bg-white p-4"
+>
+  <div class="flex gap-2 items-center">
+    <Avatar label={avatar} />
+    <div>
+      <p class="text-lg text-text-medium font-semibold">{name}</p>
+      <p class="text-md text-text-medium/70 font-normal">{rol}</p>
+    </div>
+  </div>
+  <figure class="pt-4">
+    <audio controls src={audio} preload="none" class="w-full">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+  </figure>
+</article>
+
+<style>
+  /* Estilo personalizado para el audio player */
+  audio {
+    height: 40px;
+    border-radius: 8px;
+  }
+</style>

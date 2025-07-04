@@ -1,0 +1,59 @@
+---
+import Navigation from "./Navigation.astro";
+import { PhoneCall } from "@lucide/astro";
+import { Image } from "astro:assets";
+import logoImg from "../assets/logo.svg";
+---
+
+<header class="container mx-auto">
+  <a href="/" class="cursor-pointer">
+    <div class="flex justify-center py-4">
+      <figure>
+        <Image
+          src={logoImg}
+          alt="Logo Health at Home"
+          width={120}
+          height={40}
+        />
+      </figure>
+    </div>
+  </a>
+  <a
+    href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n"
+    target="_blank"
+    class="absolute right-8 top-8 flex items-center gap-4 font-bold"
+  >
+    <PhoneCall size={36} />
+    <div>
+      <p>Llamadas o Whatsapp</p>
+      <p>+51 961 853 894</p>
+    </div>
+  </a>
+</header>
+
+<!-- Navigation con detección de scroll -->
+<div
+  id="sticky-nav"
+  class="sticky top-0 z-[99999999999] bg-accent-blue  text-white transition-all duration-300 backdrop-blur-lg"
+>
+  <div class="bg-gradient-to-b from-primary-blue to-accent-blue">
+    <div class="container mx-auto">
+      <Navigation />
+    </div>
+  </div>
+</div>
+
+<script>
+  let lastScrollY = 0;
+  const stickyNav = document.getElementById("sticky-nav");
+
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > 100) {
+    } else {
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>

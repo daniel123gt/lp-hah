@@ -1,0 +1,23 @@
+---
+import AccordionSimple from "../molecule/AccordionSimple.astro";
+import { ACCORDION_PROCEDURE } from "../../consts";
+---
+
+<section class="container mx-auto py-[80px]">
+  <h2 class="text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+    NUESTROS PROCEDIMIENTOS A DOMICILIO
+  </h2>
+  <div class="flex flex-wrap gap-[40px]">
+  {
+    ACCORDION_PROCEDURE.map((acc) => {
+      return (
+        <div class="w-[calc(50%-20px)]">
+          <AccordionSimple title={acc.title}>
+            <p class="pt-[20px]">{acc.description}</p>
+          </AccordionSimple>
+        </div>
+      );
+    })
+  }
+</div>
+</section>

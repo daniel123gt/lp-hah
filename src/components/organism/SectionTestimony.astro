@@ -1,0 +1,34 @@
+---
+import Separator from "../../components/atom/Separator.astro";
+import CardTestimony from "../molecule/CardTestimony.astro";
+import { TESTIMONY } from "../../consts";
+---
+
+<section
+  class="bg-bg-light pb-24"
+>
+  <div class="container mx-auto flex flex-col items-center justify-center ">
+    <div class="flex flex-col items-center justify-center py-12">
+      <h2 class="text-4xl font-semibold text-primary-blue">
+        Testimonios
+      </h2>
+      <Separator />
+    </div>
+    <ul class="grid gap-8 grid-cols-3">
+        {
+        TESTIMONY.map((testimony) => {
+          return (
+            <li class="h-full">
+              <CardTestimony
+                name={testimony.name}
+                rol={testimony.rol}
+                audio={testimony.audio}
+                avatar={testimony.avatar}
+              />
+            </li>
+          );
+        })
+      }
+    </ul>
+  </div>
+</section>

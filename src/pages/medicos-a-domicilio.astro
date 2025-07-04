@@ -1,0 +1,56 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import img from "../assets/images/hero/hero3.webp";
+import imgInfo from "../assets/images/enfermera-con-laptop.jpg";
+import SectionAccordionsPrecedures from "../components/organism/SectionAccordionsPrecedures.astro";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="imagen del servicio medicos"
+    title="Médicos a Domicilio"
+  />
+  <InfoSection imgSrc={imgInfo} imgAlt="imagen de servicio">
+    <p class="text-xl">
+      En nuestro staff de Médicos contamos con especialistas de gran prestigio
+      en el área de la salud, enfocados en la valoración exhaustiva, diagnóstico
+      veraz y oportuno para el tratamiento adecuado de su paciente. para ello
+      realizamos las coordinaciones interprofesionales como:
+    </p>
+    <ul
+      role="list"
+      class="list-disc marker:text-accent-blue text-lg self-start pl-[40px]"
+    >
+      <li><b>GERIATRA.</b></li>
+
+      <li><b>CARDIÓLOGO</b></li>
+
+      <li><b>NEURÓLOGO</b></li>
+
+      <li><b>NEUMÓLOGO</b></li>
+    </ul>
+    <div class="self-start">
+      <ButtonLink />
+    </div>
+  </InfoSection>
+  <section class="container mx-auto py-[80px]">
+    <h2
+      class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]"
+    >
+      La Valoración por Médicos
+    </h2>
+    <p class="text-primary-blue text-xl font-light">
+      La valoración por médicos especialistas en casa es específico para
+      examinar a los pacientes, realizar contacto estrecho con la familia y
+      sobre todo con el cuidador principal, basado en la orientación del
+      tratamiento y cuidados especiales que se debe seguir, esto permite
+      prevenir complicaciones, tratar enfermedades, a través de esta se
+      proporciona, tratamiento adecuado al paciente, mejoría importante en la
+      tranquilidad de la familia y reduce la posibilidad de hospitalización.
+    </p>
+  </section>
+</BaseLayout>

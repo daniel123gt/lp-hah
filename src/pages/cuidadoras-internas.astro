@@ -1,0 +1,33 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import SectionCardCare from "../components/organism/SectionCardCare.astro";
+import img from "../assets/images/hero/hero1.webp";
+import imgInfo from "../assets/images/Ayuda.jpg"
+---
+
+<BaseLayout>
+  <HeroSubPage imgSrc={img} imgAlt="imagen del servicio enfermeras por turnos" title="Cuidados en el Hogar" subTitle="Enfermeras por turnos" />
+  <InfoSection imgSrc={imgInfo} imgAlt="imagen de servicio">
+    <p class="text-xl">
+      El servicio de cuidado de enfermería a domicilio es una prestación que
+      está diseñada para el cuidado de un familiar que requiera apoyo para el
+      desarrollo de sus actividades diarias, para el enfermo, adulto mayor o
+      paciente que necesite cuidados profesionales especializados.
+    </p>
+    <ul role="list" class="list-disc marker:text-accent-blue text-lg">
+      <li>Adaptamos la atención a su caso.</li>
+      <li>Asignamos el profesional adecuado para la atención personalizada</li>
+      <li>
+        Acudirá al servicio personal calificado que brinda orientación familiar.
+      </li>
+      <li>Se realiza seguimiento continuo del caso.</li>
+    </ul>
+    <div class="self-start">
+        <ButtonLink/>
+    </div>
+  </InfoSection>
+  <SectionCardCare/>
+</BaseLayout>

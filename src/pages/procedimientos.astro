@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import img from "../assets/images/hero/hero2.webp";
+import imgInfo from "../assets/images/procedimiento.png";
+import SectionAccordionsPrecedures from "../components/organism/SectionAccordionsPrecedures.astro";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="imagen del servicio procedimientos"
+    title="Procedimientos de enfermería"
+    subTitle="Atención Inmediata"
+  />
+  <InfoSection imgSrc={imgInfo} imgAlt="imagen de servicio">
+    <p>
+      <span style="font-weight: 400;"
+        >Tenemos disponibles para usted todos los procedimientos de enfermería
+        desde la colocación de inyectables (intramuscular, subcutánea,
+        endovenosa) hasta transfusión Sanguínea, curas, administración de
+        hierro, vitaminas endovenosas incluyendo la vitamina C, colocación de
+        Sondas de alimentación y urinarias entre otros.</span
+      >
+    </p><p>
+      <span style="font-weight: 400;"
+        >El hecho de contratar los servicios para procedimientos de Enfermería a
+        domicilio tiene muchas ventajas, sobre todo para el paciente. Hay
+        personas que tienen problemas a la hora de desplazarse y otras que
+        prefieren recibir asistencia en su casa. El hecho de que acudan a HEALTH
+        AT HOME,
+      </span><b>&nbsp;les mejorará la calidad de vida</b><span
+        style="font-weight: 400;"
+        >. Sobre todo porque no tendrán que acudir a un hospital o centro médico
+        para hacerse curas, ponerse inyecciones, hacerse controles de diabetes o
+        glucemia, aperturar su catéter port, colocar catéter íntima, tomarse
+        pruebas para laboratorios, recibir transfusión sanguínea, entre otros
+        procederes de Enfermería.</span
+      >
+    </p><p>
+      <span style="font-weight: 400;"
+        >Todos los procedimientos se realizan bajo un esquema de protocolos
+        desde el uso&nbsp; de equipo de Bioseguridad, normas correctas de
+        asepsia y antisepsia hasta verificar datos, e indicaciones médicas.</span
+      >
+    </p>
+    <div class="self-start">
+      <ButtonLink />
+    </div>
+  </InfoSection>
+  <SectionAccordionsPrecedures/>
+</BaseLayout>

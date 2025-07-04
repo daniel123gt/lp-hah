@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import Separator from "../atom/Separator.astro";
+import WaveHero from "../atom/WaveHero.astro";
+
+const { imgSrc, imgAlt, title, subTitle } = Astro.props;
+---
+
+<section
+  class="bg-linear-125 from-primary-blue via-primary-blue via-52% to-accent-blue to-52%"
+>
+  <div class="relative">
+    <div
+      class="relative flex flex-row-reverse items-center justify-between gap-[20px] w-full h-[600px] container mx-auto mb-20"
+    >
+      <div
+        class="rounded-3xl w-[400px] h-[400px] border-primary-blue after:w-[400px] after:h-[400px] after:bg-primary-blue after:absolute after:bottom-0 after:-z-0 after:-right-5 after:top-15 after:rounded-3xl before:w-[400px] before:h-[400px] before:bg-accent-blue before:absolute before:-z-10 before:rounded-3xl before:-right-10"
+      >
+        <Image
+          src={imgSrc}
+          alt={imgAlt}
+          class="object-cover w-[400px] h-[400px] top-20 absolute rounded-3xl z-10"
+        />
+      </div>
+      <div
+        class="text-white flex flex-col  text-shadow-lg text-shadow-white/5"
+      >
+        <h1 class="text-7xl text-wrap ">{title}</h1>
+        <p class="text-4xl">{subTitle}</p>
+        <Separator />
+      </div>
+    </div>
+    <WaveHero />
+  </div>
+</section>

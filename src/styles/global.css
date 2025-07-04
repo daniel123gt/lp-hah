@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --color-primary-blue: #1f3666;
+  --color-secondary-blue: #3c5894;
+  --color-text-dark: #0e182f;
+  --color-text-medium: #757575;
+  --color-soft-blue: #f2feff;
+  --color-bg-light: #EDF1F6;
+  --color-accent-blue: #73cbcf;
+  --color-succes-primary: #3edd87;
+  --color-danger-primary: #f46565;
+  /* --font-roboto: "Roboto", sans-serif; */
+}
+* {
+  @apply font-[roboto];
+}
+
+body{
+    color: #0e182f;
+}

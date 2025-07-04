@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import logoWhite from '../assets/logo-white.svg';
+---
+
+<footer class="bg-primary-blue text-white">
+  <div class="container mx-auto p-12 grid grid-cols-4 items-center font-light">
+    <div>
+      <figure>
+        <Image 
+          src={logoWhite} 
+          alt="Logo de Health at Home" 
+          width={120} 
+          height={40}
+          loading="lazy"
+        />
+      </figure>
+      <div>
+        <ul></ul>
+      </div>
+    </div>
+    <div>
+      <ul>
+        <li>admin@health-athome</li>
+        <li>+51 961 853 894</li>
+        <li>Política de privacidad</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-lg font-semibold">Nuestras Oficinas</p>
+      <ul>
+        <li>+51 961 853 894</li>
+        <li>Política de privacidad</li>
+      </ul>
+    </div>
+    <div>
+      <p class="text-lg font-semibold">Horario de atención</p>
+      <ul>
+        <li>24 Horas</li>
+        <li>365 días incluido festivos.</li>
+      </ul>
+    </div>
+  </div>
+</footer>

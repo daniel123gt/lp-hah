@@ -1,0 +1,21 @@
+---
+import { MessageCircle, Phone } from "@lucide/astro";
+---
+
+<a
+  href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n"
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed cursor-pointer flex rounded-full justify-center items-center bg-green-500 w-[80px] h-[80px] bottom-[80px] right-[20px] z-[99999999999] text-white hover:underline shadow-lg hover:bg-green-600 transition-colors"
+  aria-label="Contactar por WhatsApp"
+>
+  <div class="relative">
+    <MessageCircle size={60} />
+    <Phone
+      size={28}
+      stroke-width={3}
+      absoluteStrokeWidth
+      class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+    />
+  </div>
+</a>

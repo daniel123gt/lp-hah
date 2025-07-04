@@ -1,0 +1,52 @@
+---
+// HeroHome.astro
+---
+
+<section class="w-full h-[800px] overflow-hidden relative">
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    id="myVideo"
+    class="w-full h-full object-cover"
+    preload="metadata"
+  >
+    <source src="video/presentacion.mp4" type="video/mp4" />
+    Tu navegador no soporta video HTML5.
+  </video>
+
+  <!-- Fallback/Loading state -->
+  <div
+    class="absolute inset-0 bg-gray-200 flex items-center justify-center"
+    id="video-fallback"
+  >
+    <p class="text-gray-600">Cargando video...</p>
+  </div>
+</section>
+
+<script>
+  const video = document.getElementById("myVideo") as HTMLVideoElement;
+  const fallback = document.getElementById("video-fallback");
+
+  if (video) {
+    video.addEventListener("loadeddata", () => {
+      if (fallback) {
+        fallback.style.display = "none";
+      }
+    });
+
+    video.addEventListener("error", () => {
+      console.error("Error al cargar el video");
+      if (fallback) {
+        fallback.innerHTML =
+          '<p class="text-red-600">Error al cargar el video</p>';
+      }
+    });
+
+    // Forzar reproducción en caso de que autoplay falle
+    video.play().catch((error) => {
+      console.warn("Autoplay bloqueado:", error);
+    });
+  }
+</script>

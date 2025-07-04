@@ -1,16 +1,14 @@
 ---
-
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionServices from "../components/organism/SectionServices.astro";
+import SectionGalery from "../components/organism/SectionGalery.astro";
+import SectionTestimony from "../components/organism/SectionTestimony.astro";
+import HeroHome from "../components/organism/HeroHome.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout>
+  <HeroHome />
+  <SectionServices />
+  <SectionGalery />
+  <SectionTestimony />
+</BaseLayout>

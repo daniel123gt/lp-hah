@@ -1,0 +1,159 @@
+---
+// Navigation.astro - Sin React/Preact
+import { NAV_LINKS } from "../consts";
+---
+
+<nav class="py-4">
+  <ul class="flex gap-6 justify-center font-normal text-lg relative">
+    {
+      NAV_LINKS.map((item, index) => (
+        <li class="relative group">
+          <a
+            href={item.href || "#"}
+            class="nav-link hover:text-primary-blue hover:border-b transition"
+            data-href={item.href}
+          >
+            {item.label}
+          </a>
+
+          {/* Dropdown simple con CSS */}
+          {item.children && item.children.length > 0 && (
+            <ul class="absolute left-1/2 -translate-x-1/2 top-full mt-2 bg-white shadow-lg rounded-md p-2 z-50 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+              {item.children.map((child) => (
+                <li class="z-50">
+                  <a
+                    href={child.href}
+                    class="z-50 nav-child-link block px-4 py-2 text-lg hover:bg-primary-blue/10 rounded transition text-primary-blue!"
+                    data-href={child.href}
+                  >
+                    {child.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  function setActiveNavLink() {
+    // Obtener la URL actual
+    const currentPath = window.location.pathname;
+    const currentHash = window.location.hash;
+    const fullCurrentUrl = currentPath + currentHash;
+
+    // Remover clases activas existentes
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.classList.remove(
+        "active-nav",
+        "text-white",
+        "border-b-2",
+        "border-primary-blue"
+      );
+    });
+
+    document.querySelectorAll(".nav-child-link").forEach((link) => {
+      link.classList.remove("active-nav", "bg-primary-blue", "text-white");
+    });
+
+    // Encontrar y marcar el enlace activo
+    let activeFound = false;
+
+    // Primero buscar en enlaces principales
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      const href = link.getAttribute("data-href") || link.getAttribute("href");
+
+      if (
+        href &&
+        (href === currentPath ||
+          href === fullCurrentUrl ||
+          (href !== "/" && currentPath.startsWith(href)))
+      ) {
+        link.classList.add(
+          "active-nav",
+          "text-white",
+          "border-b-2",
+          "border-white"
+        );
+        activeFound = true;
+      }
+    });
+
+    // Si no se encontró en principales, buscar en submenús
+    if (!activeFound) {
+      document.querySelectorAll(".nav-child-link").forEach((link) => {
+        const href =
+          link.getAttribute("data-href") || link.getAttribute("href");
+
+        if (
+          href &&
+          (href === currentPath ||
+            href === fullCurrentUrl ||
+            (href !== "/" && currentPath.startsWith(href)))
+        ) {
+          // Marcar el enlace hijo como activo
+          link.classList.add("active-nav");
+
+          // También marcar el enlace padre como activo
+          const parentNavLink = link?.closest("li")?.closest("ul")?.previousElementSibling;
+          if (parentNavLink && parentNavLink.classList.contains("nav-link")) {
+            parentNavLink.classList.add(
+              "active-nav",
+              "border-b-2",
+              "border-white"
+            );
+          }
+          activeFound = true;
+        }
+      });
+    }
+
+    // Caso especial para la página home
+    if (currentPath === "/" || currentPath === "") {
+      const homeLink = document.querySelector(
+        '.nav-link[data-href="/"], .nav-link[href="/"]'
+      );
+      if (homeLink) {
+        homeLink.classList.add(
+          "active-nav",
+          "text-primary-blue",
+          "border-b-2",
+          "border-primary-blue"
+        );
+      }
+    }
+  }
+
+  // Ejecutar cuando la página carga
+  document.addEventListener("DOMContentLoaded", setActiveNavLink);
+
+  // También ejecutar si la URL cambia (para SPAs)
+  window.addEventListener("popstate", setActiveNavLink);
+
+  // Opcional: ejecutar cuando se hace clic en un enlace
+  document.querySelectorAll(".nav-link, .nav-child-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      setTimeout(setActiveNavLink, 100);
+    });
+  });
+</script>
+
+<style>
+  /* Estilos CSS para los estados activos */
+  .nav-link.active-nav {
+    font-weight: 500;
+  }
+
+  .nav-child-link.active-nav {
+    font-weight: 500;
+  }
+
+  /* Transición suave para los cambios */
+  .nav-link,
+  .nav-child-link {
+    transition: all 0.2s ease;
+  }
+</style>
