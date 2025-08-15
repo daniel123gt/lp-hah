@@ -4,18 +4,146 @@ import { Image } from 'astro:assets';
 import { GALERY_SECTION } from "../../consts";
 ---
 
-<section class="bg-white pb-24">
-  <div class="container mx-auto flex flex-col items-center justify-center">
-    <div class="flex flex-col items-center justify-center py-12">
-      <h2 class="text-4xl font-semibold text-primary-blue">Nuestra Galería</h2>
+<section class="bg-white py-24">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col items-center justify-center text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-primary-blue mb-6">
+        Nuestra Galería
+      </h2>
+      <p class="text-xl text-text-medium max-w-3xl mb-8">
+        Conozca nuestro equipo y la calidad de atención que brindamos 
+        a cada paciente en su hogar
+      </p>
       <Separator />
     </div>
-    <ul class="grid gap-8 grid-cols-3">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
       {
-        GALERY_SECTION.map((image) => {
-          return <Image src={image.imgSrc} alt={image.imgAlt} />;
+        GALERY_SECTION.map((image, index) => {
+          return (
+            <div class="group cursor-pointer gallery-item overflow-hidden rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative" data-image-src={image.imgSrc} data-image-alt={image.imgAlt}>
+              <Image 
+                src={image.imgSrc} 
+                alt={image.imgAlt} 
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+                <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                  <span class="text-4xl">🔍</span>
+                  <p class="text-sm mt-2">Ver más grande</p>
+                </div>
+              </div>
+            </div>
+          );
         })
       }
-    </ul>
+    </div>
+    
+    <!-- Call to Action Galería -->
+    <div class="text-center mt-16">
+      <a 
+        href="/galeria"
+        class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📸</span>
+        Ver Galería Completa
+      </a>
+    </div>
   </div>
 </section>
+
+<script>
+  // Funcionalidad de lightbox mejorada
+  function initGallery() {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+      // Limpiar event listeners anteriores
+      const newItem = item.cloneNode(true);
+      if (item.parentNode) {
+        item.parentNode.replaceChild(newItem, item);
+      }
+    });
+
+    // Agregar event listeners frescos
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      item.addEventListener('click', () => {
+        const imageSrc = item.getAttribute('data-image-src');
+        const imageAlt = item.getAttribute('data-image-alt');
+        
+        if (imageSrc) {
+          // Crear modal mejorado
+          const modal = document.createElement('div');
+          modal.className = 'fixed inset-0 bg-black/95 z-50 flex items-center justify-center p-4 backdrop-blur-sm';
+          modal.innerHTML = `
+            <div class="relative max-w-5xl max-h-full w-full h-full flex items-center justify-center">
+              <img src="${imageSrc}" alt="${imageAlt}" class="w-full h-full object-contain max-w-full max-h-full">
+              <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors duration-200 bg-black/50 rounded-full w-12 h-12 flex items-center justify-center backdrop-blur-sm">&times;</button>
+              <div class="absolute bottom-4 left-4 text-white text-center bg-black/50 rounded-lg px-4 py-2 backdrop-blur-sm">
+                <p class="text-sm">${imageAlt}</p>
+              </div>
+            </div>
+          `;
+          
+          document.body.appendChild(modal);
+          document.body.style.overflow = 'hidden';
+          
+          // Cerrar modal con click en overlay
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+              closeModal();
+            }
+          });
+          
+          // Cerrar con botón
+          const closeBtn = modal.querySelector('button');
+          if (closeBtn) {
+            closeBtn.addEventListener('click', closeModal);
+          }
+          
+          // Cerrar con ESC
+          const handleEsc = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+              closeModal();
+            }
+          };
+          document.addEventListener('keydown', handleEsc);
+          
+          function closeModal() {
+            document.body.removeChild(modal);
+            document.body.style.overflow = '';
+            document.removeEventListener('keydown', handleEsc);
+          }
+        }
+      });
+    });
+  }
+
+  // Inicializar cuando la página carga
+  document.addEventListener('DOMContentLoaded', initGallery);
+
+  // Para navegación SPA de Astro
+  document.addEventListener('astro:page-load', initGallery);
+
+  // Cleanup cuando se desmonta
+  document.addEventListener('astro:before-preparation', () => {
+    // Remover modales si existen
+    const existingModal = document.querySelector('.fixed.inset-0.bg-black');
+    if (existingModal) {
+      document.body.removeChild(existingModal);
+      document.body.style.overflow = '';
+    }
+  });
+</script>
+
+<style>
+  .gallery-item {
+    position: relative;
+  }
+  
+  .gallery-item img {
+    transition: transform 0.5s ease;
+  }
+</style>

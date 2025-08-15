@@ -1,0 +1,161 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { getCollection, getEntry } from 'astro:content';
+import type { GetStaticPaths } from 'astro';
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+};
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<BaseLayout>
+  <!-- Hero del Post -->
+  <section class="relative bg-gradient-to-r from-primary-blue to-accent-blue py-20">
+    <div class="container mx-auto px-4 text-center text-white">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          {post.data.title}
+        </h1>
+        <div class="flex items-center justify-center gap-6 text-lg opacity-90">
+          <span>📅 {post.data.publishDate.toLocaleDateString('es-ES', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+          })}</span>
+          <span>👤 {post.data.author}</span>
+          <span>🏷️ {post.data.category}</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Imagen Principal -->
+  <section class="container mx-auto py-8">
+    <div class="max-w-4xl mx-auto">
+      <img 
+        src={post.data.image} 
+        alt={post.data.title}
+        class="w-full h-96 object-cover rounded-xl shadow-lg"
+        loading="eager"
+      />
+    </div>
+  </section>
+
+  <!-- Contenido del Post -->
+  <section class="container mx-auto py-12">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg p-8 md:p-12">
+        <!-- Descripción -->
+        <div class="mb-8 p-6 bg-blue-50 rounded-lg border-l-4 border-primary-blue">
+          <p class="text-lg text-gray-700 italic">
+            {post.data.description}
+          </p>
+        </div>
+
+        <!-- Tags -->
+        {post.data.tags.length > 0 && (
+          <div class="mb-8">
+            <h3 class="text-lg font-semibold text-primary-blue mb-4">Tags:</h3>
+            <div class="flex flex-wrap gap-2">
+              {post.data.tags.map((tag) => (
+                <span class="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
+                  #{tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <!-- Contenido Markdown -->
+        <div class="prose prose-lg max-w-none">
+          <Content />
+        </div>
+
+        <!-- Call to Action -->
+        <div class="mt-12 p-6 bg-gradient-to-r from-primary-blue to-accent-blue rounded-lg text-white text-center">
+          <h3 class="text-2xl font-bold mb-4">
+            ¿Necesita Nuestros Servicios?
+          </h3>
+          <p class="text-lg mb-6 opacity-90">
+            Contáctenos hoy mismo para recibir atención médica profesional en la comodidad de su hogar.
+          </p>
+          <a 
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20sus%20servicios%20médicos%20a%20domicilio"
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>📞</span>
+            Contactar por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navegación entre Posts -->
+  <section class="bg-bg-light py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-primary-blue text-center mb-12">
+          Más Artículos del Blog
+        </h2>
+        <div class="text-center">
+          <a 
+            href="/blog"
+            class="inline-flex items-center gap-3 bg-primary-blue hover:bg-accent-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>📚</span>
+            Ver Todos los Artículos
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .prose h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .prose h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e40af;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .prose p {
+    color: #374151;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+  }
+  
+  .prose ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 1rem;
+  }
+  
+  .prose li {
+    color: #374151;
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose strong {
+    font-weight: 600;
+    color: #1e40af;
+  }
+</style>

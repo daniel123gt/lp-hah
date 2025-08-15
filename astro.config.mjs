@@ -14,6 +14,10 @@ export default defineConfig({
           }
         }
       }
+    },
+    // Optimizaciones de performance
+    optimizeDeps: {
+      include: ['preact']
     }
   },
   integrations: [preact()],

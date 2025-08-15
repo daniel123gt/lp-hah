@@ -1,6 +1,6 @@
 ---
 import Avatar from "../atom/Avatar.astro";
-const { name, rol, audio, avatar } = Astro.props;
+const { name, rol, audio, avatar, loading = "lazy" } = Astro.props;
 ---
 
 <article
@@ -14,11 +14,34 @@ const { name, rol, audio, avatar } = Astro.props;
     </div>
   </div>
   <figure class="pt-4">
-    <audio controls src={audio} preload="none" class="w-full">
+    <audio 
+      controls 
+      src={audio} 
+      preload="none" 
+      class="w-full"
+      data-loading={loading}
+    >
       Tu navegador no soporta el elemento de audio.
     </audio>
   </figure>
 </article>
+
+<script>
+  // Lazy loading para audio
+  const audioElements = document.querySelectorAll('audio[data-loading="lazy"]');
+  
+  const audioObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const audio = entry.target as HTMLAudioElement;
+        audio.preload = "metadata";
+        audioObserver.unobserve(audio);
+      }
+    });
+  });
+  
+  audioElements.forEach(audio => audioObserver.observe(audio));
+</script>
 
 <style>
   /* Estilo personalizado para el audio player */

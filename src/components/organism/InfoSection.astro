@@ -2,14 +2,21 @@
 import { Image } from "astro:assets"
 const { imgSrc, imgAlt } = Astro.props;
 ---
-<section class="container mx-auto pb-10">
+<section class="container mx-auto px-4 py-8 lg:py-10">
 
-    <div class="grid grid-cols-2 gap-[40px]">
-        <div class="flex flex-col items-center justify-center gap-[30px] text-primary-blue text-justify">
+    <div class="flex flex-col-reverse lg:grid lg:grid-cols-2 gap-6 lg:gap-[40px]">
+        <!-- Contenido de texto -->
+        <div class="flex flex-col items-center lg:items-start justify-center gap-6 lg:gap-[30px] text-primary-blue text-center lg:text-justify order-2 lg:order-1">
             <slot/>
         </div>
-        <div>
-            <Image src={imgSrc} alt={imgAlt} class="rounded-3xl"/>
+        
+        <!-- Imagen -->
+        <div class="order-1 lg:order-2 flex justify-center lg:justify-start">
+            <Image 
+                src={imgSrc} 
+                alt={imgAlt} 
+                class="rounded-2xl lg:rounded-3xl w-full max-w-md lg:max-w-none object-cover"
+            />
         </div>
     </div>
 

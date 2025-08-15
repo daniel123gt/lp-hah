@@ -1,43 +1,64 @@
 ---
 import Navigation from "./Navigation.astro";
-import { PhoneCall } from "@lucide/astro";
+import { PhoneCall, MessageCircle } from "@lucide/astro";
 import { Image } from "astro:assets";
 import logoImg from "../assets/logo.svg";
 ---
 
-<header class="container mx-auto">
-  <a href="/" class="cursor-pointer">
-    <div class="flex justify-center py-4">
-      <figure>
-        <Image
-          src={logoImg}
-          alt="Logo Health at Home"
-          width={120}
-          height={40}
-        />
-      </figure>
+<header class="bg-white shadow-sm">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between py-6">
+      <!-- Espacio izquierdo para balance (solo en desktop) -->
+      <div class="hidden lg:block w-[140px]"></div>
+      
+      <!-- Logo Centrado -->
+      <a href="/" class="cursor-pointer group flex-1 lg:flex-none flex justify-center lg:justify-start">
+        <div class="flex items-center">
+          <figure class="transition-transform duration-300 group-hover:scale-105">
+            <Image
+              src={logoImg}
+              alt="Logo Health at Home"
+              width={140}
+              height={45}
+              class="h-auto"
+            />
+          </figure>
+        </div>
+      </a>
+
+      <!-- Botón de contacto mejorado (solo en desktop) -->
+      <a
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n"
+        target="_blank"
+        class="hidden lg:flex items-center gap-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl group"
+      >
+        <MessageCircle size={20} class="group-hover:rotate-12 transition-transform duration-300" />
+        <div class="text-left">
+          <p class="text-sm font-medium">Contacto 24/7</p>
+          <p class="text-xs opacity-90">+51 961 853 894</p>
+        </div>
+      </a>
+
+      <!-- Botón móvil (solo en móvil) -->
+      <a
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n"
+        target="_blank"
+        class="lg:hidden bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition-all duration-300 hover:scale-110 shadow-lg"
+      >
+        <MessageCircle size={20} />
+      </a>
     </div>
-  </a>
-  <a
-    href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n"
-    target="_blank"
-    class="absolute right-8 top-8 flex items-center gap-4 font-bold"
-  >
-    <PhoneCall size={36} />
-    <div>
-      <p>Llamadas o Whatsapp</p>
-      <p>+51 961 853 894</p>
-    </div>
-  </a>
+  </div>
 </header>
 
-<!-- Navigation con detección de scroll -->
+<!-- Navigation sticky mejorada -->
 <div
   id="sticky-nav"
-  class="sticky top-0 z-[99999999999] bg-accent-blue  text-white transition-all duration-300 backdrop-blur-lg"
+  class="sticky top-0 z-50 bg-white shadow-lg transition-all duration-300"
 >
-  <div class="bg-gradient-to-b from-primary-blue to-accent-blue">
-    <div class="container mx-auto">
+  <!-- Fondo gradient solo en desktop, fondo blanco en móvil -->
+  <div class="bg-white lg:bg-gradient-to-r lg:from-accent-blue lg:via-primary-blue lg:to-accent-blue">
+    <div class="container mx-auto px-4">
       <Navigation />
     </div>
   </div>
@@ -51,7 +72,9 @@ import logoImg from "../assets/logo.svg";
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > 100) {
+      stickyNav?.classList.add("shadow-xl");
     } else {
+      stickyNav?.classList.remove("shadow-xl");
     }
 
     lastScrollY = currentScrollY;

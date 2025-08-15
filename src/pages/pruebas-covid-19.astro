@@ -1,0 +1,298 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import img from "../assets/images/covid-test.jpg";
+import imgInfo from "../assets/images/covid-test.jpg";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="Profesional médico realizando prueba COVID-19 a domicilio"
+    title="Pruebas COVID-19"
+    subTitle="A Domicilio"
+  />
+  
+  <InfoSection imgSrc={imgInfo} imgAlt="Profesional médico realizando prueba COVID-19 a domicilio">
+    <p class="text-xl">
+      Ofrecemos una variedad de <strong>PRUEBAS COVID-19</strong> que incluyen pruebas rápidas serológicas, pruebas de antígeno y pruebas <strong>PCR MOLECULARES</strong>, proporcionando resultados confiables según las circunstancias y el momento de la toma.
+    </p>
+    <p class="text-lg">
+      Las pruebas de detección de COVID-19 tienen como objetivo determinar si el virus está presente, tomar medidas preventivas, buscar asistencia médica, asegurar el tratamiento adecuado para la recuperación y prevenir el contagio.
+    </p>
+    <p class="text-lg">
+      A continuación, encontrará un resumen de las situaciones clínicas donde se puede aplicar cada tipo de prueba.
+    </p>
+    <div class="self-start">
+      <ButtonLink />
+    </div>
+  </InfoSection>
+
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+        Tipos de Pruebas
+      </h2>
+      
+      <!-- Tabs Navigation -->
+      <div class="flex justify-center mb-8">
+        <div class="bg-white rounded-lg p-1 shadow-lg">
+          <button 
+            class="tab-btn active px-6 py-3 rounded-md font-semibold transition-all duration-300"
+            data-tab="serologica"
+          >
+            SEROLÓGICA/ELISA
+          </button>
+          <button 
+            class="tab-btn px-6 py-3 rounded-md font-semibold transition-all duration-300"
+            data-tab="antigeno"
+          >
+            PRUEBA ANTÍGENO
+          </button>
+          <button 
+            class="tab-btn px-6 py-3 rounded-md font-semibold transition-all duration-300"
+            data-tab="pcr"
+          >
+            PCR / PRUEBA MOLECULAR
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab Content -->
+      <div class="max-w-4xl mx-auto">
+        <!-- Serológica/ELISA Tab -->
+        <div id="serologica" class="tab-content active">
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+            <h3 class="text-2xl font-semibold text-primary-blue mb-6">
+              Prueba Post Covid
+            </h3>
+                         <p class="text-gray-600 leading-relaxed mb-6">
+               Pruebas para detección de anticuerpos específicos cuantitativos IgG e IgM. Generalmente, se utiliza para determinar si tuviste COVID-19 en el pasado y ahora tienes anticuerpos.
+             </p>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">¿Cuándo se realiza?</h4>
+                                 <p class="text-gray-600">Después de una recuperación total del COVID-19.</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Método:</h4>
+                                 <p class="text-gray-600">Generalmente por medio de un pinchazo en el dedo o extrayendo sangre de una vena del brazo.</p>
+              </div>
+            </div>
+            
+            <div class="mt-6">
+              <h4 class="font-semibold text-primary-blue mb-2">Resultado:</h4>
+                             <ul class="list-disc list-inside text-gray-600 space-y-2">
+                 <li><strong>Test rápido:</strong> 15 min.</li>
+                 <li><strong>Prueba Elisa:</strong> entre 12 y 24 horas.</li>
+               </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Antígeno Tab -->
+        <div id="antigeno" class="tab-content hidden">
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+            <h3 class="text-2xl font-semibold text-primary-blue mb-6">
+              Prueba de Antígeno
+            </h3>
+            
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Detección del virus</h4>
+                                 <p class="text-gray-600 leading-relaxed">
+                   Detectan la presencia del virus en los primeros 7 días. Estas no buscan el material genético, sino que identifican las proteínas que se encuentran en la parte externa.
+                 </p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">¿Cuándo se realiza?</h4>
+                                 <p class="text-gray-600 leading-relaxed">
+                   Cuando se presentan síntomas de COVID-19, como fiebre, tos, cansancio, falta de aire o al 3er y 4to día después de haber tenido contacto estrecho con alguien que tiene COVID-19.
+                 </p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Método:</h4>
+                                 <p class="text-gray-600">Hisopado nasofaríngeo.</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Resultado:</h4>
+                                 <ul class="list-disc list-inside text-gray-600 space-y-2">
+                   <li><strong>15 minutos.</strong> Certificado: emitido como máximo en 2 horas luego de la Toma.</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PCR Tab -->
+        <div id="pcr" class="tab-content hidden">
+          <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-200">
+            <h3 class="text-2xl font-semibold text-primary-blue mb-6">
+              PCR / Prueba Molecular
+            </h3>
+            
+            <div class="space-y-6">
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Prueba de oro para la detección de infección activa</h4>
+                                 <p class="text-gray-600 leading-relaxed">
+                   Diseñada para identificar con precisión el ARN del Virus. Se realiza bajo la técnica <strong>RT-PCR</strong>. La RT-PCR en tiempo real es un método de base nuclear que detecta la presencia de material genético del Virus. De otra forma se puede decir que esta prueba detecta todos los genes del virus.
+                 </p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">¿Cuándo se realiza?</h4>
+                                 <ul class="list-disc list-inside text-gray-600 space-y-2">
+                   <li>En el primer día de síntomas.</li>
+                   <li>3 días posteriores al contacto con el contagiado.</li>
+                   <li>7 días después de viaje.</li>
+                 </ul>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Método:</h4>
+                                 <p class="text-gray-600">Hisopados nasofaríngeo y orofaringe.</p>
+              </div>
+              
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Resultado:</h4>
+                                 <ul class="list-disc list-inside text-gray-600 space-y-2">
+                   <li>Los resultados se entregan <strong>hasta en 24 horas</strong> después de la toma de muestra. Pruebas 100% confiables.</li>
+                 </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto py-[80px]">
+    <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+      Protocolo de Seguridad
+    </h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-bg-light p-8 rounded-xl">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+            <span class="text-2xl">🦺</span>
+            Equipo de Protección
+          </h3>
+                     <p class="text-gray-600 leading-relaxed">
+             Nuestro personal utiliza equipo de protección completo: mascarillas N95, guantes, batas desechables y protección ocular para garantizar la seguridad tanto del paciente como del profesional.
+           </p>
+        </div>
+        
+        <div class="bg-bg-light p-8 rounded-xl">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+            <span class="text-2xl">🧼</span>
+            Desinfección
+          </h3>
+                     <p class="text-gray-600 leading-relaxed">
+             Desinfectamos todo el equipo antes y después de cada prueba, siguiendo los protocolos establecidos por las autoridades sanitarias para prevenir la propagación del virus.
+           </p>
+        </div>
+        
+        <div class="bg-bg-light p-8 rounded-xl">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+            <span class="text-2xl">📋</span>
+            Protocolo Estándar
+          </h3>
+                     <p class="text-gray-600 leading-relaxed">
+             Seguimos estrictamente los protocolos de bioseguridad establecidos, incluyendo el manejo adecuado de residuos y la desinfección del área de trabajo.
+           </p>
+        </div>
+        
+        <div class="bg-bg-light p-8 rounded-xl">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+            <span class="text-2xl">🚫</span>
+            Aislamiento Preventivo
+          </h3>
+                     <p class="text-gray-600 leading-relaxed">
+             En caso de resultado positivo, proporcionamos orientación sobre medidas de aislamiento y seguimiento médico según las recomendaciones sanitarias vigentes.
+           </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto py-[80px]">
+    <div class="text-center">
+      <h2 class="text-3xl font-semibold text-primary-blue mb-6">
+        ¿Necesita una prueba COVID-19 a domicilio?
+      </h2>
+             <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+         Nuestro equipo está listo para atenderle con la máxima seguridad y rapidez en la comodidad de su hogar.
+       </p>
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20pruebas%20COVID-19%20a%20domicilio"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-primary-blue hover:bg-accent-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📞</span>
+        Solicitar Información
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  // Tab functionality
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetTab = btn.getAttribute('data-tab');
+      
+      if (targetTab) {
+        // Remove active class from all buttons and contents
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding content
+        btn.classList.add('active');
+        const targetContent = document.getElementById(targetTab as string);
+        if (targetContent) {
+          targetContent.classList.add('active');
+        }
+      }
+    });
+  });
+</script>
+
+<style>
+  .tab-btn {
+    color: #4b5563;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-btn:hover {
+    color: #1e40af;
+  }
+  
+  .tab-btn.active {
+    background-color: #1e40af;
+    color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .tab-content {
+    transition: all 0.3s ease;
+  }
+  
+  .tab-content.active {
+    display: block;
+  }
+  
+  .tab-content:not(.active) {
+    display: none;
+  }
+</style>

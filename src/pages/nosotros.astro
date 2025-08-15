@@ -1,0 +1,238 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import img from "../assets/images/hero/hero1.webp";
+import imgInfo from "../assets/images/enfermera-con-laptop.jpg";
+import imgTeam from "../assets/images/enfermera-con-laptop.jpg";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="Profesional de la salud trabajando con dedicación y profesionalismo"
+    title="Quienes Somos"
+    subTitle="Salud y Cuidado en Casa"
+  />
+  
+  <InfoSection imgSrc={imgInfo} imgAlt="Profesional de la salud brindando atención personalizada a domicilio">
+    <p class="text-xl">
+      Somos una empresa dedicada a la <strong>promoción de la salud</strong> y la prevención de enfermedades, proporcionando atención profesional a domicilio para los problemas de salud diarios del adulto mayor y pacientes con diversas patologías.
+    </p>
+    <p class="text-lg">
+      Muchas enfermedades pueden ser tratadas en casa, y nos especializamos en servir a familias con problemas de dependencia a través de cuidadores experimentados, ofreciendo atención domiciliaria para adultos mayores y pacientes dependientes, asegurando una mejor calidad de vida comparada con la institucionalización.
+    </p>
+  </InfoSection>
+
+  <!-- Misión y Visión -->
+  <section class="container mx-auto py-[80px]">
+    <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+      <!-- Misión -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl text-accent-blue">🌱</div>
+          <div>
+            <h3 class="text-3xl font-bold text-primary-blue mb-4">Misión</h3>
+            <p class="text-gray-600 leading-relaxed text-lg">
+              Promover la importancia del cuidado de salud del adulto mayor y paciente dependiente a domicilio, fomentando un cambio en el pensamiento social y mejorando la calidad de vida del paciente.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Visión -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+        <div class="flex items-start gap-4">
+          <div class="text-4xl text-accent-blue">❤️</div>
+          <div>
+            <h3 class="text-3xl font-bold text-primary-blue mb-4">Visión</h3>
+            <p class="text-gray-600 leading-relaxed text-lg">
+              Ser una empresa que brinda un sistema integral de salud especializado a domicilio para el cuidado del adulto mayor o dependiente.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores y Equipo -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-start">
+        <!-- Valores -->
+        <div>
+          <h2 class="text-4xl font-bold text-primary-blue mb-8">Nuestros Valores</h2>
+          
+          <div class="space-y-6">
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="flex items-start gap-4">
+                <div class="text-2xl text-accent-blue mt-1">🔍</div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary-blue mb-2 underline">Transparencia</h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Atención brindada por personal verificado, titulado y altamente calificado, conducta honesta y ocupada por el confort de todos nuestros pacientes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="flex items-start gap-4">
+                <div class="text-2xl text-accent-blue mt-1">🤝</div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary-blue mb-2 underline">Respeto al Paciente</h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Buena disposición para el servicio, trato amable y profesional con el paciente, buena disposición para escuchar, atender problemas y resolver inquietudes.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="flex items-start gap-4">
+                <div class="text-2xl text-accent-blue mt-1">💙</div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary-blue mb-2 underline">Sensibilidad</h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Personal de salud con vocación y calidad de servicio, buen trato al paciente.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-white p-6 rounded-xl shadow-lg">
+              <div class="flex items-start gap-4">
+                <div class="text-2xl text-accent-blue mt-1">🎯</div>
+                <div>
+                  <h3 class="text-xl font-bold text-primary-blue mb-2 underline">Centrados en el Paciente</h3>
+                  <p class="text-gray-600 leading-relaxed">
+                    Atención y cuidados orientados al logro de los mejores resultados.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Equipo -->
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <div class="flex items-start gap-6">
+            <img 
+              src={imgTeam.src} 
+              alt="Profesional de la salud trabajando con dedicación" 
+              class="w-48 h-64 object-cover rounded-lg flex-shrink-0"
+              loading="lazy"
+            />
+            <div>
+              <h3 class="text-3xl font-bold text-primary-blue mb-4">Equipo</h3>
+              <p class="text-gray-600 leading-relaxed text-lg">
+                Formados por un equipo de profesionales con <strong>12 y más años de experiencia</strong>, quienes día a día nos dedicamos a adquirir conocimientos de nuevas tendencias en el área de salud para incorporarlos en la atención de nuestros pacientes.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia y Compromiso -->
+  <section class="container mx-auto py-[80px]">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-primary-blue mb-6">
+        Nuestra Experiencia y Compromiso
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Más de una década dedicados a mejorar la calidad de vida de nuestros pacientes a través de la atención médica domiciliaria profesional y compasiva.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-5xl text-accent-blue mb-4">📚</div>
+        <h3 class="text-2xl font-semibold text-primary-blue mb-3">Formación Continua</h3>
+        <p class="text-gray-600">
+          Nuestro equipo se mantiene actualizado con las últimas tendencias y avances en el cuidado de la salud para brindar la mejor atención posible.
+        </p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-5xl text-accent-blue mb-4">🏠</div>
+        <h3 class="text-2xl font-semibold text-primary-blue mb-3">Atención Personalizada</h3>
+        <p class="text-gray-600">
+          Cada paciente recibe atención individualizada, adaptada a sus necesidades específicas y al entorno familiar.
+        </p>
+      </div>
+      
+      <div class="text-center">
+        <div class="text-5xl text-accent-blue mb-4">🤲</div>
+        <h3 class="text-2xl font-semibold text-primary-blue mb-3">Compromiso Social</h3>
+        <p class="text-gray-600">
+          Trabajamos para cambiar la percepción social sobre el cuidado domiciliario y promover una mejor calidad de vida para adultos mayores.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Destacados -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">
+        Servicios que Definen Nuestra Identidad
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">👴</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Cuidado Geriátrico</h3>
+          <p class="text-gray-600 text-sm">
+            Atención especializada para adultos mayores con enfoque en calidad de vida y autonomía.
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">🏥</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Medicina Domiciliaria</h3>
+          <p class="text-gray-600 text-sm">
+            Servicios médicos profesionales en la comodidad del hogar con equipamiento portátil.
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">💉</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Procedimientos de Enfermería</h3>
+          <p class="text-gray-600 text-sm">
+            Cuidados especializados y procedimientos médicos con protocolos de seguridad.
+          </p>
+        </div>
+        
+        <div class="bg-white p-6 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">❤️</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Apoyo Familiar</h3>
+          <p class="text-gray-600 text-sm">
+            Orientación y apoyo integral para familias con pacientes dependientes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary-blue py-16 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        ¿Quiere Conocer Más Sobre Nosotros?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Nuestro equipo está listo para atenderle y brindarle la mejor atención médica domiciliaria con profesionalismo y dedicación.
+      </p>
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20sus%20servicios%20y%20equipo"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📞</span>
+        Contáctenos por WhatsApp
+      </a>
+    </div>
+  </section>
+</BaseLayout>

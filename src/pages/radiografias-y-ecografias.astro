@@ -1,0 +1,191 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import img from "../assets/images/rx-ultrasound-hero.jpg";
+import imgInfo from "../assets/images/doctor-xray.jpg";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="Estetoscopio médico sobre bloc de recetas con símbolo RX, representando servicios de radiología y ecografía a domicilio"
+    title="Radiografías (RX) y Ecografías"
+    subTitle="A Domicilio"
+  />
+  
+  <InfoSection imgSrc={imgInfo} imgAlt="Médico examinando una radiografía, representando el diagnóstico por imagen a domicilio">
+    <p class="text-xl">
+      Ponemos a su disposición el servicio de Radiología y ecografías con los mejores equipos para ofrecer a nuestros pacientes toda la seguridad y comodidad posible en la realización de sus pruebas de radiografías y ecografías.
+    </p>
+    <p class="text-lg">
+      Nuestro objetivo básico en el registro es obtener imágenes con una calidad uniforme a través de dispositivos avanzados de imágenes diagnósticas de alta calidad, que permitan diagnosticar el origen de síntomas y detectar enfermedades, así como conocer el progreso de un tratamiento determinado.
+    </p>
+    <div class="self-start">
+      <ButtonLink />
+    </div>
+  </InfoSection>
+
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+        Equipos de Alta Tecnología
+      </h2>
+      <p class="text-xl text-text-medium text-center max-w-4xl mx-auto mb-12">
+        Contamos con los mejores equipos y un sistema avanzado de doppler, las mejores imágenes con calidad uniforme para un mejor diagnóstico:
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 flex items-center gap-3">
+            <span class="text-3xl">🦴</span>
+            Hallazgo de Lesiones y Fracturas
+          </h3>
+          <p class="text-text-medium leading-relaxed">
+            Detección precisa de lesiones o fracturas a causa de traumatismos mediante rayos X de alta resolución, permitiendo un diagnóstico rápido y certero para el tratamiento adecuado.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 flex items-center gap-3">
+            <span class="text-3xl">🩺</span>
+            Detección Temprana del Cáncer de Mama
+          </h3>
+          <p class="text-text-medium leading-relaxed">
+            A través de la mastografía con equipos especializados, realizamos la detección temprana del cáncer de mama, fundamental para un tratamiento exitoso y la preservación de la salud.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 flex items-center gap-3">
+            <span class="text-3xl">👶</span>
+            Seguimiento del Desarrollo Fetal
+          </h3>
+          <p class="text-text-medium leading-relaxed">
+            Con el ultrasonido de alta definición, monitoreamos el adecuado desarrollo y detectamos posibles anormalidades en el feto, proporcionando tranquilidad a los futuros padres.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔍</span>
+            Diagnóstico de Tumores
+          </h3>
+          <p class="text-text-medium leading-relaxed">
+            Diagnóstico oportuno de tumores de partes blandas y tiroides mediante ecografía especializada, permitiendo la detección temprana y el tratamiento inmediato.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container mx-auto py-[80px]">
+    <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+      Tipos de Radiología
+    </h2>
+    <div class="max-w-4xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-bg-light p-8 rounded-xl">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+            <span class="text-2xl">📋</span>
+            Radiología Diagnóstica
+          </h3>
+          <p class="text-text-medium leading-relaxed">
+            Permite diagnosticar el origen de síntomas y detectar enfermedades, así como conocer el progreso de un tratamiento determinado. Utilizamos equipos de última generación para obtener imágenes de máxima calidad.
+          </p>
+        </div>
+        
+        <div class="bg-bg-light p-8 rounded-xl">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+            <span class="text-2xl">💉</span>
+            Radiología Intervencionista
+          </h3>
+          <p class="text-text-medium leading-relaxed">
+            Utiliza las imágenes como guía para los procedimientos, ayudando a los médicos al introducir catéteres, alambres y otros instrumentos y herramientas pequeñas en el cuerpo de los pacientes de manera segura y precisa.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+        Preparación para los Estudios
+      </h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 text-center">
+            ¿Se requiere alguna preparación previa?
+          </h3>
+          <p class="text-lg text-text-medium text-center mb-6">
+            Sí se requiere preparación previa para algunos estudios. Consulte con uno de nuestros profesionales para mayor información y recibir las instrucciones específicas para su caso.
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-6 mt-8">
+            <div class="flex items-start gap-4">
+              <div class="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                1
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Consulta Previa</h4>
+                <p class="text-text-medium">Contacte con nuestro equipo para recibir instrucciones específicas según el tipo de estudio.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                2
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Preparación Específica</h4>
+                <p class="text-text-medium">Algunos estudios requieren ayuno, hidratación o medicación específica.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                3
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Documentación</h4>
+                <p class="text-text-medium">Lleve consigo estudios previos y documentación médica relevante.</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="bg-accent-blue text-white rounded-full w-8 h-8 flex items-center justify-center text-sm font-bold flex-shrink-0">
+                4
+              </div>
+              <div>
+                <h4 class="font-semibold text-primary-blue mb-2">Comodidad</h4>
+                <p class="text-text-medium">Use ropa cómoda y evite joyas o accesorios metálicos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto py-[80px]">
+    <div class="text-center">
+      <h2 class="text-3xl font-semibold text-primary-blue mb-6">
+        ¿Necesita un estudio de radiología o ecografía?
+      </h2>
+      <p class="text-xl text-text-medium mb-8 max-w-2xl mx-auto">
+        Nuestro equipo de profesionales está listo para atenderle en la comodidad de su hogar con equipos de última generación.
+      </p>
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20radiografías%20y%20ecografías%20a%20domicilio"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-primary-blue hover:bg-accent-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📞</span>
+        Solicitar Información
+      </a>
+    </div>
+  </section>
+</BaseLayout>

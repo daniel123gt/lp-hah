@@ -1,0 +1,637 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import { Image } from 'astro:assets';
+import img from "../assets/images/hero/hero2.webp";
+import hierroEndovenosoImg from "../assets/images/galery/images/hierrro-endovenoso.jpg";
+import tratamientoEndovenosoImg from "../assets/images/galery/images/tratamiento-endovenoso.jpg";
+import sondaNasogastricaImg from "../assets/images/galery/images/sonda-nasogastrica.jpg";
+import tomaPresionImg from "../assets/images/galery/images/toma-presion-alterial.jpg";
+import terapiaFisicaImg from "../assets/images/galery/images/adulto-mayor-terapia-fisica.jpg";
+import terapiaOcupacionalImg from "../assets/images/galery/images/adulto-mayor-terapia-ocupacional.jpg";
+import tomaMuestrasImg from "../assets/images/galery/images/toma-de-muestras.jpg";
+import enfermeraPlanificandoImg from "../assets/images/galery/images/enfermera-planificando-y-organizando.jpg";
+import aplicacionInyectableImg from "../assets/images/galery/images/aplicacion-inyectable.png";
+import adultoMayorFragilidadImg from "../assets/images/galery/images/adulto-mayor-fragilidad-capilar.png";
+import terapiaOcupacional2Img from "../assets/images/galery/images/adulto-mayor-terapia-ocupacional-2.jpg";
+import verificacionDocumentoImg from "../assets/images/galery/images/verificacion-documento.jpg";
+import adultoMayorDependienteImg from "../assets/images/galery/images/adulto-mayor-dependiente.jpg";
+import pcrMolecularImg from "../assets/images/galery/images/pcr-molecular.jpg";
+import glucemiaCapilarImg from "../assets/images/galery/images/glucemia-capilar.jpg";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="Galería de servicios médicos y atención domiciliaria profesional"
+    title="Galería"
+    subTitle="Nuestros Servicios en Imágenes"
+  />
+
+  <!-- Descripción de la Galería -->
+  <section class="container mx-auto py-[80px]">
+    <div class="text-center max-w-4xl mx-auto">
+      <h2 class="text-4xl font-bold text-primary-blue mb-6">
+        Nuestros Servicios en Acción
+      </h2>
+      <p class="text-xl text-gray-600 leading-relaxed">
+        Descubra a través de nuestra galería visual la calidad y profesionalismo de nuestros servicios médicos a domicilio. 
+        Cada imagen representa el compromiso de nuestro equipo con la excelencia en el cuidado de la salud.
+      </p>
+    </div>
+  </section>
+
+  <!-- Galería Principal -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Imagen 1: Administración de Hierro Endovenoso -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={hierroEndovenosoImg} 
+              alt="Administración de hierro endovenoso a domicilio" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Administración de Hierro Endovenoso
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ADMINISTRACIÓN DE HIERRO ENDOVENOSO A DOMICILIO (DOSIS, BAJO INDICACIÓN MÉDICA)
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🏥</span>
+              <span>Tratamiento Endovenoso</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 2: Tratamiento Endovenoso -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={tratamientoEndovenosoImg} 
+              alt="Tratamiento endovenoso con administración previa orden médica" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Tratamiento Endovenoso
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              TRATAMIENTO ENDOVENOSO, ADMINISTRACIÓN PREVIA ORDEN MÉDICA
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>💊</span>
+              <span>Medicamentos IV</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 3: Alimentación por Sonda Nasogástrica -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={sondaNasogastricaImg} 
+              alt="Paciente adulta mayor recibiendo alimentación a través de sonda nasogástrica" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Alimentación por Sonda Nasogástrica
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              PACIENTE ADULTA MAYOR QUIEN RECIBE ALIMENTACIÓN A TRAVÉS DE S.N.G. (SONDA NASOGÁSTRICA), SE BRINDA EL SERVICIO DE INSTALACIÓN DE SONDA POR PARTE DE NUESTROS PROFESIONALES CALIFICADOS
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>👴</span>
+              <span>Cuidado Geriátrico</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 4: Toma de Presión Arterial -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={tomaPresionImg} 
+              alt="Profesional de la salud tomando presión arterial a paciente" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Monitoreo de Signos Vitales
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              TOMA DE PRESIÓN ARTERIAL A UNO DE NUESTROS PACIENTES
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>📊</span>
+              <span>Control Médico</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 5: Terapia Física -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={terapiaFisicaImg} 
+              alt="Adulto mayor recibiendo terapia física" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Terapia Física
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ADULTO MAYOR RECIBIENDO TERAPIA FÍSICA POR PARTE DE NUESTROS PROFESIONALES
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🏃</span>
+              <span>Rehabilitación</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 6: Terapia Ocupacional -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={terapiaOcupacionalImg} 
+              alt="Adulto mayor recibiendo terapia ocupacional" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Terapia Ocupacional
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ADULTO MAYOR RECIBIENDO TERAPIA OCUPACIONAL POR PARTE DE NUESTROS PROFESIONALES
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🎨</span>
+              <span>Terapia Ocupacional</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 7: Toma de Muestras -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={tomaMuestrasImg} 
+              alt="Toma de muestras para análisis de laboratorio a domicilio" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Toma de Muestras
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              TOMA DE MUESTRAS PARA ANALSISIS DE LABORATORIO A DOMICILIO
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🧪</span>
+              <span>Laboratorio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 8: Enfermera Planificando -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={enfermeraPlanificandoImg} 
+              alt="Enfermería en planificación, organización, valoración y asignación de personal" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Planificación y Organización
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ENFERMERÍA EN PLANIFICACIÓN, ORGANIZACIÓN, VALORACIÓN Y ASIGNACIÓN DE PERSONAL SEGÚN LAS PATOLOGÍAS O REQUERIMIENTOS DE CUIDADOS DE LOS PACIENTES
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>📋</span>
+              <span>Administración</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 9: Aplicación de Inyectables -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={aplicacionInyectableImg} 
+              alt="Aplicación de inyectables a domicilio" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Aplicación de Inyectables
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              APLICACIÓN DE INYECTABLES A DOMICILIO
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>💉</span>
+              <span>Inyecciones</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 10: Adulto Mayor con Fragilidad Capilar -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={adultoMayorFragilidadImg} 
+              alt="Paciente adulta mayor con fragilidad capilar siendo atendida por profesionales" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Cuidado Especializado
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              PACIENTE ADULTA MAYOR CON FRAGILIDAD CAPILAR, QUIEN ES ATENDIDA POR NUESTROS PROFESIONALES
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>👵</span>
+              <span>Cuidado Especial</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 11: Terapia Ocupacional 2 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={terapiaOcupacional2Img} 
+              alt="Adulto mayor recibiendo terapia ocupacional del profesional de enfermería" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Terapia Ocupacional Especializada
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ADULTO MAYOR RECIBIENDO TERAPIA OCUPACIONAL POR PARTE DEL PROFESIONAL DE ENFERMERÍA
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>✂️</span>
+              <span>Actividades Manuales</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 12: Verificación de Documento -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={verificacionDocumentoImg} 
+              alt="Profesionales verificando medicamento a administrar previa verificación de indicaciones médicas" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Verificación de Medicamentos
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              NUESTROS PROFESIONALES VERIFICANDO EL MEDICAMENTO A ADMINISTRAR PREVIA VERIFICACIÓN DE INDICACIONES MÉDICAS
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🔍</span>
+              <span>Control de Calidad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 13: Adulto Mayor Dependiente -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={adultoMayorDependienteImg} 
+              alt="Adulto mayor dependiente recibiendo cuidados de profesionales" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Cuidado de Adultos Mayores Dependientes
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              ADULTO MAYOR DEPENDIENTE: CUIDADOS BRINDADOS POR PARTE DE NUESTROS PROFESIONALES
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🦽</span>
+              <span>Apoyo Integral</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 14: PCR Molecular -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={pcrMolecularImg} 
+              alt="Toma de muestra hisopado oro/nasofaríngeo para PCR molecular" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              PCR Molecular COVID-19
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              TOMA DE MUESTRA HISOPADO ORO/NASOFARINGEO PARA PCR MOLECULAR. (DESCARTE DE COVID 19)
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🦠</span>
+              <span>Test COVID-19</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Imagen 15: Glucemia Capilar -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2 gallery-item cursor-pointer">
+          <div class="relative group">
+            <Image 
+              src={glucemiaCapilarImg} 
+              alt="Toma de glucemia capilar" 
+              class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-transparent group-hover:bg-black/30 transition-all duration-300 flex items-center justify-center">
+              <div class="opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-white text-center">
+                <div class="text-4xl mb-2">🔍</div>
+                <p class="font-semibold">Ver Detalles</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-primary-blue mb-3">
+              Control de Glucemia
+            </h3>
+            <p class="text-gray-600 leading-relaxed mb-4">
+              TOMA DE GLUCEMIA CAPILAR
+            </p>
+            <div class="flex items-center gap-2 text-sm text-accent-blue">
+              <span>🩸</span>
+              <span>Control Diabético</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicios Destacados -->
+  <section class="container mx-auto py-[80px]">
+    <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">
+      Servicios que Capturamos en Nuestra Galería
+    </h2>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="text-center p-6">
+        <div class="text-5xl mb-4">💉</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Tratamientos Endovenosos</h3>
+        <p class="text-gray-600 text-sm">
+          Administración de medicamentos, hierro y vitaminas por vía endovenosa con técnicas profesionales.
+        </p>
+      </div>
+      
+      <div class="text-center p-6">
+        <div class="text-5xl mb-4">❤️</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Monitoreo Médico</h3>
+        <p class="text-gray-600 text-sm">
+          Control de signos vitales, presión arterial y otros parámetros médicos en tiempo real.
+        </p>
+      </div>
+      
+      <div class="text-center p-6">
+        <div class="text-5xl mb-4">🍽️</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Nutrición Especializada</h3>
+        <p class="text-gray-600 text-sm">
+          Instalación y mantenimiento de sondas nasogástricas para alimentación enteral.
+        </p>
+      </div>
+      
+      <div class="text-center p-6">
+        <div class="text-4xl mb-4">👴</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Cuidado Geriátrico</h3>
+        <p class="text-gray-600 text-sm">
+          Atención personalizada para adultos mayores con enfoque en calidad de vida.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estadísticas -->
+  <section class="bg-primary-blue py-16 text-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold mb-2">1000+</div>
+          <p class="text-lg">Pacientes Atendidos</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">50+</div>
+          <p class="text-lg">Profesionales Calificados</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">24/7</div>
+          <p class="text-lg">Atención Disponible</p>
+        </div>
+        <div>
+          <div class="text-4xl font-bold mb-2">5+</div>
+          <p class="text-lg">Años de Experiencia</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="container mx-auto py-[80px] text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+      ¿Quiere Ver Nuestros Servicios en Persona?
+    </h2>
+    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      Nuestro equipo está listo para brindarle la mejor atención médica domiciliaria 
+      con la misma profesionalidad que se muestra en nuestra galería.
+    </p>
+    <a 
+      href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20sus%20servicios%20médicos%20a%20domicilio"
+      target="_blank"
+      class="inline-flex items-center gap-3 bg-primary-blue hover:bg-accent-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+    >
+      <span>📞</span>
+      Solicitar Información
+    </a>
+  </section>
+</BaseLayout>
+
+<script>
+  // Funcionalidad de lightbox simple
+  document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    
+    galleryItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        if (img) {
+          // Crear modal simple
+          const modal = document.createElement('div');
+          modal.className = 'fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4';
+          modal.innerHTML = `
+            <div class="relative max-w-4xl max-h-full">
+              <img src="${img.src}" alt="${img.alt}" class="w-full h-auto object-contain">
+              <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 transition-colors duration-200">&times;</button>
+            </div>
+          `;
+          
+          document.body.appendChild(modal);
+          
+          // Cerrar modal
+          modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+              document.body.removeChild(modal);
+            }
+          });
+          
+          // Cerrar con botón
+          const closeBtn = modal.querySelector('button');
+          if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+              document.body.removeChild(modal);
+            });
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .gallery-item {
+    position: relative;
+  }
+  
+  .gallery-item img {
+    transition: transform 0.5s ease;
+  }
+</style>

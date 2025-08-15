@@ -1,44 +1,149 @@
 ---
 import { Image } from "astro:assets";
+import { Phone, Mail, MapPin, Clock, Shield, MessageCircle } from "@lucide/astro";
 import logoWhite from '../assets/logo-white.svg';
 ---
 
-<footer class="bg-primary-blue text-white">
-  <div class="container mx-auto p-12 grid grid-cols-4 items-center font-light">
-    <div>
-      <figure>
-        <Image 
-          src={logoWhite} 
-          alt="Logo de Health at Home" 
-          width={120} 
-          height={40}
-          loading="lazy"
-        />
-      </figure>
+<footer class="bg-gradient-to-br from-primary-blue via-accent-blue to-primary-blue text-white">
+  <div class="container mx-auto px-4 py-16">
+    <!-- Sección principal -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+      <!-- Logo y descripción -->
+      <div class="lg:col-span-1">
+        <figure class="mb-6">
+          <Image 
+            src={logoWhite} 
+            alt="Logo de Health at Home" 
+            width={140} 
+            height={45}
+            loading="lazy"
+            class="h-auto"
+          />
+        </figure>
+        <p class="text-gray-200 leading-relaxed mb-6">
+          Brindamos servicios médicos y de cuidado a domicilio con la más alta calidad y profesionalismo, disponibles 24/7 para tu tranquilidad.
+        </p>
+        <!-- Enlaces sociales -->
+        <div class="flex gap-4">
+          <a 
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20m%C3%A1s%20informaci%C3%B3n"
+            target="_blank"
+            class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110"
+            aria-label="WhatsApp"
+          >
+            <MessageCircle size={20} />
+          </a>
+          <a 
+            href="tel:+51961853894"
+            class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110"
+            aria-label="Llamar"
+          >
+            <Phone size={20} />
+          </a>
+          <a 
+            href="mailto:admin@health-athome.com"
+            class="bg-white/20 hover:bg-white/30 p-3 rounded-full transition-all duration-300 hover:scale-110"
+            aria-label="Email"
+          >
+            <Mail size={20} />
+          </a>
+        </div>
+      </div>
+
+      <!-- Información de contacto -->
       <div>
-        <ul></ul>
+        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+          <Phone size={20} class="text-blue-200" />
+          Contacto
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <Phone size={16} class="text-blue-200 mt-1 flex-shrink-0" />
+            <div>
+              <p class="font-medium">Teléfono</p>
+              <a href="tel:+51961853894" class="text-gray-200 hover:text-white transition-colors duration-300">
+                +51 961 853 894
+              </a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <Mail size={16} class="text-blue-200 mt-1 flex-shrink-0" />
+            <div>
+              <p class="font-medium">Email</p>
+              <a href="mailto:admin@health-athome.com" class="text-gray-200 hover:text-white transition-colors duration-300">
+                admin@health-athome.com
+              </a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <MapPin size={16} class="text-blue-200 mt-1 flex-shrink-0" />
+            <div>
+              <p class="font-medium">Zona de Servicio</p>
+              <p class="text-gray-200">Lima Metropolitana</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Horarios y políticas -->
+      <div>
+        <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
+          <Clock size={20} class="text-blue-200" />
+          Horarios
+        </h3>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <Clock size={16} class="text-blue-200 mt-1 flex-shrink-0" />
+            <div>
+              <p class="font-medium">Atención</p>
+              <p class="text-gray-200">24 Horas</p>
+              <p class="text-gray-200 text-sm">365 días incluido festivos</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <Shield size={16} class="text-blue-200 mt-1 flex-shrink-0" />
+            <div>
+              <p class="font-medium">Políticas</p>
+              <a href="#" class="text-gray-200 hover:text-white transition-colors duration-300">
+                Política de privacidad
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="lg:col-span-1">
+        <h3 class="text-xl font-semibold mb-6">¿Necesitas ayuda?</h3>
+        <p class="text-gray-200 mb-6">
+          Nuestro equipo está disponible para atenderte en cualquier momento del día.
+        </p>
+        <a 
+          href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20necesito%20ayuda"
+          target="_blank"
+          class="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+        >
+          <MessageCircle size={20} />
+          Contactar Ahora
+        </a>
       </div>
     </div>
-    <div>
-      <ul>
-        <li>admin@health-athome</li>
-        <li>+51 961 853 894</li>
-        <li>Política de privacidad</li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-lg font-semibold">Nuestras Oficinas</p>
-      <ul>
-        <li>+51 961 853 894</li>
-        <li>Política de privacidad</li>
-      </ul>
-    </div>
-    <div>
-      <p class="text-lg font-semibold">Horario de atención</p>
-      <ul>
-        <li>24 Horas</li>
-        <li>365 días incluido festivos.</li>
-      </ul>
+
+    <!-- Línea divisoria -->
+    <div class="border-t border-white/20 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+        <p class="text-gray-300 text-sm">
+          © 2024 Health at Home. Todos los derechos reservados.
+        </p>
+        <div class="flex gap-6 text-sm">
+          <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+            Términos y condiciones
+          </a>
+          <a href="#" class="text-gray-300 hover:text-white transition-colors duration-300">
+            Política de privacidad
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </footer>

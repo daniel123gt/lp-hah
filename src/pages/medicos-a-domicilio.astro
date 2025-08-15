@@ -5,52 +5,415 @@ import InfoSection from "../components/organism/InfoSection.astro";
 import ButtonLink from "../components/atom/ButtonLink.astro";
 import img from "../assets/images/hero/hero3.webp";
 import imgInfo from "../assets/images/enfermera-con-laptop.jpg";
-import SectionAccordionsPrecedures from "../components/organism/SectionAccordionsPrecedures.astro";
 ---
 
 <BaseLayout>
   <HeroSubPage
     imgSrc={img}
-    imgAlt="imagen del servicio medicos"
+    imgAlt="Médicos especialistas realizando atención médica a domicilio"
     title="Médicos a Domicilio"
+    subTitle="Atención Especializada en Casa"
   />
-  <InfoSection imgSrc={imgInfo} imgAlt="imagen de servicio">
+  
+  <InfoSection imgSrc={imgInfo} imgAlt="Médico especialista realizando consulta a domicilio">
     <p class="text-xl">
-      En nuestro staff de Médicos contamos con especialistas de gran prestigio
-      en el área de la salud, enfocados en la valoración exhaustiva, diagnóstico
-      veraz y oportuno para el tratamiento adecuado de su paciente. para ello
-      realizamos las coordinaciones interprofesionales como:
+      En nuestro staff de <strong>Médicos Especialistas</strong> contamos con profesionales de gran prestigio en el área de la salud, enfocados en la valoración exhaustiva, diagnóstico veraz y oportuno para el tratamiento adecuado de su paciente.
     </p>
-    <ul
-      role="list"
-      class="list-disc marker:text-accent-blue text-lg self-start pl-[40px]"
-    >
-      <li><b>GERIATRA.</b></li>
-
-      <li><b>CARDIÓLOGO</b></li>
-
-      <li><b>NEURÓLOGO</b></li>
-
-      <li><b>NEUMÓLOGO</b></li>
-    </ul>
+    <p class="text-lg">
+      Realizamos coordinaciones interprofesionales con especialistas altamente calificados que brindan atención médica integral en la comodidad de su hogar, evitando desplazamientos innecesarios y garantizando la continuidad del cuidado.
+    </p>
     <div class="self-start">
       <ButtonLink />
     </div>
   </InfoSection>
+
+  <!-- Especialidades Médicas -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+        Nuestras Especialidades Médicas
+      </h2>
+      <p class="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-12">
+        Contamos con un equipo multidisciplinario de médicos especialistas que brindan atención integral y personalizada
+      </p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">👴</div>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Geriatría</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Especialistas en el cuidado de adultos mayores, manejo de enfermedades crónicas, evaluación funcional y calidad de vida. Enfoque integral en gerontología y medicina preventiva.
+          </p>
+          <ul class="mt-4 text-sm text-gray-600 space-y-1">
+            <li>• Evaluación geriátrica integral</li>
+            <li>• Manejo de polimedicación</li>
+            <li>• Prevención de caídas</li>
+            <li>• Cuidados paliativos</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">❤️</div>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Cardiología</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Especialistas en enfermedades del corazón y sistema cardiovascular. Diagnóstico, tratamiento y seguimiento de patologías cardíacas con equipos de monitoreo portátiles.
+          </p>
+          <ul class="mt-4 text-sm text-gray-600 space-y-1">
+            <li>• Electrocardiogramas</li>
+            <li>• Monitoreo cardíaco</li>
+            <li>• Control de hipertensión</li>
+            <li>• Seguimiento post-infarto</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">🧠</div>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Neurología</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Especialistas en enfermedades del sistema nervioso, cerebro y médula espinal. Diagnóstico y tratamiento de trastornos neurológicos con evaluación clínica especializada.
+          </p>
+          <ul class="mt-4 text-sm text-gray-600 space-y-1">
+            <li>• Evaluación neurológica</li>
+            <li>• Trastornos del movimiento</li>
+            <li>• Demencias y memoria</li>
+            <li>• Dolor neuropático</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">🫁</div>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Neumología</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Especialistas en enfermedades respiratorias y del sistema pulmonar. Diagnóstico, tratamiento y rehabilitación respiratoria con equipos portátiles de última generación.
+          </p>
+          <ul class="mt-4 text-sm text-gray-600 space-y-1">
+            <li>• Espirometría portátil</li>
+            <li>• Oxigenoterapia</li>
+            <li>• Rehabilitación pulmonar</li>
+            <li>• Control de asma/EPOC</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">🏥</div>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Medicina Interna</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Especialistas en medicina general para adultos, manejo integral de pacientes con múltiples patologías y coordinación de tratamientos complejos.
+          </p>
+          <ul class="mt-4 text-sm text-gray-600 space-y-1">
+            <li>• Medicina general</li>
+            <li>• Control de diabetes</li>
+            <li>• Hipertensión arterial</li>
+            <li>• Coordinación de tratamientos</li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+          <div class="text-4xl mb-4">🔬</div>
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Oncología</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Especialistas en el diagnóstico y tratamiento del cáncer. Seguimiento oncológico, control de síntomas y cuidados paliativos en el hogar.
+          </p>
+          <ul class="mt-4 text-sm text-gray-600 space-y-1">
+            <li>• Seguimiento oncológico</li>
+            <li>• Control de síntomas</li>
+            <li>• Cuidados paliativos</li>
+            <li>• Apoyo familiar</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Procedimientos Médicos -->
   <section class="container mx-auto py-[80px]">
-    <h2
-      class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]"
-    >
-      La Valoración por Médicos
+    <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+      Procedimientos Médicos a Domicilio
     </h2>
-    <p class="text-primary-blue text-xl font-light">
-      La valoración por médicos especialistas en casa es específico para
-      examinar a los pacientes, realizar contacto estrecho con la familia y
-      sobre todo con el cuidador principal, basado en la orientación del
-      tratamiento y cuidados especiales que se debe seguir, esto permite
-      prevenir complicaciones, tratar enfermedades, a través de esta se
-      proporciona, tratamiento adecuado al paciente, mejoría importante en la
-      tranquilidad de la familia y reduce la posibilidad de hospitalización.
+    <p class="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-12">
+      Nuestros médicos especialistas pueden realizar diversos procedimientos médicos en la comodidad de su hogar
     </p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-bg-light p-6 rounded-xl">
+        <div class="text-3xl mb-4">💉</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Inyecciones y Medicamentos</h3>
+        <p class="text-gray-600">
+          Administración de medicamentos por vía intramuscular, subcutánea o endovenosa según prescripción médica.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-6 rounded-xl">
+        <div class="text-3xl mb-4">🩺</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Exámenes Físicos</h3>
+        <p class="text-gray-600">
+          Evaluación física completa, auscultación cardíaca y pulmonar, palpación abdominal y examen neurológico.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-6 rounded-xl">
+        <div class="text-3xl mb-4">📊</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Monitoreo de Signos Vitales</h3>
+        <p class="text-gray-600">
+          Control de presión arterial, frecuencia cardíaca, temperatura, saturación de oxígeno y glucemia.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-6 rounded-xl">
+        <div class="text-3xl mb-4">🔍</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Evaluación Diagnóstica</h3>
+        <p class="text-gray-600">
+          Análisis de síntomas, interpretación de estudios previos y formulación de diagnósticos diferenciales.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-6 rounded-xl">
+        <div class="text-3xl mb-4">📋</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Prescripción de Medicamentos</h3>
+        <p class="text-gray-600">
+          Recetas médicas, ajustes de dosis y seguimiento de tratamientos farmacológicos.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-6 rounded-xl">
+        <div class="text-3xl mb-4">🏥</div>
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Coordinación de Cuidados</h3>
+        <p class="text-gray-600">
+          Comunicación con otros especialistas, coordinación de estudios y derivaciones cuando sea necesario.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipamiento Médico -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+        Equipamiento Médico Portátil
+      </h2>
+      <p class="text-xl text-gray-600 text-center max-w-4xl mx-auto mb-12">
+        Contamos con equipos médicos portátiles de última generación para realizar diagnósticos precisos en su hogar
+      </p>
+      
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 flex items-center gap-3">
+            <span class="text-3xl">💓</span>
+            Monitoreo Cardíaco
+          </h3>
+          <ul class="text-gray-600 space-y-3">
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Electrocardiógrafos portátiles de 12 derivaciones
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Monitores de presión arterial automáticos
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Oxímetros de pulso de alta precisión
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Estetoscopios electrónicos
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔬</span>
+            Diagnóstico y Laboratorio
+          </h3>
+          <ul class="text-gray-600 space-y-3">
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Glucometros de alta precisión
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Termómetros digitales profesionales
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Equipos de espirometría portátil
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="text-accent-blue">✓</span>
+              Kits de toma de muestras
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ventajas del Servicio -->
+  <section class="container mx-auto py-[80px]">
+    <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+      Ventajas del Servicio Médico a Domicilio
+    </h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-bg-light p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+          <span class="text-2xl">🏠</span>
+          Comodidad en Casa
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          No es necesario desplazarse a un centro médico. Reciba atención profesional en la comodidad de su hogar, especialmente importante para pacientes con movilidad reducida o que requieren aislamiento.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+          <span class="text-2xl">⏰</span>
+          Atención Inmediata
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Respuesta rápida ante emergencias médicas, atención preventiva programada y seguimiento continuo de tratamientos sin esperas ni colas.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+          <span class="text-2xl">👨‍👩‍👧‍👦</span>
+          Atención Familiar
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          El médico puede evaluar el entorno familiar, coordinar con cuidadores y brindar orientación integral a toda la familia sobre el cuidado del paciente.
+        </p>
+      </div>
+      
+      <div class="bg-bg-light p-8 rounded-xl">
+        <h3 class="text-2xl font-semibold text-primary-blue mb-4 flex items-center gap-3">
+          <span class="text-2xl">💰</span>
+          Ahorro de Costos
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          Evita costos de transporte, estacionamiento y tiempo perdido. El servicio a domicilio es más económico que múltiples visitas a consultorios.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valoración por Médicos -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+        La Valoración por Médicos Especialistas
+      </h2>
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white p-8 rounded-xl shadow-lg">
+          <p class="text-lg text-gray-600 leading-relaxed mb-6">
+            La valoración por médicos especialistas en casa es específica para examinar a los pacientes, realizar contacto estrecho con la familia y sobre todo con el cuidador principal, basado en la orientación del tratamiento y cuidados especiales que se debe seguir.
+          </p>
+          
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+              <h4 class="font-semibold text-primary-blue text-lg">Beneficios de la Valoración Domiciliaria:</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Prevención de complicaciones
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Tratamiento oportuno de enfermedades
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Mejoría en la tranquilidad familiar
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Reducción de hospitalizaciones
+                </li>
+              </ul>
+            </div>
+            
+            <div class="space-y-4">
+              <h4 class="font-semibold text-primary-blue text-lg">Aspectos de la Valoración:</h4>
+              <ul class="text-gray-600 space-y-2">
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Examen físico completo
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Revisión de medicamentos
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Evaluación del entorno
+                </li>
+                <li class="flex items-start gap-2">
+                  <span class="text-accent-blue text-sm mt-1">•</span>
+                  Plan de cuidados personalizado
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonios -->
+  <section class="container mx-auto py-[80px]">
+    <h2 class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]">
+      Testimonios de Pacientes
+    </h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white p-6 rounded-xl shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="text-2xl mr-3">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p class="text-gray-600 italic mb-4">
+          "El Dr. García nos atendió a mi madre de 85 años en casa. Su atención fue excepcional y nos dio mucha tranquilidad. Ahora tenemos control médico regular sin salir de casa."
+        </p>
+        <div class="font-semibold text-primary-blue">- María L., Hija de paciente</div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-xl shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="text-2xl mr-3">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p class="text-gray-600 italic mb-4">
+          "Como cardiólogo, el Dr. Rodríguez me ha ayudado a controlar mi hipertensión desde casa. Sus visitas regulares y el monitoreo constante han mejorado mi calidad de vida."
+        </p>
+        <div class="font-semibold text-primary-blue">- Carlos M., Paciente cardíaco</div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-xl shadow-lg">
+        <div class="flex items-center mb-4">
+          <div class="text-2xl mr-3">⭐⭐⭐⭐⭐</div>
+        </div>
+        <p class="text-gray-600 italic mb-4">
+          "La atención neurológica que recibió mi padre fue profesional y compasiva. El Dr. López no solo trató su enfermedad, sino que nos orientó a toda la familia."
+        </p>
+        <div class="font-semibold text-primary-blue">- Ana R., Hija de paciente</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary-blue py-16 text-white text-center">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">
+        ¿Necesita un Médico Especialista a Domicilio?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">
+        Nuestro equipo de médicos especialistas está listo para atenderle en la comodidad de su hogar con la máxima profesionalidad y cuidado.
+      </p>
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20médicos%20especialistas%20a%20domicilio"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-white text-primary-blue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📞</span>
+        Solicitar Consulta Médica
+      </a>
+    </div>
   </section>
 </BaseLayout>

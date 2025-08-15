@@ -1,0 +1,235 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import { Image } from 'astro:assets';
+import img from "../assets/images/empresas.jpg";
+import covidTestImg from "../assets/images/galery/images/pcr-molecular.jpg";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="Servicios médicos empresariales y pruebas COVID-19 para empresas"
+    title="Empresas"
+    subTitle="Servicios Corporativos de Salud"
+  />
+
+  <!-- Servicio Principal COVID-19 -->
+  <section class="container mx-auto py-[80px]">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Imagen del Servicio -->
+        <div class="relative">
+          <Image 
+            src={covidTestImg} 
+            alt="Test masivo de prueba COVID-19 para empresas" 
+            class="w-full h-96 object-cover"
+            loading="eager"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
+        </div>
+        
+        <!-- Contenido del Servicio -->
+        <div class="p-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+            Test Masivo de Prueba COVID-19
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+            Pruebas serológicas rápidas, pruebas antígenos y pruebas PCR molecular en la comodidad de su empresa 
+            con entregas de certificados a prontitud.
+          </p>
+          
+          <!-- Botón Call to Action -->
+          <a 
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20servicios%20COVID-19%20para%20empresas"
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>📞</span>
+            Ver Más
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Beneficios para Empresas -->
+  <section class="bg-bg-light py-[80px]">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">
+        ¿Por Qué Elegir Nuestros Servicios Empresariales?
+      </h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">🏢</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-4">Servicio In-Situ</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Nos desplazamos a su empresa para realizar las pruebas, minimizando la interrupción de la jornada laboral.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">⚡</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-4">Resultados Rápidos</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Pruebas antígenos con resultados en 15 minutos y PCR molecular en 24-48 horas.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">📋</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-4">Certificados Oficiales</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Documentación válida para viajes, trabajo y cumplimiento de protocolos empresariales.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">👥</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-4">Equipos Especializados</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Personal médico capacitado con equipos portátiles de última generación.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">🕒</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-4">Flexibilidad Horaria</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Adaptamos nuestros horarios a las necesidades de su empresa y turnos de trabajo.
+          </p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div class="text-5xl mb-4">💰</div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-4">Precios Corporativos</h3>
+          <p class="text-gray-600 leading-relaxed">
+            Tarifas especiales para empresas con descuentos por volumen de pruebas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tipos de Pruebas -->
+  <section class="container mx-auto py-[80px]">
+    <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">
+      Tipos de Pruebas Disponibles
+    </h2>
+    
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gradient-to-br from-blue-50 to-accent-blue/10 p-8 rounded-xl border border-accent-blue/20">
+        <div class="text-4xl mb-4">🔬</div>
+        <h3 class="text-2xl font-bold text-primary-blue mb-4">Pruebas Serológicas</h3>
+        <p class="text-gray-600 mb-4">
+          Detectan anticuerpos IgG e IgM para evaluar exposición previa al virus.
+        </p>
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li>• Resultados en 15-20 minutos</li>
+          <li>• Muestra de sangre capilar</li>
+          <li>• Ideal para estudios de seroprevalencia</li>
+        </ul>
+      </div>
+      
+      <div class="bg-gradient-to-br from-green-50 to-green-400/10 p-8 rounded-xl border border-green-400/20">
+        <div class="text-4xl mb-4">🧪</div>
+        <h3 class="text-2xl font-bold text-primary-blue mb-4">Pruebas de Antígenos</h3>
+        <p class="text-gray-600 mb-4">
+          Detectan proteínas virales activas, indicando infección actual.
+        </p>
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li>• Resultados en 15 minutos</li>
+          <li>• Muestra nasofaríngea</li>
+          <li>• Alta sensibilidad y especificidad</li>
+        </ul>
+      </div>
+      
+      <div class="bg-gradient-to-br from-purple-50 to-purple-400/10 p-8 rounded-xl border border-purple-400/20">
+        <div class="text-4xl mb-4">🧬</div>
+        <h3 class="text-2xl font-bold text-primary-blue mb-4">PCR Molecular</h3>
+        <p class="text-gray-600 mb-4">
+          Estándar de oro para detección del material genético del virus.
+        </p>
+        <ul class="text-sm text-gray-600 space-y-2">
+          <li>• Resultados en 24-48 horas</li>
+          <li>• Muestra nasofaríngea</li>
+          <li>• Máxima precisión diagnóstica</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Proceso de Implementación -->
+  <section class="bg-primary-blue py-16 text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center mb-12">
+        Proceso de Implementación
+      </h2>
+      
+      <div class="grid md:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="text-5xl mb-4">📞</div>
+          <h3 class="text-xl font-semibold mb-3">1. Contacto</h3>
+          <p class="text-blue-100 text-sm">
+            Evaluamos sus necesidades y programamos la visita.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-5xl mb-4">📅</div>
+          <h3 class="text-xl font-semibold mb-3">2. Programación</h3>
+          <p class="text-blue-100 text-sm">
+            Coordinamos fecha, hora y logística de la prueba masiva.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-5xl mb-4">🏥</div>
+          <h3 class="text-xl font-semibold mb-3">3. Ejecución</h3>
+          <p class="text-blue-100 text-sm">
+            Nuestro equipo realiza las pruebas en su empresa.
+          </p>
+        </div>
+        
+        <div class="text-center">
+          <div class="text-5xl mb-4">📋</div>
+          <h3 class="text-xl font-semibold mb-3">4. Resultados</h3>
+          <p class="text-blue-100 text-sm">
+            Entregamos resultados y certificados oficiales.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Final -->
+  <section class="container mx-auto py-[80px] text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+      ¿Listo para Proteger a su Equipo?
+    </h2>
+    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      Contáctenos hoy mismo para programar su programa de pruebas COVID-19 empresarial 
+      y mantener un entorno de trabajo seguro y saludable.
+    </p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20servicios%20COVID-19%20para%20empresas"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📞</span>
+        Solicitar Cotización
+      </a>
+      
+      <a 
+        href="tel:+51961853894"
+        class="inline-flex items-center gap-3 bg-white border-2 border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>📱</span>
+        Llamar Ahora
+      </a>
+    </div>
+  </section>
+</BaseLayout>

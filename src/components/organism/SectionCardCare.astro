@@ -1,12 +1,27 @@
 ---
-import CardSimple from "../molecule/CardSimple.astro";
 import { CARDS_BENEFICTS } from "../../consts";
 ---
 
-<section class="container mx-auto grid grid-cols-2 gap-[60px] py-[80px]">
-  {
-    CARDS_BENEFICTS.map((card) => {
-      return <CardSimple title={card.title} description={card.description} />;
-    })
-  }
+<section class="container mx-auto py-[80px]">
+  <h2
+    class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]"
+  >
+    Nuestros Servicios de Cuidado
+  </h2>
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {
+      CARDS_BENEFICTS.map((card) => {
+        return (
+          <div class="bg-bg-light p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <h3 class="text-2xl font-semibold text-primary-blue mb-4">
+              {card.title}
+            </h3>
+            <p class="text-text-medium leading-relaxed">
+              {card.description}
+            </p>
+          </div>
+        );
+      })
+    }
+  </div>
 </section>

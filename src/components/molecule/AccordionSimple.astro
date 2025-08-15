@@ -1,10 +1,130 @@
 ---
-const { title } = Astro.props;
+const { title, icon = "🩺", category = "general" } = Astro.props;
 ---
 
-<details class="py-8 px-16 bg-white shadow-lg shadow-primary-blue/10 rounded-3xl text-primary-blue">
-  <summary class="cursor-pointer text-xl font-semibold">
-    {title}
-  </summary>
-  <slot class="text-lg font-light"/>
-</details>
+<div class="accordion-item bg-white shadow-lg shadow-primary-blue/10 rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+  <button 
+    class="accordion-trigger w-full px-6 py-5 text-left bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 text-primary-blue hover:from-blue-100 hover:via-blue-200 hover:to-blue-100 transition-all duration-300 flex items-center justify-between group border-b border-blue-200"
+    aria-expanded="false"
+    aria-controls={`accordion-${title.replace(/\s+/g, '-').toLowerCase()}`}
+  >
+    <div class="flex items-center gap-4">
+      <span class="text-2xl">{icon}</span>
+      <h3 class="text-xl font-semibold group-hover:text-primary-blue transition-colors duration-300">
+        {title}
+      </h3>
+    </div>
+    <svg 
+      class="accordion-icon w-6 h-6 transform transition-transform duration-300 group-hover:scale-110 text-primary-blue" 
+      fill="none" 
+      stroke="currentColor" 
+      viewBox="0 0 24 24"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+  
+  <div 
+    class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out"
+    id={`accordion-${title.replace(/\s+/g, '-').toLowerCase()}`}
+  >
+    <div class="px-6 py-5 bg-gray-50 border-t border-blue-100">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  // Funcionalidad del acordeón
+  function initAccordion() {
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    
+    accordionItems.forEach(item => {
+      const trigger = item.querySelector('.accordion-trigger') as HTMLButtonElement;
+      const content = item.querySelector('.accordion-content') as HTMLElement;
+      const icon = item.querySelector('.accordion-icon') as HTMLElement;
+      
+      if (trigger && content && icon) {
+        // Limpiar event listeners anteriores
+        const newTrigger = trigger.cloneNode(true);
+        if (trigger.parentNode) {
+          trigger.parentNode.replaceChild(newTrigger, trigger);
+        }
+        
+        // Obtener referencia fresca
+        const freshTrigger = item.querySelector('.accordion-trigger') as HTMLButtonElement;
+        const freshContent = item.querySelector('.accordion-content') as HTMLElement;
+        const freshIcon = item.querySelector('.accordion-icon') as HTMLElement;
+        
+        if (freshTrigger && freshContent && freshIcon) {
+          freshTrigger.addEventListener('click', () => {
+            const isExpanded = freshTrigger.getAttribute('aria-expanded') === 'true';
+            
+            // Cerrar todos los otros acordeones
+            accordionItems.forEach(otherItem => {
+              if (otherItem !== item) {
+                const otherTrigger = otherItem.querySelector('.accordion-trigger') as HTMLButtonElement;
+                const otherContent = otherItem.querySelector('.accordion-content') as HTMLElement;
+                const otherIcon = otherItem.querySelector('.accordion-icon') as HTMLElement;
+                
+                if (otherTrigger && otherContent && otherIcon) {
+                  otherTrigger.setAttribute('aria-expanded', 'false');
+                  otherContent.style.maxHeight = '0px';
+                  otherIcon.style.transform = 'rotate(0deg)';
+                }
+              }
+            });
+            
+            // Toggle del acordeón actual
+            if (isExpanded) {
+              freshTrigger.setAttribute('aria-expanded', 'false');
+              freshContent.style.maxHeight = '0px';
+              freshIcon.style.transform = 'rotate(0deg)';
+            } else {
+              freshTrigger.setAttribute('aria-expanded', 'true');
+              freshContent.style.maxHeight = freshContent.scrollHeight + 'px';
+              freshIcon.style.transform = 'rotate(180deg)';
+            }
+          });
+        }
+      }
+    });
+  }
+
+  // Inicializar cuando la página carga
+  document.addEventListener('DOMContentLoaded', initAccordion);
+
+  // Para navegación SPA de Astro
+  document.addEventListener('astro:page-load', initAccordion);
+
+  // Cleanup cuando se desmonta
+  document.addEventListener('astro:before-preparation', () => {
+    // Resetear todos los acordeones
+    document.querySelectorAll('.accordion-item').forEach(item => {
+      const trigger = item.querySelector('.accordion-trigger') as HTMLButtonElement;
+      const content = item.querySelector('.accordion-content') as HTMLElement;
+      const icon = item.querySelector('.accordion-icon') as HTMLElement;
+      
+      if (trigger && content && icon) {
+        trigger.setAttribute('aria-expanded', 'false');
+        content.style.maxHeight = '0px';
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+</script>
+
+<style>
+  .accordion-content {
+    max-height: 0;
+  }
+  
+  .accordion-trigger:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  .accordion-trigger:hover {
+    transform: translateY(-2px);
+  }
+</style>

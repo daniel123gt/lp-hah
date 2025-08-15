@@ -4,31 +4,47 @@ import CardTestimony from "../molecule/CardTestimony.astro";
 import { TESTIMONY } from "../../consts";
 ---
 
-<section
-  class="bg-bg-light pb-24"
->
-  <div class="container mx-auto flex flex-col items-center justify-center ">
-    <div class="flex flex-col items-center justify-center py-12">
-      <h2 class="text-4xl font-semibold text-primary-blue">
-        Testimonios
+<section class="bg-bg-light py-24">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-col items-center justify-center text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-primary-blue mb-6">
+        Testimonios de Nuestros Pacientes
       </h2>
+      <p class="text-xl text-text-medium max-w-3xl mb-8">
+        Escuche directamente de las familias que han confiado en nuestros servicios 
+        de atención médica a domicilio
+      </p>
       <Separator />
     </div>
-    <ul class="grid gap-8 grid-cols-3">
-        {
-        TESTIMONY.map((testimony) => {
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {
+        TESTIMONY.map((testimony, index) => {
           return (
-            <li class="h-full">
+            <div class="h-full">
               <CardTestimony
                 name={testimony.name}
                 rol={testimony.rol}
                 audio={testimony.audio}
                 avatar={testimony.avatar}
+                loading={index === 0 ? "eager" : "lazy"}
               />
-            </li>
+            </div>
           );
         })
       }
-    </ul>
+    </div>
+    
+    <!-- Call to Action Testimonios -->
+    <div class="text-center mt-16">
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20conocer%20más%20testimonios%20de%20sus%20servicios"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-primary-blue hover:bg-accent-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>💬</span>
+        Contar Su Experiencia
+      </a>
+    </div>
   </div>
 </section>

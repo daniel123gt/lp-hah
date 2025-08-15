@@ -47,11 +47,11 @@ export const NAV_LINKS = [
       },
       {
         label: "Pruebas Covid 19",
-        href: "",
+        href: "/pruebas-covid-19",
       },
       {
         label: "Radiografías (RX) y Ecografías a Domicilio",
-        href: "",
+        href: "/radiografias-y-ecografias",
       },
     ],
   },
@@ -61,19 +61,19 @@ export const NAV_LINKS = [
   },
   {
     label: "Galería",
-    href: "",
+    href: "/galeria",
   },
   {
     label: "Blog",
-    href: "",
+    href: "/blog",
   },
   {
     label: "Empresas",
-    href: "",
+    href: "/empresas",
   },
   {
     label: "Nosotros",
-    href: "",
+    href: "/nosotros",
   },
 ];
 
@@ -208,27 +208,27 @@ export const TESTIMONY = [
 
 export const CARDS_BENEFICTS = [
   {
-    title: "CUIDADORES/AS Y ENFERMERAS POR HORAS.",
+    title: "🕐 CUIDADORES/AS Y ENFERMERAS POR HORAS",
     description:
       "Horario adaptado a necesidad del caso y familia. profesionales titulados y experiencia constatada.",
   },
   {
-    title: "CUIDADORES/AS Y ENFERMERAS EN FINES DE SEMANA.",
+    title: "📅 CUIDADORES/AS Y ENFERMERAS EN FINES DE SEMANA",
     description:
       "Diseñado para personas/pacientes dependientes y necesidad de servicios los fines de semana.",
   },
   {
-    title: "CUIDADORES/AS Y ENFERMERAS 24 HORAS.",
+    title: "🌙 CUIDADORES/AS Y ENFERMERAS 24 HORAS",
     description:
       "Servicio continuo día y noche Los 365 días del año. profesionales titulados y experiencia constatada.",
   },
   {
-    title: "CUIDADORES/AS Y ENFERMERAS 12 HORAS. (DIA Y/O NOCHE)",
+    title: "⏰ CUIDADORES/AS Y ENFERMERAS 12 HORAS (DIA Y/O NOCHE)",
     description:
       "Establecido con un diseño de cuidados adaptados a la necesidad  de persona/paciente. profesionales titulados y experiencia constatada.",
   },
   {
-    title: "TRASLADOS DE PACIENTES 24 HORAS/365 DIAS AL AÑO",
+    title: "🚑 TRASLADOS DE PACIENTES 24 HORAS/365 DIAS AL AÑO",
     description:
       "Diseñado para el paciente que requiere traslado bajo supervisión y cuidados de nuestros profesionales de la salud. Clínica u hospital – casa. casa-casa. Ciudad- Ciudad. Pais-Pais..",
   },
@@ -239,65 +239,91 @@ export const ACCORDION_PROCEDURE = [
     title: "Administración de tratamientos endovenosos",
     description:
       "Amplia experiencia en Canalización de vía endovenosa a pacientes Geriátricos y oncológicos. para cualquier tratamiento endovenoso se requiere orden Médica.",
+    icon: "💉",
+    category: "tratamiento"
   },
   {
-    title: "Medición signos vitales:",
+    title: "Medición signos vitales",
     description:
       "Servicio disponible a cualquier hora, Medición de: Presión arterial, pulso o frecuencia cardiaca, Saturación de oxígeno, temperatura, frecuencia respiratoria y medición de glucemia o azúcar en sangre.",
+    icon: "❤️",
+    category: "monitoreo"
   },
   {
     title: "Colocación de sondas",
     description:
       "Realizamos cambios y colocación de sonda NSG y  foley a domicilio. En todos los casos se solicitará la orden médica y calibre o medida de la sonda.",
+    icon: "🔌",
+    category: "procedimiento"
   },
   {
-    title: "Colocación de enema- evacuol.",
+    title: "Colocación de enema- evacuol",
     description:
       "Según sea el caso, colocamos enema evacuante, realizamos tacto rectal y extracción de fecalomas (masas de heces acumuladas en el conducto intestinal y rectal), a pacientes postrados y no postrados.",
+    icon: "🚽",
+    category: "procedimiento"
   },
   {
     title: "Canalización de vía subcutánea- catéter íntima",
     description:
       "Somos expertos en Administración de medicamentos subcutáneos y colocación de Catéter ÍNTIMA.",
+    icon: "🩸",
+    category: "tratamiento"
   },
   {
     title: "Retiro de puntos",
     description:
       "Procedimiento especial, realizado por profesionales calificados, bajo métodos de asepsia y antisepsia se retiran puntos y grapas quirúrgicas dentro de los días indicados para su retiro.",
+    icon: "✂️",
+    category: "postoperatorio"
   },
   {
     title: "Inyectables intramuscular/ intradérmica",
     description:
       "Aplicamos inyectables con técnicas y jeringas correctas que ayudan a la  disminución del dolor a la hora de la punción y en muchas ocasiones sin dolor.",
+    icon: "💊",
+    category: "tratamiento"
   },
   {
-    title: "Higiene y confort ",
+    title: "Higiene y confort",
     description:
       "De acuerdo al estado del paciente, previa valoración de enfermería se realiza baño/higiene completo del paciente, utilizando las  técnicas adecuadas para prevención de lesión y riesgo de caída, incluye cambio de cama.",
+    icon: "🛁",
+    category: "cuidado"
   },
   {
     title: "Curación avanzada",
     description:
       "Tenemos amplia experiencia en curaciones de heridas simples y complicadas (lesiones por presión, quemaduras, pie diabético, úlceras venosas o arteriales, heridas quirúrgicas, entre otras). ",
+    icon: "🩹",
+    category: "cuidado"
   },
   {
     title: "Cambio bolsa colostomía",
     description:
       "Existen diferentes tipos de bolsas, de ser necesario, le ayudamos a seleccionar la bolsa adecuada para su ostomía, realizamos el cambio guardando la integridad de su piel con nuestros productos especiales y brindamos información requerida.",
+    icon: "🩺",
+    category: "cuidado"
   },
   {
-    title: "Transfusión sanguínea:",
+    title: "Transfusión sanguínea",
     description:
       "Hemoterapia que consiste en Transfusión de sangre, Transfusión de concentrados de glóbulos rojos, Transfusión de plasma fresco, Procedimiento especial que se realiza  bajo órdenes médicas, verificación rigurosa de datos del paciente, origen y datos del hemoderivado.",
+    icon: "🩸",
+    category: "tratamiento"
   },
   {
     title: "Aspiración de secreciones",
     description:
       "Previa valoración de enfermería y de acuerdo al estado clínico del paciente y necesidad de aspiración de secreciones. Aplicamos las técnicas adecuadas: Aspiración abierta (OSS) y Aspiración cerrada (CSS).",
+    icon: "🌬️",
+    category: "procedimiento"
   },
   {
     title: "Apertura de catéter port",
     description:
       "Bajo técnicas correctas, previa asepsia y antisepsia realizamos apertura, cuidados y mantenimiento del catéter PORT- A- CATH. brindamos la información necesaria.",
+    icon: "🔑",
+    category: "procedimiento"
   },
 ];
