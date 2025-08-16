@@ -25,17 +25,17 @@ export const NAV_LINKS = [
     children: [
       {
         label: "Cuidadoras Internas",
-        href: "/cuidadoras-internas",
+        href: "/lp-hah/cuidadoras-internas",
       },
       {
         label: "Cuidadoras Externas",
-        href: "/cuidadoras-internas",
+        href: "/lp-hah/cuidadoras-internas",
       },
     ],
   },
   {
     label: "Procedimientos",
-    href: "/procedimientos",
+    href: "/lp-hah/procedimientos",
   },
   {
     label: "Servicios",
@@ -43,37 +43,37 @@ export const NAV_LINKS = [
     children: [
       {
         label: "Médicos a Domicilio",
-        href: "/medicos-a-domicilio",
+        href: "/lp-hah/medicos-a-domicilio",
       },
       {
         label: "Pruebas Covid 19",
-        href: "/pruebas-covid-19",
+        href: "/lp-hah/pruebas-covid-19",
       },
       {
         label: "Radiografías (RX) y Ecografías a Domicilio",
-        href: "/radiografias-y-ecografias",
+        href: "/lp-hah/radiografias-y-ecografias",
       },
     ],
   },
   {
     label: "Equipamiento Médico",
-    href: "",
+    href: "/lp-hah/equipos-medicos",
   },
   {
     label: "Galería",
-    href: "/galeria",
+    href: "/lp-hah/galeria",
   },
   {
     label: "Blog",
-    href: "/blog",
+    href: "/lp-hah/blog",
   },
   {
     label: "Empresas",
-    href: "/empresas",
+    href: "/lp-hah/empresas",
   },
   {
     label: "Nosotros",
-    href: "/nosotros",
+    href: "/lp-hah/nosotros",
   },
 ];
 
@@ -86,7 +86,7 @@ export const SERVICES = [
     title: "Médico en Casa",
     description:
       "Servicio de médicos a domicilio, contamos con diferentes especialidades: GERIATRIA – CARDIOLOGIA – INTERNISTA – ONCOLOGIA – GASTROENTEROLOGIA – NEUMOLOGIA entre otras especialidades",
-    href: "/",
+    href: "/lp-hah/medicos-a-domicilio",
   },
   {
     img: {
@@ -96,7 +96,7 @@ export const SERVICES = [
     title: "Cuidados en Casa\n Enfermeras técnicas a domicilio",
     description:
       "Servicio de médicos a domicilio, contamos con diferentes especialidades: GERIATRIA – CARDIOLOGIA – INTERNISTA – ONCOLOGIA – GASTROENTEROLOGIA – NEUMOLOGIA entre otras especialidades",
-    href: "/",
+    href: "/lp-hah/cuidadoras-internas",
   },
   {
     img: {
@@ -106,7 +106,7 @@ export const SERVICES = [
     title: "Enfermeras a domicilio\n Atención especializada",
     description:
       "Atención de enfermería diseñada para pacientes con diferentes patologías que requieren cuidados especializados:  monitoreo continuo, procedimientos de enfermería invasivos, cuidados paliativos, cuidados post operatorios entre otros.",
-    href: "/",
+    href: "/lp-hah/cuidadoras-internas",
   },
   {
     img: {
@@ -116,7 +116,7 @@ export const SERVICES = [
     title: "Procedimientos\n Enfermeras licenciadas a domicilio",
     description:
       "Inyectables, tratamientos por vía endovenosa, toma de muestras para laboratorios, colocación de sondas, catéter, curas de escaras, hidratación, sueros endovenosos.",
-    href: "/",
+    href: "/lp-hah/procedimientos",
   },
   {
     img: {
@@ -126,7 +126,7 @@ export const SERVICES = [
     title: "Laboratorios clínicos",
     description:
       "Tenemos a su disposición más de 4 mil análisis de laboratorios que puede realizar desde casa con nuestro personal altamente entrenado y calificado.",
-    href: "/",
+    href: "/lp-hah/cuidadoras-internas",
   },
   {
     img: {
@@ -136,7 +136,7 @@ export const SERVICES = [
     title: "Radiografía y Ecografía",
     description:
       "Contamos con los mejores equipos y un sistema avanzado deDoppler. Las mejores imágenes con calidad uniforme para un mejor diagnóstico.",
-    href: "/",
+    href: "/lp-hah/radiografias-y-ecografias",
   },
   {
     img: {
@@ -146,7 +146,7 @@ export const SERVICES = [
     title: "Clínica en casa\n Equipos médicos",
     description:
       "Servicio de equipamiento en casa, camas clínicas, monitores, accesorios para pacientes encamados o postrados, materiales médicos entre otros.",
-    href: "/",
+    href: "/lp-hah/equipos-medicos",
   },
   {
     img: {
@@ -156,7 +156,7 @@ export const SERVICES = [
     title: "Oxígeno Medicinal",
     description:
       "Servicio de  recarga de balones de oxígeno, instalación y suministro de accesorios,  las 24 horas del día con atención oportuna en el menor tiempo posible.",
-    href: "/",
+    href: "/lp-hah/cuidadoras-internas",
   },
   {
     img: {
@@ -166,7 +166,7 @@ export const SERVICES = [
     title: "Cóctel vitamínicos\n Administración de vitaminas",
     description:
       "Por Vena, Vitamina C, Vitamina B12, Acido Folico, Glutathione, Sueros Vitaminados Diseñados Para Pacientes Que Desean Recibir Atencion En Casa.",
-    href: "/",
+    href: "/lp-hah/cuidadoras-internas",
   },
 ];
 
@@ -189,19 +189,19 @@ export const TESTIMONY = [
   {
     name: "Rosa Quintana",
     rol: "Hija del paciente",
-    audio: "/audio/testimony3.mp3",
+    audio: "/lp-hah/audio/testimony3.mp3",
     avatar: "RS",
   },
   {
     name: "Olga María Ramos Salazar",
     rol: "Hija del paciente",
-    audio: "/audio/testimony2.mp3",
+    audio: "/lp-hah/audio/testimony2.mp3",
     avatar: "OS",
   },
   {
     name: "Johnny Barrón",
     rol: "Hijo del paciente",
-    audio: "/audio/testimony1.mp3",
+    audio: "/lp-hah/audio/testimony1.mp3",
     avatar: "JB",
   },
 ];
@@ -288,7 +288,7 @@ export const ACCORDION_PROCEDURE = [
     title: "Higiene y confort",
     description:
       "De acuerdo al estado del paciente, previa valoración de enfermería se realiza baño/higiene completo del paciente, utilizando las  técnicas adecuadas para prevención de lesión y riesgo de caída, incluye cambio de cama.",
-    icon: "🛁",
+    icon: "🩺",
     category: "cuidado"
   },
   {
