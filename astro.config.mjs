@@ -3,6 +3,8 @@ import tailwindcss from "@tailwindcss/vite";
 import preact from '@astrojs/preact';
 
 export default defineConfig({
+  site: 'https://daniel123gt.github.io',
+  base: '/lp-hah',
   vite: {
     plugins: [tailwindcss()],
     build: {
