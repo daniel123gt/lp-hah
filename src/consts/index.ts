@@ -17,7 +17,7 @@ import galery3Img from "../assets/images/galery/galery3.webp";
 export const NAV_LINKS = [
   {
     label: "Inicio",
-    href: "/",
+    href: "/lp-hah/",
   },
   {
     label: "Opciones de Cuidado",
