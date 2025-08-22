@@ -6,10 +6,10 @@
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
       <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
-        Números que Hablan por Sí Solos
+        Estadísticas informativas
       </h2>
       <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-        Más de una década brindando atención médica de calidad a domicilio
+        Más de una década brindando atención médica de calidad a domicilio.
       </p>
     </div>
     
@@ -17,7 +17,7 @@
       <!-- Pacientes Atendidos -->
       <div class="text-center text-white">
         <div class="text-4xl md:text-5xl font-bold mb-2 text-accent-blue">
-          <span class="counter" data-target="5000">0</span>+
+          <span class="counter" data-target="4000">0</span>+
         </div>
         <p class="text-lg text-blue-100">Pacientes Atendidos</p>
       </div>
@@ -25,7 +25,7 @@
       <!-- Años de Experiencia -->
       <div class="text-center text-white">
         <div class="text-4xl md:text-5xl font-bold mb-2 text-accent-blue">
-          <span class="counter" data-target="12">0</span>+
+          <span class="counter" data-target="2">0</span>+
         </div>
         <p class="text-lg text-blue-100">Años de Experiencia</p>
       </div>
@@ -33,7 +33,7 @@
       <!-- Personal Calificado -->
       <div class="text-center text-white">
         <div class="text-4xl md:text-5xl font-bold mb-2 text-accent-blue">
-          <span class="counter" data-target="50">0</span>+
+          <span class="counter" data-target="40">0</span>+
         </div>
         <p class="text-lg text-blue-100">Profesionales Calificados</p>
       </div>
@@ -62,15 +62,27 @@
 </section>
 
 <script>
-  // Animación de contadores
-  document.addEventListener('DOMContentLoaded', () => {
+  // Función para inicializar los contadores
+  function initCounters() {
     const counters = document.querySelectorAll('.counter');
     
+    // Limpiar contadores anteriores
+    counters.forEach(counter => {
+      if (counter instanceof HTMLElement) {
+        counter.textContent = '0';
+        counter.classList.remove('animated');
+      }
+    });
+    
     const animateCounter = (counter: HTMLElement) => {
+      if (counter.classList.contains('animated')) return;
+      
       const target = parseInt(counter.getAttribute('data-target') || '0');
       const duration = 2000; // 2 segundos
       const step = target / (duration / 16); // 60fps
       let current = 0;
+      
+      counter.classList.add('animated');
       
       const timer = setInterval(() => {
         current += step;
@@ -91,8 +103,44 @@
           observer.unobserve(counter);
         }
       });
+    }, {
+      threshold: 0.3,
+      rootMargin: '0px 0px -50px 0px'
     });
     
-    counters.forEach(counter => observer.observe(counter));
+    counters.forEach(counter => {
+      if (counter instanceof HTMLElement) {
+        observer.observe(counter);
+      }
+    });
+    
+    return observer;
+  }
+  
+  // Inicializar en la carga inicial
+  let observer: IntersectionObserver | null = null;
+  
+  document.addEventListener('DOMContentLoaded', () => {
+    observer = initCounters();
+  });
+  
+  // Reinicializar en cada navegación SPA
+  document.addEventListener('astro:page-load', () => {
+    // Limpiar observer anterior
+    if (observer) {
+      observer.disconnect();
+    }
+    // Pequeño delay para asegurar que el DOM esté listo
+    setTimeout(() => {
+      observer = initCounters();
+    }, 100);
+  });
+  
+  // Limpiar antes de la navegación
+  document.addEventListener('astro:before-preparation', () => {
+    if (observer) {
+      observer.disconnect();
+      observer = null;
+    }
   });
 </script>

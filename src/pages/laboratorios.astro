@@ -1,0 +1,167 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import img from "../assets/images/hero/hero3.webp";
+import imgInfo from "../assets/images/services/laboratorio.webp";
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="imagen del servicio de laboratorios clínicos"
+    title="Laboratorios Clínicos"
+    subTitle="Análisis a Domicilio"
+  />
+  
+  <InfoSection imgSrc={imgInfo} imgAlt="imagen de laboratorio clínico">
+    <p>
+      Los análisis de laboratorio son pruebas rutinarias que se realizan para detectar cambios en su salud, diagnosticar condiciones clínicas, planificar tratamientos y controlar enfermedades.
+    </p>
+    <p>
+      Tenemos a su disposición más de 4,000 análisis de laboratorios (bioquímica, inmunología, hematología, microbiología) que puede realizar desde casa con nuestro personal altamente entrenado y calificado. Contamos con un riguroso control de calidad y protección del paciente dentro de un servicio integral de laboratorio e investigación.
+    </p>
+    <p>
+      Nuestro personal está altamente entrenado y calificado para brindar resultados oportunos y precisos para el diagnóstico clínico.
+    </p>
+    
+    <div class="mt-8">
+      <h3 class="text-2xl font-semibold text-primary-blue mb-4">Tipos de Muestras que Recogemos:</h3>
+      <ul class="space-y-2 text-lg">
+        <li class="flex items-center gap-3">
+          <span class="text-accent-blue text-xl">🩸</span>
+          <span>Muestras de sangre</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-accent-blue text-xl">💩</span>
+          <span>Muestras de heces</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-accent-blue text-xl">💧</span>
+          <span>Muestras de orina</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-accent-blue text-xl">🔬</span>
+          <span>Biopsias</span>
+        </li>
+        <li class="flex items-center gap-3">
+          <span class="text-accent-blue text-xl">🧪</span>
+          <span>Cultivos de secreciones</span>
+        </li>
+      </ul>
+    </div>
+    
+    <div class="self-start mt-8">
+      <ButtonLink />
+    </div>
+  </InfoSection>
+
+  <!-- Sección de Preparativos -->
+  <section class="bg-bg-light py-24">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-semibold text-primary-blue mb-6">
+          Preparativos para Pruebas de Laboratorio
+        </h2>
+        <p class="text-xl text-gray-600 max-w-4xl mx-auto">
+          Para muchas pruebas de laboratorio, no se necesitan preparativos específicos más allá de responder preguntas. Sin embargo, para otras, es posible que se requieran preparativos específicos. Consulte con nuestro profesional para obtener información detallada sobre los preparativos necesarios para su análisis específico.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Preparativos Comunes -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6">
+            ¿Cuáles son los preparativos más comunes?
+          </h3>
+          <ul class="space-y-4 text-lg text-gray-700">
+            <li class="flex items-start gap-3">
+              <span class="text-accent-blue text-xl mt-1">🚫</span>
+              <span>Evitar alimentos y bebidas específicos como carnes cocidas, tés de hierbas o alcohol</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-blue text-xl mt-1">🍽️</span>
+              <span>No comer en forma excesiva el día antes de la prueba</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-blue text-xl mt-1">🚭</span>
+              <span>No fumar</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-blue text-xl mt-1">🏃‍♂️</span>
+              <span>Evitar actividades específicas, como el ejercicio vigoroso o tener relaciones sexuales (según sea el caso)</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-accent-blue text-xl mt-1">💊</span>
+              <span>Evitar ciertos medicamentos o suplementos. Converse con nosotros sobre los medicamentos que está tomando, incluyendo los de <strong class="text-red-600">venta sin receta</strong>, las vitaminas y los suplementos antes de realizar cualquier análisis.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Preparativos Especiales -->
+        <div class="bg-white p-8 rounded-2xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-6">
+            ¿Qué tipos de pruebas requieren preparativos especiales?
+          </h3>
+          <div class="space-y-4 text-lg text-gray-700">
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-primary-blue mb-2">Prueba de glucosa en la sangre</h4>
+              <p>Requiere ayuno de 8-12 horas antes de la prueba.</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-primary-blue mb-2">Prueba de niveles de colesterol</h4>
+              <p>Ayuno de 12-14 horas, evitar grasas 24 horas antes.</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-primary-blue mb-2">Prueba de triglicéridos</h4>
+              <p>Ayuno de 12-14 horas, dieta baja en grasas 3 días antes.</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-primary-blue mb-2">Prueba de creatinina</h4>
+              <p>Puede requerir ayuno o evitar carnes cocidas.</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-primary-blue mb-2">Prueba de cortisol</h4>
+              <p>Descanso previo, evitar comer, beber o cepillarse los dientes por tiempo determinado.</p>
+            </div>
+            <div class="p-4 bg-blue-50 rounded-lg">
+              <h4 class="font-semibold text-primary-blue mb-2">Prueba 5-HIAA</h4>
+              <p>Evitar aguacates, bananas, piñas, nueces y berenjenas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Información Adicional -->
+      <div class="text-center mt-16">
+        <h3 class="text-3xl font-semibold text-primary-blue mb-6">
+          ¿Debo saber algo más sobre los preparativos?
+        </h3>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Si tiene preguntas o inquietudes sobre los preparativos para su prueba de laboratorio, converse con nuestro profesional. Es importante asegurarse de que entienda todas las instrucciones antes del día de la prueba.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="bg-primary-blue py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl font-bold text-white mb-6">
+        ¿Necesita un análisis de laboratorio a domicilio?
+      </h2>
+      <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+        Nuestro personal calificado puede realizar más de 4,000 tipos de análisis en la comodidad de su hogar.
+      </p>
+      <a 
+        href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20información%20sobre%20análisis%20de%20laboratorio%20a%20domicilio"
+        target="_blank"
+        class="inline-flex items-center gap-3 bg-white hover:bg-blue-50 text-primary-blue px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+      >
+        <span>🧪</span>
+        Solicitar Información
+      </a>
+    </div>
+  </section>
+</BaseLayout>

@@ -69,17 +69,27 @@ import { ACCORDION_PROCEDURE } from "../../consts";
 </section>
 
 <script>
-  // Funcionalidad de filtros
-  document.addEventListener('DOMContentLoaded', () => {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const accordionWrappers = document.querySelectorAll('.accordion-wrapper');
+  // Función para inicializar los filtros
+  function initFilters() {
+    const filterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const accordionWrappers = document.querySelectorAll<HTMLDivElement>('.accordion-wrapper');
     
+    // Limpiar event listeners anteriores
     filterBtns.forEach(btn => {
+      const newBtn = btn.cloneNode(true) as HTMLButtonElement;
+      btn.parentNode?.replaceChild(newBtn, btn);
+    });
+    
+    // Obtener referencias frescas después del clonado
+    const freshFilterBtns = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+    const freshAccordionWrappers = document.querySelectorAll<HTMLDivElement>('.accordion-wrapper');
+    
+    freshFilterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const category = btn.getAttribute('data-category');
         
         // Actualizar botones activos
-        filterBtns.forEach(b => {
+        freshFilterBtns.forEach(b => {
           b.classList.remove('active', 'bg-primary-blue', 'text-white');
           b.classList.add('bg-gray-200', 'text-primary-blue');
         });
@@ -87,7 +97,7 @@ import { ACCORDION_PROCEDURE } from "../../consts";
         btn.classList.remove('bg-gray-200', 'text-primary-blue');
         
         // Filtrar acordeones
-        accordionWrappers.forEach(wrapper => {
+        freshAccordionWrappers.forEach(wrapper => {
           const wrapperCategory = wrapper.getAttribute('data-category');
           
           if (category === 'todos' || wrapperCategory === category) {
@@ -99,6 +109,24 @@ import { ACCORDION_PROCEDURE } from "../../consts";
         });
       });
     });
+  }
+  
+  // Inicializar en la carga inicial
+  document.addEventListener('DOMContentLoaded', () => {
+    initFilters();
+  });
+  
+  // Reinicializar en cada navegación SPA
+  document.addEventListener('astro:page-load', () => {
+    // Pequeño delay para asegurar que el DOM esté listo
+    setTimeout(() => {
+      initFilters();
+    }, 100);
+  });
+  
+  // Limpiar antes de la navegación
+  document.addEventListener('astro:before-preparation', () => {
+    // No es necesario limpiar nada aquí para este componente
   });
 </script>
 

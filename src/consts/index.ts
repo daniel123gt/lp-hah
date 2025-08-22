@@ -5,9 +5,9 @@ import enfermeraImg from "../assets/images/services/enfermera.webp";
 import procedimientosImg from "../assets/images/services/procedimientos.webp";
 import laboratorioImg from "../assets/images/services/laboratorio.webp";
 import radiografiaImg from "../assets/images/services/radiografia.webp";
-import equiposImg from "../assets/images/services/equipos.webp";
+import equiposImg from "../assets/images/services/equipom.jpg";
 import oxigenoImg from "../assets/images/services/oxigeno.webp";
-import vitaminasImg from "../assets/images/services/vitaminas.webp";
+import vitaminasImg from "../assets/images/services/vitaminas.jpeg";
 
 // Imports de galería
 import galery1Img from "../assets/images/galery/galery1.webp";
@@ -48,6 +48,10 @@ export const NAV_LINKS = [
       {
         label: "Pruebas Covid 19",
         href: "/lp-hah/pruebas-covid-19",
+      },
+      {
+        label: "Laboratorios Clínicos",
+        href: "/lp-hah/laboratorios",
       },
       {
         label: "Radiografías (RX) y Ecografías a Domicilio",
@@ -126,7 +130,7 @@ export const SERVICES = [
     title: "Laboratorios clínicos",
     description:
       "Tenemos a su disposición más de 4 mil análisis de laboratorios que puede realizar desde casa con nuestro personal altamente entrenado y calificado.",
-    href: "/lp-hah/cuidadoras-internas",
+    href: "/lp-hah/laboratorios",
   },
   {
     img: {
