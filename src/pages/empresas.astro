@@ -4,6 +4,8 @@ import HeroSubPage from "../components/organism/HeroSubPage.astro";
 import { Image } from 'astro:assets';
 import img from "../assets/images/empresas.jpg";
 import covidTestImg from "../assets/images/galery/images/pcr-molecular.jpg";
+import laboratorioImg from "../assets/images/services/laboratorio.webp";
+import enfermeraImg from "../assets/images/services/enfermera.webp";
 ---
 
 <BaseLayout>
@@ -41,11 +43,89 @@ import covidTestImg from "../assets/images/galery/images/pcr-molecular.jpg";
           
           <!-- Botón Call to Action -->
           <a 
-            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20servicios%20COVID-19%20para%20empresas"
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20servicios%20empresariales%20de%20salud"
             target="_blank"
             class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
           >
             <span>📞</span>
+            Ver Más
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicio de Laboratorio para Empresas -->
+  <section class="container mx-auto py-[80px]">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Imagen del Servicio -->
+        <div class="relative">
+          <Image 
+            src={laboratorioImg} 
+            alt="Exámenes de laboratorio para empresas" 
+            class="w-full h-96 object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
+        </div>
+        
+        <!-- Contenido del Servicio -->
+        <div class="p-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+            Exámenes de Laboratorio para Empresas
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+            Programas de salud ocupacional y exámenes pre-ocupacionales con más de 4,000 tipos de análisis 
+            disponibles. Realizamos toma de muestras en su empresa para mayor comodidad de sus empleados.
+          </p>
+          
+          <!-- Botón Call to Action -->
+          <a 
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20exámenes%20de%20laboratorio%20para%20empresas"
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>🧪</span>
+            Ver Más
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Servicio de Enfermeras Ocupacionales -->
+  <section class="container mx-auto py-[80px]">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+        <!-- Imagen del Servicio -->
+        <div class="relative">
+          <Image 
+            src={enfermeraImg} 
+            alt="Enfermeras ocupacionales para empresas" 
+            class="w-full h-96 object-cover"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
+        </div>
+        
+        <!-- Contenido del Servicio -->
+        <div class="p-8 text-center">
+          <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
+            Enfermeras Ocupacionales
+          </h2>
+          <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
+            Servicio de enfermería especializada en salud ocupacional, incluyendo evaluaciones médicas, 
+            primeros auxilios, control de signos vitales y seguimiento de la salud de sus empleados.
+          </p>
+          
+          <!-- Botón Call to Action -->
+          <a 
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20enfermeras%20ocupacionales%20para%20empresas"
+            target="_blank"
+            class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>👩‍⚕️</span>
             Ver Más
           </a>
         </div>
@@ -59,6 +139,9 @@ import covidTestImg from "../assets/images/galery/images/pcr-molecular.jpg";
       <h2 class="text-4xl font-bold text-primary-blue text-center mb-12">
         ¿Por Qué Elegir Nuestros Servicios Empresariales?
       </h2>
+      <p class="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
+        Ofrecemos una gama completa de servicios médicos empresariales para mantener la salud y seguridad de su equipo de trabajo.
+      </p>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
@@ -209,8 +292,8 @@ import covidTestImg from "../assets/images/galery/images/pcr-molecular.jpg";
       ¿Listo para Proteger a su Equipo?
     </h2>
     <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-      Contáctenos hoy mismo para programar su programa de pruebas COVID-19 empresarial 
-      y mantener un entorno de trabajo seguro y saludable.
+      Contáctenos hoy mismo para programar cualquiera de nuestros servicios empresariales 
+      y mantener un entorno de trabajo seguro y saludable para su equipo.
     </p>
     
     <div class="flex flex-col sm:flex-row gap-4 justify-center">
