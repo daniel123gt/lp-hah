@@ -50,7 +50,7 @@ export const NAV_LINKS = [
         href: "/lp-hah/pruebas-covid-19",
       },
       {
-        label: "Laboratorios Clínicos",
+        label: "Laboratorio a Domicilio",
         href: "/lp-hah/laboratorios",
       },
       {
@@ -127,7 +127,7 @@ export const SERVICES = [
       src: laboratorioImg,
       alt: "Imagen del servicio de laboratorio a domicilio",
     },
-    title: "Laboratorios clínicos",
+    title: "Laboratorio a Domicilio",
     description:
       "Tenemos a su disposición más de 4 mil análisis de laboratorios que puede realizar desde casa con nuestro personal altamente entrenado y calificado.",
     href: "/lp-hah/laboratorios",
