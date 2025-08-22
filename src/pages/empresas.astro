@@ -16,118 +16,110 @@ import enfermeraImg from "../assets/images/services/enfermera.webp";
     subTitle="Servicios Corporativos de Salud"
   />
 
-  <!-- Servicio Principal COVID-19 -->
+  <!-- Servicios Principales -->
   <section class="container mx-auto py-[80px]">
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Imagen del Servicio -->
-        <div class="relative">
-          <Image 
-            src={covidTestImg} 
-            alt="Test masivo de prueba COVID-19 para empresas" 
-            class="w-full h-96 object-cover"
-            loading="eager"
-          />
-          <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
-        </div>
-        
-        <!-- Contenido del Servicio -->
-        <div class="p-8 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
-            Test Masivo de Prueba COVID-19
-          </h2>
-          <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            Pruebas serológicas rápidas, pruebas antígenos y pruebas PCR molecular en la comodidad de su empresa 
-            con entregas de certificados a prontitud.
-          </p>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 servicios-principales-grid">
+        <!-- Servicio COVID-19 -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <!-- Imagen del Servicio -->
+          <div class="relative">
+            <Image 
+              src={covidTestImg} 
+              alt="Test masivo de prueba COVID-19 para empresas" 
+              class="w-full h-64 object-cover"
+              loading="eager"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
+          </div>
           
-          <!-- Botón Call to Action -->
-          <a 
-            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20servicios%20empresariales%20de%20salud"
-            target="_blank"
-            class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <span>📞</span>
-            Ver Más
-          </a>
+          <!-- Contenido del Servicio -->
+          <div class="p-6 text-center">
+            <h2 class="text-2xl font-bold text-primary-blue mb-4">
+              Test Masivo de Prueba COVID-19
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Pruebas serológicas rápidas, pruebas antígenos y pruebas PCR molecular en la comodidad de su empresa.
+            </p>
+            
+            <!-- Botón Call to Action -->
+            <a 
+              href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20servicios%20empresariales%20de%20salud"
+              target="_blank"
+              class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>📞</span>
+              Ver Más
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Servicio de Laboratorio para Empresas -->
-  <section class="container mx-auto py-[80px]">
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Imagen del Servicio -->
-        <div class="relative">
-          <Image 
-            src={laboratorioImg} 
-            alt="Exámenes de laboratorio para empresas" 
-            class="w-full h-96 object-cover"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
-        </div>
-        
-        <!-- Contenido del Servicio -->
-        <div class="p-8 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
-            Exámenes de Laboratorio para Empresas
-          </h2>
-          <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            Programas de salud ocupacional y exámenes pre-ocupacionales con más de 4,000 tipos de análisis 
-            disponibles. Realizamos toma de muestras en su empresa para mayor comodidad de sus empleados.
-          </p>
+        <!-- Servicio de Laboratorio -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <!-- Imagen del Servicio -->
+          <div class="relative">
+            <Image 
+              src={laboratorioImg} 
+              alt="Exámenes de laboratorio para empresas" 
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
+          </div>
           
-          <!-- Botón Call to Action -->
-          <a 
-            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20exámenes%20de%20laboratorio%20para%20empresas"
-            target="_blank"
-            class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <span>🧪</span>
-            Ver Más
-          </a>
+          <!-- Contenido del Servicio -->
+          <div class="p-6 text-center">
+            <h2 class="text-2xl font-bold text-primary-blue mb-4">
+              Exámenes de Laboratorio
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Más de 4,000 tipos de análisis para salud ocupacional y exámenes pre-ocupacionales.
+            </p>
+            
+            <!-- Botón Call to Action -->
+            <a 
+              href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20exámenes%20de%20laboratorio%20para%20empresas"
+              target="_blank"
+              class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>🧪</span>
+              Ver Más
+            </a>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Servicio de Enfermeras Ocupacionales -->
-  <section class="container mx-auto py-[80px]">
-    <div class="max-w-4xl mx-auto">
-      <div class="bg-white rounded-xl shadow-lg overflow-hidden">
-        <!-- Imagen del Servicio -->
-        <div class="relative">
-          <Image 
-            src={enfermeraImg} 
-            alt="Enfermeras ocupacionales para empresas" 
-            class="w-full h-96 object-cover"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
-        </div>
-        
-        <!-- Contenido del Servicio -->
-        <div class="p-8 text-center">
-          <h2 class="text-3xl md:text-4xl font-bold text-primary-blue mb-6">
-            Enfermeras Ocupacionales
-          </h2>
-          <p class="text-xl text-gray-600 leading-relaxed mb-8 max-w-3xl mx-auto">
-            Servicio de enfermería especializada en salud ocupacional, incluyendo evaluaciones médicas, 
-            primeros auxilios, control de signos vitales y seguimiento de la salud de sus empleados.
-          </p>
+        <!-- Servicio de Enfermeras -->
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+          <!-- Imagen del Servicio -->
+          <div class="relative">
+            <Image 
+              src={enfermeraImg} 
+              alt="Enfermeras ocupacionales para empresas" 
+              class="w-full h-64 object-cover"
+              loading="lazy"
+            />
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-blue/20 to-accent-blue/20"></div>
+          </div>
           
-          <!-- Botón Call to Action -->
-          <a 
-            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20enfermeras%20ocupacionales%20para%20empresas"
-            target="_blank"
-            class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-          >
-            <span>👩‍⚕️</span>
-            Ver Más
-          </a>
+          <!-- Contenido del Servicio -->
+          <div class="p-6 text-center">
+            <h2 class="text-2xl font-bold text-primary-blue mb-4">
+              Enfermeras Ocupacionales
+            </h2>
+            <p class="text-gray-600 leading-relaxed mb-6">
+              Servicio de enfermería especializada en salud ocupacional y primeros auxilios.
+            </p>
+            
+            <!-- Botón Call to Action -->
+            <a 
+              href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20quiero%20más%20información%20sobre%20enfermeras%20ocupacionales%20para%20empresas"
+              target="_blank"
+              class="inline-flex items-center gap-3 bg-accent-blue hover:bg-primary-blue text-white px-6 py-3 rounded-full text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <span>👩‍⚕️</span>
+              Ver Más
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -335,6 +327,22 @@ import enfermeraImg from "../assets/images/services/enfermera.webp";
     
     @media (min-width: 1024px) {
       .empresas-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+
+    /* Forzar grilla responsive para servicios principales */
+    .servicios-principales-grid {
+      display: grid !important;
+      gap: 2rem !important;
+    }
+    
+    .servicios-principales-grid {
+      grid-template-columns: 1fr !important;
+    }
+    
+    @media (min-width: 1024px) {
+      .servicios-principales-grid {
         grid-template-columns: repeat(3, 1fr) !important;
       }
     }
