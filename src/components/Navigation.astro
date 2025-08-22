@@ -233,92 +233,44 @@ import { NAV_LINKS } from "../consts";
     initMobileLinks();
   }
 
-  // Funcionalidad de navegación activa (existente)
+  // Funcionalidad de navegación activa (simplificada y eficiente)
   function setActiveNavLink() {
-    // Obtener la URL actual
     const currentPath = window.location.pathname;
-    const currentHash = window.location.hash;
-    const fullCurrentUrl = currentPath + currentHash;
-
+    
     // Remover clases activas existentes
-    document.querySelectorAll(".nav-link, .mobile-nav-link").forEach((link) => {
-      link.classList.remove(
-        "active-nav",
-        "bg-white/30",
-        "text-white",
-        "shadow-lg"
-      );
+    document.querySelectorAll(".nav-link, .mobile-nav-link, .nav-child-link, .mobile-nav-child-link").forEach((link) => {
+      link.classList.remove("active-nav", "bg-white/30", "text-white", "shadow-lg", "bg-primary-blue/20", "text-primary-blue");
     });
 
-    document.querySelectorAll(".nav-child-link, .mobile-nav-child-link").forEach((link) => {
-      link.classList.remove("active-nav", "bg-primary-blue/20", "text-primary-blue");
-    });
-
-    // Encontrar y marcar el enlace activo
-    let activeFound = false;
-
-    // Primero buscar en enlaces principales
-    document.querySelectorAll(".nav-link, .mobile-nav-link").forEach((link) => {
-      const href = link.getAttribute("data-href") || link.getAttribute("href");
-
-      if (
-        href &&
-        (href === currentPath ||
-          href === fullCurrentUrl ||
-          (href !== "/" && currentPath.startsWith(href)))
-      ) {
-        link.classList.add(
-          "active-nav",
-          "bg-white/30",
-          "text-white",
-          "shadow-lg"
-        );
-        activeFound = true;
+    // Buscar enlace activo de forma eficiente
+    let activeLink = null;
+    
+    // Buscar en enlaces de submenús primero
+    activeLink = document.querySelector(`.nav-child-link[data-href="${currentPath}"], .mobile-nav-child-link[data-href="${currentPath}"]`);
+    
+    if (activeLink) {
+      // Marcar enlace hijo como activo
+      activeLink.classList.add("active-nav", "bg-primary-blue/20", "text-primary-blue");
+      
+      // Marcar enlace padre
+      const parentNavLink = activeLink.closest("li")?.closest("ul")?.closest("li")?.querySelector(".nav-link");
+      if (parentNavLink) {
+        parentNavLink.classList.add("active-nav", "bg-white/30", "text-white", "shadow-lg");
       }
-    });
-
-    // Si no se encontró en principales, buscar en submenús
-    if (!activeFound) {
-      document.querySelectorAll(".nav-child-link, .mobile-nav-child-link").forEach((link) => {
-        const href =
-          link.getAttribute("data-href") || link.getAttribute("href");
-
-        if (
-          href &&
-          (href === currentPath ||
-            href === fullCurrentUrl ||
-            (href !== "/" && currentPath.startsWith(href)))
-        ) {
-          // Marcar el enlace hijo como activo
-          link.classList.add("active-nav", "bg-primary-blue/20");
-
-          // También marcar el enlace padre como activo
-          const parentNavLink = link?.closest("li")?.closest("ul")?.previousElementSibling;
-          if (parentNavLink && parentNavLink.classList.contains("nav-link")) {
-            parentNavLink.classList.add(
-              "active-nav",
-              "bg-white/30",
-              "text-white",
-              "shadow-lg"
-            );
-          }
-          activeFound = true;
-        }
-      });
+    } else {
+      // Buscar en enlaces principales
+      activeLink = document.querySelector(`.nav-link[data-href="${currentPath}"], .mobile-nav-link[data-href="${currentPath}"]`);
+      
+      if (activeLink) {
+        activeLink.classList.add("active-nav", "bg-white/30", "text-white", "shadow-lg");
+      }
     }
 
-    // Caso especial para la página home
-    if (currentPath === "/" || currentPath === "") {
-      const homeLink = document.querySelector(
-        '.nav-link[data-href="/"], .nav-link[href="/"], .mobile-nav-link[data-href="/"], .mobile-nav-link[href="/"]'
-      );
+    // Caso especial para home
+    if (currentPath === "/" || currentPath === "/lp-hah/" || currentPath === "") {
+      const homeLink = document.querySelector('.nav-link[data-href="/lp-hah/"], .mobile-nav-link[data-href="/lp-hah/"]');
       if (homeLink) {
-        homeLink.classList.add(
-          "active-nav",
-          "bg-white/30",
-          "text-white",
-          "shadow-lg"
-        );
+        homeLink.classList.add("active-nav", "bg-white/30", "text-white", "shadow-lg");
       }
     }
   }
