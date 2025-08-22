@@ -143,7 +143,7 @@ import enfermeraImg from "../assets/images/services/enfermera.webp";
         Ofrecemos una gama completa de servicios médicos empresariales para mantener la salud y seguridad de su equipo de trabajo.
       </p>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 empresas-grid">
         <div class="bg-white p-8 rounded-xl shadow-lg text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
           <div class="text-5xl mb-4">🏢</div>
           <h3 class="text-xl font-semibold text-primary-blue mb-4">Servicio In-Situ</h3>
@@ -315,4 +315,28 @@ import enfermeraImg from "../assets/images/services/enfermera.webp";
       </a>
     </div>
   </section>
+
+  <style>
+    /* Forzar grilla responsive para empresas */
+    .empresas-grid {
+      display: grid !important;
+      gap: 2rem !important;
+    }
+    
+    .empresas-grid {
+      grid-template-columns: 1fr !important;
+    }
+    
+    @media (min-width: 768px) {
+      .empresas-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+    
+    @media (min-width: 1024px) {
+      .empresas-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+      }
+    }
+  </style>
 </BaseLayout>
