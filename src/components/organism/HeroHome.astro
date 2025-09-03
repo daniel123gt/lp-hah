@@ -1,15 +1,74 @@
 ---
 // HeroHome.astro
+import { Image } from 'astro:assets';
+import hero1 from '../../assets/images/herohome/hero1.jpeg';
+import hero2 from '../../assets/images/herohome/hero2.jpeg';
+import hero3 from '../../assets/images/herohome/hero3.jpg';
 ---
 
 <section class="w-full h-[400px] sm:h-[500px] md:h-[600px] lg:h-[800px] overflow-hidden relative">
+  <!-- Carrusel de Imágenes -->
+  <div id="hero-carousel" class="w-full h-full relative">
+    <!-- Imagen 1 -->
+    <div class="carousel-slide active">
+      <Image 
+        src={hero1} 
+        alt="Servicios de enfermería a domicilio" 
+        class="w-full h-full object-cover"
+        loading="eager"
+      />
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center text-white px-16">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+            Servicios especializados y profesionales de enfermería a domicilio
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen 2 -->
+    <div class="carousel-slide">
+      <Image 
+        src={hero2} 
+        alt="Servicios de enfermería a domicilio" 
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center text-white px-16">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+            Servicios especializados y profesionales de enfermería a domicilio
+          </h1>
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="carousel-slide">
+      <Image 
+        src={hero3} 
+        alt="Servicios de enfermería a domicilio" 
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+      <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+        <div class="text-center text-white px-16">
+          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+            Servicios especializados y profesionales de enfermería a domicilio
+          </h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video (se muestra después del carrusel) -->
   <video
     autoplay
     muted
     loop
     playsinline
     id="myVideo"
-    class="w-full h-full object-cover"
+    class="w-full h-full object-cover hidden"
     preload="none"
     poster="/lp-hah/src/assets/images/hero/hero1.webp"
   >
@@ -19,7 +78,7 @@
 
   <!-- Fallback/Loading state -->
   <div
-    class="absolute inset-0 bg-gray-200 flex items-center justify-center"
+    class="absolute inset-0 bg-gray-200 flex items-center justify-center hidden"
     id="video-fallback"
   >
     <div class="text-center px-4">
@@ -29,41 +88,98 @@
   </div>
 </section>
 
+<style>
+  .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  .carousel-slide.active {
+    opacity: 1;
+  }
+</style>
+
 <script>
+  let carouselInterval: ReturnType<typeof setInterval> | null = null;
   let observer: IntersectionObserver | null = null;
   let video: HTMLVideoElement | null = null;
   let fallback: HTMLElement | null = null;
+  let carousel: HTMLElement | null = null;
+  let currentSlide = 0;
+  let slides: NodeListOf<HTMLElement> | null = null;
 
-  function initializeVideo() {
+  function initializeCarousel() {
+    carousel = document.getElementById("hero-carousel");
+    if (!carousel) return;
+
+    slides = carousel.querySelectorAll(".carousel-slide");
+    if (slides.length === 0) return;
+
+    // Iniciar carrusel automático
+    startCarousel();
+
+    // Después de 9 segundos (3 slides x 3 segundos), mostrar el video
+    setTimeout(() => {
+      showVideo();
+    }, 9000);
+  }
+
+  function startCarousel() {
+    if (!slides || slides.length === 0) return;
+
+    carouselInterval = setInterval(() => {
+      if (!slides) return;
+      
+      // Ocultar slide actual
+      slides[currentSlide].classList.remove("active");
+      
+      // Avanzar al siguiente slide
+      currentSlide = (currentSlide + 1) % slides.length;
+      
+      // Mostrar nuevo slide
+      slides[currentSlide].classList.add("active");
+    }, 3000); // Cambiar cada 3 segundos
+  }
+
+  function showVideo() {
+    if (!carousel) return;
+
+    // Detener carrusel
+    if (carouselInterval) {
+      clearInterval(carouselInterval);
+      carouselInterval = null;
+    }
+
+    // Ocultar carrusel
+    carousel.style.display = "none";
+
+    // Mostrar y cargar video
     video = document.getElementById("myVideo") as HTMLVideoElement;
     fallback = document.getElementById("video-fallback");
 
     if (!video || !fallback) return;
 
-    // Limpiar observer anterior si existe
-    if (observer) {
-      observer.disconnect();
-    }
+    // Mostrar video y fallback
+    video.classList.remove("hidden");
+    fallback.classList.remove("hidden");
 
-    // Crear nuevo observer
-    observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          // Solo cargar si no se ha cargado ya
-          if (video && video.readyState === 0) {
-            video.preload = "metadata";
-            video.load();
-          }
-        }
-      });
-    }, {
-      threshold: 0.1 // Activar cuando 10% del video sea visible
-    });
-    
-    observer.observe(video);
+    // Cargar video inmediatamente
+    video.preload = "metadata";
+    video.load();
 
     // Event listeners
     video.addEventListener("loadeddata", () => {
+      if (fallback) {
+        fallback.style.display = "none";
+      }
+    });
+
+    video.addEventListener("canplay", () => {
       if (fallback) {
         fallback.style.display = "none";
       }
@@ -76,23 +192,29 @@
       }
     });
 
-    // Forzar reproducción en caso de que autoplay falle
+    // Forzar reproducción
     video.play().catch((error) => {
       console.warn("Autoplay bloqueado:", error);
     });
   }
 
-  // Inicializar cuando la página carga
-  document.addEventListener("DOMContentLoaded", initializeVideo);
-
-  // Para navegación SPA de Astro
-  document.addEventListener("astro:page-load", initializeVideo);
-
-  // Cleanup cuando se desmonta
-  document.addEventListener("astro:before-preparation", () => {
+  function cleanup() {
+    if (carouselInterval) {
+      clearInterval(carouselInterval);
+      carouselInterval = null;
+    }
     if (observer) {
       observer.disconnect();
       observer = null;
     }
-  });
+  }
+
+  // Inicializar cuando la página carga
+  document.addEventListener("DOMContentLoaded", initializeCarousel);
+
+  // Para navegación SPA de Astro
+  document.addEventListener("astro:page-load", initializeCarousel);
+
+  // Cleanup cuando se desmonta
+  document.addEventListener("astro:before-preparation", cleanup);
 </script>

@@ -1,0 +1,253 @@
+{
+  "productos": [
+    {
+      "id": "concentrador-oxigeno",
+      "nombre": "Concentrador de Oxígeno Portátil",
+      "descripcion": "Equipo portátil para terapia de oxígeno en casa. Ideal para pacientes con insuficiencia respiratoria.",
+      "categoria": "equipos",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 2500000,
+      "precioAlquiler": 150000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/services/equipos.webp",
+      "caracteristicas": [
+        "🔋 Batería de larga duración",
+        "📱 Control digital",
+        "🔇 Operación silenciosa"
+      ],
+      "especificaciones": {
+        "concentracion": "93% ± 3%",
+        "flujo": "1-5 L/min",
+        "peso": "2.3 kg",
+        "dimensiones": "23 x 13 x 30 cm",
+        "ruido": "< 45 dB",
+        "bateria": "8 horas (flujo 2 L/min)",
+        "alimentacion": "AC 100-240V, 50/60Hz",
+        "temperatura": "5°C - 40°C"
+      },
+      "incluye": [
+        "Equipo Principal",
+        "Accesorios",
+        "Transporte",
+        "Documentación"
+      ],
+      "iconos": {
+        "icon1": "🔋",
+        "icon2": "📱",
+        "icon3": "🔇",
+        "text1": "Batería Larga",
+        "text2": "Control Digital",
+        "text3": "Silencioso"
+      }
+    },
+    {
+      "id": "nebulizador-ultrasonico",
+      "nombre": "Nebulizador Ultrasónico",
+      "descripcion": "Nebulizador de alta eficiencia para administración de medicamentos inhalados.",
+      "categoria": "equipos",
+      "tipo": ["venta"],
+      "precioVenta": 450000,
+      "imagen": "/src/assets/images/services/equipos.webp",
+      "caracteristicas": [
+        "⚡ Ultrasonido",
+        "🎯 Partículas finas",
+        "⏱️ Tratamiento rápido"
+      ],
+      "especificaciones": {
+        "tipo": "Ultrasónica",
+        "particulas": "1-5 micrones",
+        "tasa": "0.2-0.5 ml/min",
+        "capacidad": "8 ml",
+        "ruido": "< 50 dB",
+        "peso": "1.2 kg",
+        "dimensiones": "20 x 15 x 12 cm",
+        "alimentacion": "AC 100-240V, 50/60Hz"
+      },
+      "indicaciones": [
+        "Asma",
+        "Bronquitis",
+        "Neumonía",
+        "Pediatría"
+      ],
+      "incluye": [
+        "Equipo Principal",
+        "Mascarilla",
+        "Accesorios",
+        "Documentación"
+      ],
+      "iconos": {
+        "icon1": "⚡",
+        "icon2": "🎯",
+        "icon3": "⏱️",
+        "text1": "Ultrasonido",
+        "text2": "Partículas Finas",
+        "text3": "Tratamiento Rápido"
+      }
+    },
+    {
+      "id": "tensiometro-digital",
+      "nombre": "Tensiómetro Digital Profesional",
+      "descripcion": "Monitor de presión arterial digital con memoria y detección de arritmias.",
+      "categoria": "equipos",
+      "tipo": ["venta"],
+      "precioVenta": 180000,
+      "imagen": "/src/assets/images/services/equipos.webp",
+      "caracteristicas": [
+        "💾 Memoria 200 mediciones",
+        "📊 Promedio automático",
+        "⚠️ Detección arritmias"
+      ],
+      "especificaciones": {
+        "memoria": "200 mediciones",
+        "promedio": "Automático",
+        "arritmias": "Detección incluida",
+        "pantalla": "LCD digital",
+        "manguito": "Ajustable",
+        "bateria": "Incluida"
+      },
+      "incluye": [
+        "Tensiómetro",
+        "Manguito",
+        "Baterías",
+        "Manual"
+      ],
+      "iconos": {
+        "icon1": "💾",
+        "icon2": "📊",
+        "icon3": "⚠️",
+        "text1": "Memoria",
+        "text2": "Promedio",
+        "text3": "Arritmias"
+      }
+    },
+    {
+      "id": "glucometro-digital",
+      "nombre": "Glucómetro Digital",
+      "descripcion": "Medidor de glucosa en sangre con tiras reactivas incluidas.",
+      "categoria": "equipos",
+      "tipo": ["venta"],
+      "precioVenta": 120000,
+      "imagen": "/src/assets/images/services/equipos.webp",
+      "caracteristicas": [
+        "🩸 Muestra pequeña",
+        "⏱️ Resultado en 5 seg",
+        "💾 Memoria 500 tests"
+      ],
+      "especificaciones": {
+        "muestra": "0.7 μl",
+        "tiempo": "5 segundos",
+        "memoria": "500 tests",
+        "rango": "20-600 mg/dL",
+        "tiras": "Incluidas",
+        "bateria": "Incluida"
+      },
+      "incluye": [
+        "Glucómetro",
+        "Tiras reactivas",
+        "Lancetas",
+        "Manual"
+      ],
+      "iconos": {
+        "icon1": "🩸",
+        "icon2": "⏱️",
+        "icon3": "💾",
+        "text1": "Muestra Pequeña",
+        "text2": "5 Segundos",
+        "text3": "Memoria 500"
+      }
+    },
+    {
+      "id": "estetoscopio-profesional",
+      "nombre": "Estetoscopio Profesional",
+      "descripcion": "Estetoscopio de alta calidad para auscultación cardíaca y pulmonar.",
+      "categoria": "equipos",
+      "tipo": ["venta"],
+      "precioVenta": 85000,
+      "imagen": "/src/assets/images/services/equipos.webp",
+      "caracteristicas": [
+        "🎧 Sonido claro",
+        "🔧 Ajustable",
+        "💼 Estuche incluido"
+      ],
+      "especificaciones": {
+        "tipo": "Acústico",
+        "diafragma": "Doble cara",
+        "tubos": "No frío",
+        "olivas": "Suaves",
+        "estuche": "Incluido",
+        "garantia": "2 años"
+      },
+      "incluye": [
+        "Estetoscopio",
+        "Estuche",
+        "Olivas extra",
+        "Manual"
+      ],
+      "iconos": {
+        "icon1": "🎧",
+        "icon2": "🔧",
+        "icon3": "💼",
+        "text1": "Sonido Claro",
+        "text2": "Ajustable",
+        "text3": "Estuche"
+      }
+    },
+    {
+      "id": "jeringas-desechables",
+      "nombre": "Jeringas Desechables Estériles",
+      "descripcion": "Jeringas estériles de diferentes capacidades para uso médico profesional.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 25000,
+      "unidad": "caja",
+      "cantidadUnidad": 100,
+      "imagen": "/src/assets/images/services/equipos.webp",
+      "caracteristicas": [
+        "🩹 Estériles",
+        "📏 Múltiples tamaños",
+        "📦 Caja x 100 unidades"
+      ],
+      "capacidades": [
+        "1ml - Insulina",
+        "3ml - Intramuscular",
+        "5ml - General",
+        "10ml - Aspiración"
+      ],
+      "especificaciones": {
+        "material": "Polipropileno (PP)",
+        "esterilizacion": "Óxido de Etileno",
+        "capacidades": "1ml, 3ml, 5ml, 10ml",
+        "unidades": "100 por caja",
+        "certificacion": "CE, FDA",
+        "aguja": "Incluida",
+        "vidaUtil": "5 años",
+        "almacenamiento": "Temperatura ambiente"
+      },
+      "aplicaciones": [
+        "Inyecciones",
+        "Extracción de Sangre",
+        "Irrigación",
+        "Aspiración"
+      ],
+      "descuentos": [
+        { "cantidad": "1-5 cajas", "precio": 25000, "descuento": "Precio regular" },
+        { "cantidad": "6-20 cajas", "precio": 22000, "descuento": "12% descuento" },
+        { "cantidad": "21+ cajas", "precio": 20000, "descuento": "20% descuento" }
+      ],
+      "incluye": [
+        "Jeringas estériles",
+        "Agujas incluidas",
+        "Embalaje individual",
+        "Certificado"
+      ],
+      "iconos": {
+        "icon1": "🩹",
+        "icon2": "📏",
+        "icon3": "📦",
+        "text1": "Estériles",
+        "text2": "Múltiples Tamaños",
+        "text3": "Caja x 100"
+      }
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroSubPage from "../../components/organism/HeroSubPage.astro";
+import { Image } from "astro:assets";
+import img from "../../assets/images/services/equipos.webp";
+import equiposData from "../../data/equipos-medicos.json";
+
+const { productos } = equiposData;
+---
+
+<BaseLayout>
+  <HeroSubPage
+    imgSrc={img}
+    imgAlt="Equipamiento médico profesional para clínicas en casa"
+    title="Equipamiento Médico"
+    subTitle="Tu Clínica en Casa"
+    tagText="Equipos y Materiales"
+    icon1="🏥"
+    icon2="💰"
+    icon3="🏠"
+    text1="Profesional"
+    text2="Venta/Alquiler"
+    text3="Domicilio"
+  />
+
+  <!-- Filtros y Categorías -->
+  <section class="container mx-auto py-[60px]">
+    <div class="max-w-6xl mx-auto">
+      <!-- Filtros -->
+      <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <button class="filter-btn active" data-filter="all">
+          Todos los Productos
+        </button>
+        <button class="filter-btn" data-filter="equipos">
+          Equipos Médicos
+        </button>
+        <button class="filter-btn" data-filter="materiales">
+          Materiales
+        </button>
+        <button class="filter-btn" data-filter="venta">
+          Solo Venta
+        </button>
+        <button class="filter-btn" data-filter="alquiler">
+          Solo Alquiler
+        </button>
+      </div>
+
+      <!-- Grid de Productos -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="products-grid">
+        {productos.map((producto) => (
+          <div class="product-card" data-category={producto.categoria} data-type={producto.tipo.join(' ')}>
+            <div class="product-image">
+              <Image
+                src={img}
+                alt={producto.nombre}
+                class="w-full h-48 object-cover rounded-t-lg"
+              />
+              <div class="product-badges">
+                {producto.tipo.includes('venta') && (
+                  <span class="badge badge-venta">Venta</span>
+                )}
+                {producto.tipo.includes('alquiler') && (
+                  <span class="badge badge-alquiler">Alquiler</span>
+                )}
+              </div>
+            </div>
+            <div class="product-content">
+              <h3 class="product-title">{producto.nombre}</h3>
+              <p class="product-description">
+                {producto.descripcion}
+              </p>
+              <div class="product-features">
+                {producto.caracteristicas.map((caracteristica) => (
+                  <span class="feature">{caracteristica}</span>
+                ))}
+              </div>
+              <div class="product-pricing">
+                {producto.precioVenta && (
+                  <div class="price-venta">
+                    <span class="price-label">Venta:</span>
+                    <span class="price-value">${producto.precioVenta.toLocaleString()}</span>
+                  </div>
+                )}
+                {producto.precioAlquiler && (
+                  <div class="price-alquiler">
+                    <span class="price-label">Alquiler:</span>
+                    <span class="price-value">${producto.precioAlquiler.toLocaleString()}/{producto.periodoAlquiler}</span>
+                  </div>
+                )}
+              </div>
+              <a href={`/lp-hah/equipos-medicos/${producto.id}`} class="btn-details">
+                Ver Detalles
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-primary-blue py-[80px]">
+    <div class="container mx-auto text-center">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-white mb-6">
+          ¿No encuentras lo que buscas?
+        </h2>
+        <p class="text-xl text-white/90 mb-8">
+          Contáctanos para consultar sobre otros equipos médicos disponibles o solicitar cotizaciones personalizadas.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/lp-hah/#contact" class="btn btn-white">
+            Contactar Ahora
+          </a>
+          <a href="tel:+573001234567" class="btn btn-outline-white">
+            Llamar Ahora
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .filter-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 9999px;
+    border: 2px solid #1e40af;
+    color: #1e40af;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-btn:hover {
+    background-color: #1e40af;
+    color: white;
+  }
+  
+  .filter-btn.active {
+    background-color: #1e40af;
+    color: white;
+  }
+
+  .product-card {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .product-card:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: translateY(-0.5rem);
+  }
+
+  .product-image {
+    position: relative;
+  }
+
+  .product-badges {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .badge-venta {
+    background-color: #10b981;
+    color: white;
+  }
+
+  .badge-alquiler {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  .product-content {
+    padding: 1.5rem;
+  }
+
+  .product-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 0.75rem;
+  }
+
+  .product-description {
+    color: #4b5563;
+    margin-bottom: 1rem;
+  }
+
+  .product-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature {
+    font-size: 0.875rem;
+    color: #374151;
+  }
+
+  .product-pricing {
+    margin-bottom: 1.5rem;
+  }
+
+  .price-venta, .price-alquiler {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .price-label {
+    color: #4b5563;
+    font-weight: 500;
+  }
+
+  .price-value {
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 1.125rem;
+  }
+
+  .btn-details {
+    width: 100%;
+    background-color: #1e40af;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: block;
+  }
+
+  .btn-details:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+  }
+
+  .btn {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.125rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+  }
+
+  .btn-white {
+    background-color: white;
+    color: #1e40af;
+  }
+
+  .btn-white:hover {
+    background-color: #f3f4f6;
+  }
+
+  .btn-outline-white {
+    border: 2px solid white;
+    color: white;
+  }
+
+  .btn-outline-white:hover {
+    background-color: white;
+    color: #1e40af;
+  }
+</style>
+
+<script>
+  // Filtros de productos
+  function initializeFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const productCards = document.querySelectorAll('.product-card');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remover clase active de todos los botones
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        // Agregar clase active al botón clickeado
+        button.classList.add('active');
+
+        const filter = button.getAttribute('data-filter');
+
+        productCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const type = card.getAttribute('data-type');
+          const cardElement = card as HTMLElement;
+
+          if (filter === 'all') {
+            cardElement.style.display = 'block';
+          } else if (filter === 'venta') {
+            cardElement.style.display = type && type.includes('venta') ? 'block' : 'none';
+          } else if (filter === 'alquiler') {
+            cardElement.style.display = type && type.includes('alquiler') ? 'block' : 'none';
+          } else {
+            cardElement.style.display = category === filter ? 'block' : 'none';
+          }
+        });
+      });
+    });
+  }
+
+  // Inicializar filtros
+  document.addEventListener('DOMContentLoaded', initializeFilters);
+  document.addEventListener('astro:page-load', initializeFilters);
+</script>

@@ -1,0 +1,584 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import img from "../../assets/images/services/equipos.webp";
+import equiposData from "../../data/equipos-medicos.json";
+
+export async function getStaticPaths() {
+  return equiposData.productos.map((producto) => ({
+    params: { id: producto.id },
+    props: { producto },
+  }));
+}
+
+const { producto } = Astro.props;
+---
+
+<BaseLayout>
+  <!-- Información del Producto -->
+  <section class="container mx-auto py-[80px]">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Imagen del Producto -->
+        <div class="product-gallery">
+          <div class="main-image">
+            <Image
+              src={img}
+              alt={producto.nombre}
+              class="w-full h-96 object-cover rounded-2xl shadow-2xl"
+            />
+          </div>
+          <div class="thumbnail-grid">
+            <Image
+              src={img}
+              alt={`Vista frontal de ${producto.nombre}`}
+              class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 border-primary-blue"
+            />
+            <Image
+              src={img}
+              alt={`Panel de control de ${producto.nombre}`}
+              class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-primary-blue"
+            />
+            <Image
+              src={img}
+              alt={`Accesorios de ${producto.nombre}`}
+              class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-primary-blue"
+            />
+          </div>
+        </div>
+
+        <!-- Información del Producto -->
+        <div class="product-info">
+          <div class="product-badges mb-6">
+            {producto.tipo.includes('venta') && (
+              <span class="badge badge-venta">Disponible para Venta</span>
+            )}
+            {producto.tipo.includes('alquiler') && (
+              <span class="badge badge-alquiler">Disponible para Alquiler</span>
+            )}
+          </div>
+
+          <h1 class="text-4xl font-bold text-primary-blue mb-4">
+            {producto.nombre}
+          </h1>
+
+          <p class="text-xl text-gray-600 mb-6">
+            {producto.descripcion}
+          </p>
+
+          <!-- Precios -->
+          <div class="pricing-section mb-8">
+            {producto.precioVenta && (
+              <div class="price-card">
+                <div class="price-header">
+                  <h3 class="text-2xl font-bold text-green-600">💰 Venta</h3>
+                  <div class="price-amount">${producto.precioVenta.toLocaleString()}</div>
+                </div>
+                <ul class="price-features">
+                  <li>✅ Equipo completamente nuevo</li>
+                  <li>✅ Garantía de 2 años</li>
+                  <li>✅ Entrega e instalación incluida</li>
+                  <li>✅ Capacitación de uso</li>
+                </ul>
+              </div>
+            )}
+
+            {producto.precioAlquiler && (
+              <div class="price-card">
+                <div class="price-header">
+                  <h3 class="text-2xl font-bold text-blue-600">🏠 Alquiler</h3>
+                  <div class="price-amount">${producto.precioAlquiler.toLocaleString()}<span class="text-sm">/{producto.periodoAlquiler}</span></div>
+                </div>
+                <ul class="price-features">
+                  <li>✅ Mantenimiento incluido</li>
+                  <li>✅ Soporte técnico 24/7</li>
+                  <li>✅ Reposición en caso de falla</li>
+                  <li>✅ Sin compromiso de permanencia</li>
+                </ul>
+              </div>
+            )}
+          </div>
+
+          <!-- Botones de Acción -->
+          <div class="action-buttons">
+            {producto.precioVenta && (
+              <button class="btn btn-primary" onclick="openContactModal('venta')">
+                Comprar Ahora
+              </button>
+            )}
+            {producto.precioAlquiler && (
+              <button class="btn btn-secondary" onclick="openContactModal('alquiler')">
+                Alquilar Ahora
+              </button>
+            )}
+            <button class="btn btn-outline" onclick="openWhatsApp()">
+              Consultar por WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Características Técnicas -->
+  <section class="bg-gray-50 py-[80px]">
+    <div class="container mx-auto">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">
+          Características Técnicas
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {producto.caracteristicas.map((caracteristica, index) => (
+            <div class="feature-card">
+              <div class="feature-icon">{caracteristica.split(' ')[0]}</div>
+              <h3 class="feature-title">{caracteristica.split(' ').slice(1).join(' ')}</h3>
+              <p class="feature-description">
+                {caracteristica}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Especificaciones -->
+  {producto.especificaciones && (
+    <section class="container mx-auto py-[80px]">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">
+          Especificaciones Técnicas
+        </h2>
+
+        <div class="specs-table">
+          {Object.entries(producto.especificaciones).map(([key, value]) => (
+            <div class="spec-row">
+              <span class="spec-label">{key.charAt(0).toUpperCase() + key.slice(1)}:</span>
+              <span class="spec-value">{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Indicaciones de Uso (solo para nebulizador) -->
+  {producto.indicaciones && (
+    <section class="bg-primary-blue py-[80px]">
+      <div class="container mx-auto">
+        <div class="max-w-4xl mx-auto">
+          <h2 class="text-4xl font-bold text-center text-white mb-12">
+            Indicaciones de Uso
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {producto.indicaciones.map((indicacion) => (
+              <div class="indication-item">
+                <div class="indication-icon">🩺</div>
+                <h3 class="indication-title">{indicacion}</h3>
+                <p class="indication-description">Aplicación médica específica</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Capacidades (solo para jeringas) -->
+  {producto.capacidades && (
+    <section class="container mx-auto py-[80px]">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center text-primary-blue mb-12">
+          Capacidades Disponibles
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {producto.capacidades.map((capacidad) => (
+            <div class="capacity-item">
+              <div class="capacity-value">{capacidad.split(' - ')[0]}</div>
+              <div class="capacity-label">{capacidad.split(' - ')[1]}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Descuentos por Volumen (solo para jeringas) -->
+  {producto.descuentos && (
+    <section class="container mx-auto py-[80px]">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-primary-blue mb-12">
+          Descuentos por Volumen
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {producto.descuentos.map((descuento, index) => (
+            <div class={`volume-card ${index === 1 ? 'featured' : ''}`}>
+              <div class="volume-quantity">{descuento.cantidad}</div>
+              <div class="volume-price">${descuento.precio.toLocaleString()}</div>
+              <div class="volume-discount">{descuento.descuento}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- Incluye -->
+  <section class="bg-primary-blue py-[80px]">
+    <div class="container mx-auto">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-4xl font-bold text-white mb-12">
+          ¿Qué Incluye?
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {producto.incluye.map((item, index) => (
+            <div class="include-item">
+              <div class="include-icon">📦</div>
+              <h3 class="include-title">{item}</h3>
+              <p class="include-description">Incluido en el paquete</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="container mx-auto py-[80px]">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-primary-blue mb-6">
+        ¿Listo para tener tu clínica en casa?
+      </h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Contáctanos ahora para más información, cotización personalizada o para programar una demostración.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:+573001234567" class="btn btn-primary">
+          📞 Llamar Ahora
+        </a>
+        <a href="https://wa.me/573001234567" class="btn btn-whatsapp" target="_blank">
+          💬 WhatsApp
+        </a>
+        <a href="/lp-hah/#contact" class="btn btn-outline">
+          📧 Contactar
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .product-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .thumbnail-grid {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .product-badges {
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .badge {
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .badge-venta {
+    background-color: #10b981;
+    color: white;
+  }
+
+  .badge-alquiler {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  .pricing-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    .pricing-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .price-card {
+    background-color: white;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  }
+
+  .price-header {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .price-amount {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e40af;
+  }
+
+  .price-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .price-features li {
+    color: #374151;
+  }
+
+  .action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .action-buttons {
+      flex-direction: row;
+    }
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    background-color: #1e40af;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+  }
+
+  .btn-secondary {
+    background-color: #3b82f6;
+    color: white;
+  }
+
+  .btn-secondary:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+  }
+
+  .btn-outline {
+    border: 2px solid #1e40af;
+    color: #1e40af;
+  }
+
+  .btn-outline:hover {
+    background-color: #1e40af;
+    color: white;
+  }
+
+  .btn-whatsapp {
+    background-color: #10b981;
+    color: white;
+  }
+
+  .btn-whatsapp:hover {
+    background-color: #059669;
+    transform: scale(1.05);
+  }
+
+  .feature-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .feature-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-description {
+    color: #4b5563;
+  }
+
+  .specs-table {
+    background-color: white;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+
+  .spec-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .spec-row:last-child {
+    border-bottom: none;
+  }
+
+  .spec-label {
+    font-weight: 600;
+    color: #374151;
+  }
+
+  .spec-value {
+    color: #1e40af;
+    font-weight: 700;
+  }
+
+  .indication-item {
+    text-align: center;
+  }
+
+  .indication-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .indication-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .indication-description {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .capacity-item {
+    text-align: center;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .capacity-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e40af;
+  }
+
+  .capacity-label {
+    font-size: 0.875rem;
+    color: #4b5563;
+  }
+
+  .volume-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border: 2px solid #e5e7eb;
+  }
+
+  .volume-card.featured {
+    border-color: #1e40af;
+    background-color: rgba(30, 64, 175, 0.05);
+  }
+
+  .volume-quantity {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+  }
+
+  .volume-price {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 0.5rem;
+  }
+
+  .volume-discount {
+    color: #059669;
+    font-weight: 600;
+  }
+
+  .include-item {
+    text-align: center;
+  }
+
+  .include-icon {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .include-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .include-description {
+    color: rgba(255, 255, 255, 0.9);
+  }
+</style>
+
+<script>
+  function openContactModal(type: string) {
+    alert(`Redirigiendo para ${type} del producto...`);
+  }
+
+  function openWhatsApp() {
+    const message = encodeURIComponent('Hola, me interesa este producto médico. ¿Podrían darme más información?');
+    window.open(`https://wa.me/573001234567?text=${message}`, '_blank');
+  }
+
+  // Inicializar funcionalidad de galería
+  function initializeGallery() {
+    const thumbnails = document.querySelectorAll('.thumbnail-grid img');
+    const mainImage = document.querySelector('.main-image img');
+
+    thumbnails.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        thumbnails.forEach(t => t.classList.remove('border-primary-blue'));
+        thumbnails.forEach(t => t.classList.add('border-transparent'));
+        
+        thumb.classList.remove('border-transparent');
+        thumb.classList.add('border-primary-blue');
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initializeGallery);
+  document.addEventListener('astro:page-load', initializeGallery);
+</script>
