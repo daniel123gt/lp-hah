@@ -61,20 +61,19 @@ import hero3 from '../../assets/images/herohome/hero3.jpg';
     </div>
   </div>
 
-  <!-- Video (se muestra después del carrusel) -->
-  <video
-    autoplay
-    muted
-    loop
-    playsinline
-    id="myVideo"
-    class="w-full h-full object-cover hidden"
-    preload="none"
-    poster="/lp-hah/src/assets/images/hero/hero1.webp"
-  >
-    <source src="/lp-hah/video/presentacion.mp4" type="video/mp4" />
-    Tu navegador no soporta video HTML5.
-  </video>
+      <!-- Video (se muestra después del carrusel) -->
+    <video
+      muted
+      loop
+      playsinline
+      id="myVideo"
+      class="w-full h-full object-cover hidden"
+      preload="none"
+      poster="/lp-hah/src/assets/images/hero/hero1.webp"
+    >
+      <source src="/lp-hah/video/presentacion.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
 
   <!-- Fallback/Loading state -->
   <div
@@ -192,10 +191,48 @@ import hero3 from '../../assets/images/herohome/hero3.jpg';
       }
     });
 
-    // Forzar reproducción
-    video.play().catch((error) => {
-      console.warn("Autoplay bloqueado:", error);
-    });
+    // Intentar reproducir con manejo de errores mejorado
+    const playPromise = video.play();
+    
+    if (playPromise !== undefined) {
+      playPromise.then(() => {
+        // Video reproduciéndose exitosamente
+        console.log("Video reproduciéndose");
+      }).catch((error) => {
+        console.warn("Autoplay bloqueado:", error);
+        
+        // Mostrar botón de play manual si el autoplay falla
+        if (fallback) {
+          fallback.innerHTML = `
+            <div class="text-center px-4">
+              <button 
+                id="play-video-btn" 
+                class="bg-primary-blue text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-accent-blue transition-all duration-300 transform hover:scale-105"
+              >
+                ▶️ Reproducir Video
+              </button>
+              <p class="text-gray-600 text-sm mt-4">Haz clic para reproducir el video</p>
+            </div>
+          `;
+          
+          // Agregar event listener al botón
+          const playBtn = document.getElementById("play-video-btn");
+          if (playBtn && video) {
+            playBtn.addEventListener("click", () => {
+              if (video) {
+                video.play().then(() => {
+                  if (fallback) {
+                    fallback.style.display = "none";
+                  }
+                }).catch((err) => {
+                  console.error("Error al reproducir video:", err);
+                });
+              }
+            });
+          }
+        }
+      });
+    }
   }
 
   function cleanup() {
