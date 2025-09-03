@@ -9,7 +9,7 @@
       "precioVenta": 2500000,
       "precioAlquiler": 150000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Concentrador-de-oxigeno.png",
+      "imagen": "/lp-hah/images/products/equipos/Concentrador-de-oxigeno.png",
       "caracteristicas": [
         "🔋 Batería de larga duración",
         "📱 Control digital",
@@ -47,7 +47,7 @@
       "categoria": "equipos",
       "tipo": ["venta"],
       "precioVenta": 450000,
-      "imagen": "/src/assets/images/products/equipos/Nebulizador.webp",
+      "imagen": "/lp-hah/images/products/equipos/Nebulizador.webp",
       "caracteristicas": [
         "⚡ Ultrasonido",
         "🎯 Partículas finas",
@@ -91,7 +91,7 @@
       "categoria": "equipos",
       "tipo": ["venta"],
       "precioVenta": 180000,
-      "imagen": "/src/assets/images/products/equipos/Tensiometro.png",
+      "imagen": "/lp-hah/images/products/equipos/Tensiometro.png",
       "caracteristicas": [
         "💾 Memoria 200 mediciones",
         "📊 Promedio automático",
@@ -129,7 +129,7 @@
       "precioVenta": 850000,
       "precioAlquiler": 80000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Aspirador-de-secreciones.jpg",
+      "imagen": "/lp-hah/images/products/equipos/Aspirador-de-secreciones.jpg",
       "caracteristicas": [
         "💨 Potencia ajustable",
         "🔋 Batería recargable",
@@ -167,7 +167,7 @@
       "precioVenta": 1200000,
       "precioAlquiler": 120000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Bomba-de-infusion.jpg",
+      "imagen": "/lp-hah/images/products/equipos/Bomba-de-infusion.jpg",
       "caracteristicas": [
         "💧 Precisión ±2%",
         "⚠️ Alarmas de seguridad",
@@ -205,7 +205,7 @@
       "precioVenta": 3500000,
       "precioAlquiler": 200000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Camas-clinicas.webp",
+      "imagen": "/lp-hah/images/products/equipos/Camas-clinicas.webp",
       "caracteristicas": [
         "🛏️ Posiciones múltiples",
         "⚡ Control eléctrico",
@@ -242,7 +242,7 @@
       "precioVenta": 1800000,
       "precioAlquiler": 100000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Colchon-antiescaras.jpg",
+      "imagen": "/lp-hah/images/products/equipos/Colchon-antiescaras.jpg",
       "caracteristicas": [
         "💨 Celdas alternantes",
         "🔧 Presión ajustable",
@@ -279,7 +279,7 @@
       "precioVenta": 2800000,
       "precioAlquiler": 180000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Monitor-de-funciones.jpg",
+      "imagen": "/lp-hah/images/products/equipos/Monitor-de-funciones.jpg",
       "caracteristicas": [
         "📊 ECG, SpO2, NIBP",
         "⚠️ Alarmas configurables",
@@ -316,7 +316,7 @@
       "precioVenta": 650000,
       "precioAlquiler": 50000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/products/equipos/Silla-de-ruedas.webp",
+      "imagen": "/lp-hah/images/products/equipos/Silla-de-ruedas.webp",
       "caracteristicas": [
         "🔄 Plegable",
         "🛞 Ruedas grandes",
@@ -353,7 +353,7 @@
       "precioVenta": 25000,
       "unidad": "caja",
       "cantidadUnidad": 100,
-      "imagen": "/src/assets/images/products/materiales/JERINGAS.webp",
+      "imagen": "/lp-hah/images/products/materiales/JERINGAS.webp",
       "caracteristicas": [
         "🩹 Estériles",
         "📏 Múltiples tamaños",
@@ -410,7 +410,7 @@
       "precioVenta": 45000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/AGUJA-HUBER.jpg",
+      "imagen": "/lp-hah/images/products/materiales/AGUJA-HUBER.jpg",
       "caracteristicas": [
         "💉 Punta biselada",
         "🔒 Seguridad",
@@ -452,7 +452,7 @@
       "precioVenta": 35000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/CATETER-ABOCATH.jpg",
+      "imagen": "/lp-hah/images/products/materiales/CATETER-ABOCATH.jpg",
       "caracteristicas": [
         "💉 Punta biselada",
         "🔒 Válvula de seguridad",
@@ -494,7 +494,7 @@
       "precioVenta": 40000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/CATETER-INTIMA.png",
+      "imagen": "/lp-hah/images/products/materiales/CATETER-INTIMA.png",
       "caracteristicas": [
         "🛡️ Protección contra pinchazos",
         "💉 Punta biselada",
@@ -536,7 +536,7 @@
       "precioVenta": 20000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/LLAVE-3-VIAS.webp",
+      "imagen": "/lp-hah/images/products/materiales/LLAVE-3-VIAS.webp",
       "caracteristicas": [
         "🔀 Tres vías",
         "💧 Flujo libre",
@@ -578,7 +578,7 @@
       "precioVenta": 18000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/JERINGA-ALIMENTACION.webp",
+      "imagen": "/lp-hah/images/products/materiales/JERINGA-ALIMENTACION.webp",
       "caracteristicas": [
         "🍽️ Para alimentación",
         "💧 Graduación clara",
@@ -620,7 +620,7 @@
       "precioVenta": 30000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/SONDA-URINARIA.jpg",
+      "imagen": "/lp-hah/images/products/materiales/SONDA-URINARIA.jpg",
       "caracteristicas": [
         "🚽 Drenaje urinario",
         "🛡️ Recubrimiento antibacteriano",
@@ -662,7 +662,7 @@
       "precioVenta": 35000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/ALMOHADILLA-ANTIESCARA.jpg",
+      "imagen": "/lp-hah/images/products/materiales/ALMOHADILLA-ANTIESCARA.jpg",
       "caracteristicas": [
         "🛡️ Prevención úlceras",
         "💨 Material transpirable",
@@ -704,7 +704,7 @@
       "precioVenta": 15000,
       "unidad": "caja",
       "cantidadUnidad": 100,
-      "imagen": "/src/assets/images/products/materiales/GUANTES.webp",
+      "imagen": "/lp-hah/images/products/materiales/GUANTES.webp",
       "caracteristicas": [
         "🧤 Nitrilo hipoalergénico",
         "🛡️ Protección química",
@@ -746,7 +746,7 @@
       "precioVenta": 12000,
       "unidad": "paquete",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/GASAS-Y-ALGODON.webp",
+      "imagen": "/lp-hah/images/products/materiales/GASAS-Y-ALGODON.webp",
       "caracteristicas": [
         "🩹 Estériles",
         "💧 Absorbentes",
@@ -788,7 +788,7 @@
       "precioVenta": 25000,
       "unidad": "unidad",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/SANDA-ALIMENTACION.webp",
+      "imagen": "/lp-hah/images/products/materiales/SANDA-ALIMENTACION.webp",
       "caracteristicas": [
         "🍽️ Alimentación enteral",
         "💊 Administración medicamentos",
@@ -830,7 +830,7 @@
       "precioVenta": 45000,
       "unidad": "kit",
       "cantidadUnidad": 1,
-      "imagen": "/src/assets/images/products/materiales/EPP.jpg",
+      "imagen": "/lp-hah/images/products/materiales/EPP.jpg",
       "caracteristicas": [
         "🛡️ Protección completa",
         "🧤 Guantes incluidos",
