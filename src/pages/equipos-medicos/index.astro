@@ -50,8 +50,8 @@ const { productos } = equiposData;
         {productos.map((producto) => (
           <div class="product-card" data-category={producto.categoria} data-type={producto.tipo.join(' ')}>
             <div class="product-image">
-              <Image
-                src={img}
+              <img
+                src={producto.imagen}
                 alt={producto.nombre}
                 class="w-full h-48 object-cover rounded-t-lg"
               />
@@ -125,19 +125,19 @@ const { productos } = equiposData;
   .filter-btn {
     padding: 0.75rem 1.5rem;
     border-radius: 9999px;
-    border: 2px solid #1e40af;
-    color: #1e40af;
+    border: 2px solid var(--color-primary-blue);
+    color: var(--color-primary-blue);
     font-weight: 600;
     transition: all 0.3s ease;
   }
   
   .filter-btn:hover {
-    background-color: #1e40af;
+    background-color: var(--color-primary-blue);
     color: white;
   }
   
   .filter-btn.active {
-    background-color: #1e40af;
+    background-color: var(--color-primary-blue);
     color: white;
   }
 
@@ -180,7 +180,7 @@ const { productos } = equiposData;
   }
 
   .badge-alquiler {
-    background-color: #3b82f6;
+    background-color: var(--color-secondary-blue);
     color: white;
   }
 
@@ -191,12 +191,12 @@ const { productos } = equiposData;
   .product-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--color-primary-blue);
     margin-bottom: 0.75rem;
   }
 
   .product-description {
-    color: #4b5563;
+    color: var(--color-text-medium);
     margin-bottom: 1rem;
   }
 
@@ -209,7 +209,7 @@ const { productos } = equiposData;
 
   .feature {
     font-size: 0.875rem;
-    color: #374151;
+    color: var(--color-text-dark);
   }
 
   .product-pricing {
@@ -224,19 +224,19 @@ const { productos } = equiposData;
   }
 
   .price-label {
-    color: #4b5563;
+    color: var(--color-text-medium);
     font-weight: 500;
   }
 
   .price-value {
-    color: #1e40af;
+    color: var(--color-primary-blue);
     font-weight: 700;
     font-size: 1.125rem;
   }
 
   .btn-details {
     width: 100%;
-    background-color: #1e40af;
+    background-color: var(--color-primary-blue);
     color: white;
     padding: 0.75rem 1.5rem;
     border-radius: 0.5rem;
@@ -247,7 +247,7 @@ const { productos } = equiposData;
   }
 
   .btn-details:hover {
-    background-color: #3b82f6;
+    background-color: var(--color-secondary-blue);
     transform: scale(1.05);
   }
 
@@ -262,11 +262,11 @@ const { productos } = equiposData;
 
   .btn-white {
     background-color: white;
-    color: #1e40af;
+    color: var(--color-primary-blue);
   }
 
   .btn-white:hover {
-    background-color: #f3f4f6;
+    background-color: var(--color-bg-light);
   }
 
   .btn-outline-white {
@@ -276,7 +276,7 @@ const { productos } = equiposData;
 
   .btn-outline-white:hover {
     background-color: white;
-    color: #1e40af;
+    color: var(--color-primary-blue);
   }
 </style>
 

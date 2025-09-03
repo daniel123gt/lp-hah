@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
-import img from "../../assets/images/services/equipos.webp";
 import equiposData from "../../data/equipos-medicos.json";
 
 export async function getStaticPaths() {
@@ -22,25 +21,25 @@ const { producto } = Astro.props;
         <!-- Imagen del Producto -->
         <div class="product-gallery">
           <div class="main-image">
-            <Image
-              src={img}
+            <img
+              src={producto.imagen}
               alt={producto.nombre}
               class="w-full h-96 object-cover rounded-2xl shadow-2xl"
             />
           </div>
           <div class="thumbnail-grid">
-            <Image
-              src={img}
+            <img
+              src={producto.imagen}
               alt={`Vista frontal de ${producto.nombre}`}
               class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 border-primary-blue"
             />
-            <Image
-              src={img}
+            <img
+              src={producto.imagen}
               alt={`Panel de control de ${producto.nombre}`}
               class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-primary-blue"
             />
-            <Image
-              src={img}
+            <img
+              src={producto.imagen}
               alt={`Accesorios de ${producto.nombre}`}
               class="w-20 h-20 object-cover rounded-lg cursor-pointer border-2 border-transparent hover:border-primary-blue"
             />
@@ -254,7 +253,7 @@ const { producto } = Astro.props;
       <h2 class="text-4xl font-bold text-primary-blue mb-6">
         ¿Listo para tener tu clínica en casa?
       </h2>
-      <p class="text-xl text-gray-600 mb-8">
+      <p class="text-xl text-text-medium mb-8">
         Contáctanos ahora para más información, cotización personalizada o para programar una demostración.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
@@ -303,7 +302,7 @@ const { producto } = Astro.props;
   }
 
   .badge-alquiler {
-    background-color: #3b82f6;
+    background-color: var(--color-secondary-blue);
     color: white;
   }
 
@@ -335,7 +334,7 @@ const { producto } = Astro.props;
   .price-amount {
     font-size: 1.875rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--color-primary-blue);
   }
 
   .price-features {
@@ -345,7 +344,7 @@ const { producto } = Astro.props;
   }
 
   .price-features li {
-    color: #374151;
+    color: var(--color-text-dark);
   }
 
   .action-buttons {
@@ -369,32 +368,32 @@ const { producto } = Astro.props;
   }
 
   .btn-primary {
-    background-color: #1e40af;
+    background-color: var(--color-primary-blue);
     color: white;
   }
 
   .btn-primary:hover {
-    background-color: #3b82f6;
+    background-color: var(--color-secondary-blue);
     transform: scale(1.05);
   }
 
   .btn-secondary {
-    background-color: #3b82f6;
+    background-color: var(--color-secondary-blue);
     color: white;
   }
 
   .btn-secondary:hover {
-    background-color: #2563eb;
+    background-color: var(--color-primary-blue);
     transform: scale(1.05);
   }
 
   .btn-outline {
-    border: 2px solid #1e40af;
-    color: #1e40af;
+    border: 2px solid var(--color-primary-blue);
+    color: var(--color-primary-blue);
   }
 
   .btn-outline:hover {
-    background-color: #1e40af;
+    background-color: var(--color-primary-blue);
     color: white;
   }
 
@@ -424,12 +423,12 @@ const { producto } = Astro.props;
   .feature-title {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--color-primary-blue);
     margin-bottom: 0.75rem;
   }
 
   .feature-description {
-    color: #4b5563;
+    color: var(--color-text-medium);
   }
 
   .specs-table {
@@ -453,11 +452,11 @@ const { producto } = Astro.props;
 
   .spec-label {
     font-weight: 600;
-    color: #374151;
+    color: var(--color-text-dark);
   }
 
   .spec-value {
-    color: #1e40af;
+    color: var(--color-primary-blue);
     font-weight: 700;
   }
 
@@ -492,12 +491,12 @@ const { producto } = Astro.props;
   .capacity-value {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--color-primary-blue);
   }
 
   .capacity-label {
     font-size: 0.875rem;
-    color: #4b5563;
+    color: var(--color-text-medium);
   }
 
   .volume-card {
@@ -509,21 +508,21 @@ const { producto } = Astro.props;
   }
 
   .volume-card.featured {
-    border-color: #1e40af;
-    background-color: rgba(30, 64, 175, 0.05);
+    border-color: var(--color-primary-blue);
+    background-color: rgba(31, 54, 102, 0.05);
   }
 
   .volume-quantity {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--color-primary-blue);
     margin-bottom: 0.5rem;
   }
 
   .volume-price {
     font-size: 1.875rem;
     font-weight: 700;
-    color: #1e40af;
+    color: var(--color-primary-blue);
     margin-bottom: 0.5rem;
   }
 

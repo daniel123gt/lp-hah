@@ -9,7 +9,7 @@
       "precioVenta": 2500000,
       "precioAlquiler": 150000,
       "periodoAlquiler": "mes",
-      "imagen": "/src/assets/images/services/equipos.webp",
+      "imagen": "/src/assets/images/products/equipos/Concentrador-de-oxigeno.png",
       "caracteristicas": [
         "🔋 Batería de larga duración",
         "📱 Control digital",
@@ -47,7 +47,7 @@
       "categoria": "equipos",
       "tipo": ["venta"],
       "precioVenta": 450000,
-      "imagen": "/src/assets/images/services/equipos.webp",
+      "imagen": "/src/assets/images/products/equipos/Nebulizador.webp",
       "caracteristicas": [
         "⚡ Ultrasonido",
         "🎯 Partículas finas",
@@ -91,7 +91,7 @@
       "categoria": "equipos",
       "tipo": ["venta"],
       "precioVenta": 180000,
-      "imagen": "/src/assets/images/services/equipos.webp",
+      "imagen": "/src/assets/images/products/equipos/Tensiometro.png",
       "caracteristicas": [
         "💾 Memoria 200 mediciones",
         "📊 Promedio automático",
@@ -121,75 +121,227 @@
       }
     },
     {
-      "id": "glucometro-digital",
-      "nombre": "Glucómetro Digital",
-      "descripcion": "Medidor de glucosa en sangre con tiras reactivas incluidas.",
+      "id": "aspirador-secreciones",
+      "nombre": "Aspirador de Secreciones",
+      "descripcion": "Equipo portátil para aspiración de secreciones respiratorias en pacientes con dificultad para expectorar.",
       "categoria": "equipos",
-      "tipo": ["venta"],
-      "precioVenta": 120000,
-      "imagen": "/src/assets/images/services/equipos.webp",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 850000,
+      "precioAlquiler": 80000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/products/equipos/Aspirador-de-secreciones.jpg",
       "caracteristicas": [
-        "🩸 Muestra pequeña",
-        "⏱️ Resultado en 5 seg",
-        "💾 Memoria 500 tests"
+        "💨 Potencia ajustable",
+        "🔋 Batería recargable",
+        "🧼 Fácil limpieza"
       ],
       "especificaciones": {
-        "muestra": "0.7 μl",
-        "tiempo": "5 segundos",
-        "memoria": "500 tests",
-        "rango": "20-600 mg/dL",
-        "tiras": "Incluidas",
-        "bateria": "Incluida"
+        "presion": "0-80 kPa",
+        "flujo": "20-30 L/min",
+        "peso": "1.8 kg",
+        "dimensiones": "25 x 15 x 35 cm",
+        "bateria": "2 horas continuas",
+        "alimentacion": "AC 100-240V, 50/60Hz"
       },
       "incluye": [
-        "Glucómetro",
-        "Tiras reactivas",
-        "Lancetas",
+        "Equipo Principal",
+        "Tubos de aspiración",
+        "Filtros",
         "Manual"
       ],
       "iconos": {
-        "icon1": "🩸",
-        "icon2": "⏱️",
-        "icon3": "💾",
-        "text1": "Muestra Pequeña",
-        "text2": "5 Segundos",
-        "text3": "Memoria 500"
+        "icon1": "💨",
+        "icon2": "🔋",
+        "icon3": "🧼",
+        "text1": "Potencia Ajustable",
+        "text2": "Batería Recargable",
+        "text3": "Fácil Limpieza"
       }
     },
     {
-      "id": "estetoscopio-profesional",
-      "nombre": "Estetoscopio Profesional",
-      "descripcion": "Estetoscopio de alta calidad para auscultación cardíaca y pulmonar.",
+      "id": "bomba-infusion",
+      "nombre": "Bomba de Infusión",
+      "descripcion": "Bomba de infusión de precisión para administración controlada de medicamentos y fluidos.",
       "categoria": "equipos",
-      "tipo": ["venta"],
-      "precioVenta": 85000,
-      "imagen": "/src/assets/images/services/equipos.webp",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 1200000,
+      "precioAlquiler": 120000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/products/equipos/Bomba-de-infusion.jpg",
       "caracteristicas": [
-        "🎧 Sonido claro",
-        "🔧 Ajustable",
-        "💼 Estuche incluido"
+        "💧 Precisión ±2%",
+        "⚠️ Alarmas de seguridad",
+        "📱 Pantalla digital"
       ],
       "especificaciones": {
-        "tipo": "Acústico",
-        "diafragma": "Doble cara",
-        "tubos": "No frío",
-        "olivas": "Suaves",
-        "estuche": "Incluido",
-        "garantia": "2 años"
+        "rango": "0.1-999 ml/h",
+        "precision": "±2%",
+        "alarmas": "Oclusión, aire, batería baja",
+        "bateria": "8 horas",
+        "peso": "2.5 kg",
+        "dimensiones": "30 x 20 x 15 cm"
       },
       "incluye": [
-        "Estetoscopio",
-        "Estuche",
-        "Olivas extra",
+        "Bomba Principal",
+        "Jeringas",
+        "Tubos",
         "Manual"
       ],
       "iconos": {
-        "icon1": "🎧",
+        "icon1": "💧",
+        "icon2": "⚠️",
+        "icon3": "📱",
+        "text1": "Precisión ±2%",
+        "text2": "Alarmas Seguridad",
+        "text3": "Pantalla Digital"
+      }
+    },
+    {
+      "id": "cama-clinica",
+      "nombre": "Cama Clínica Eléctrica",
+      "descripcion": "Cama clínica eléctrica con múltiples posiciones para comodidad del paciente.",
+      "categoria": "equipos",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 3500000,
+      "precioAlquiler": 200000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/products/equipos/Camas-clinicas.webp",
+      "caracteristicas": [
+        "🛏️ Posiciones múltiples",
+        "⚡ Control eléctrico",
+        "🛡️ Barandas de seguridad"
+      ],
+      "especificaciones": {
+        "dimensiones": "200 x 90 x 45-80 cm",
+        "peso_max": "150 kg",
+        "posiciones": "Cabeza, pie, Trendelenburg",
+        "material": "Acero inoxidable",
+        "motor": "3 motores independientes"
+      },
+      "incluye": [
+        "Cama Principal",
+        "Colchón",
+        "Barandas",
+        "Control Remoto"
+      ],
+      "iconos": {
+        "icon1": "🛏️",
+        "icon2": "⚡",
+        "icon3": "🛡️",
+        "text1": "Posiciones Múltiples",
+        "text2": "Control Eléctrico",
+        "text3": "Barandas Seguridad"
+      }
+    },
+    {
+      "id": "colchon-antiescaras",
+      "nombre": "Colchón Antiescaras",
+      "descripcion": "Colchón de aire alternante para prevención y tratamiento de úlceras por presión.",
+      "categoria": "equipos",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 1800000,
+      "precioAlquiler": 100000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/products/equipos/Colchon-antiescaras.jpg",
+      "caracteristicas": [
+        "💨 Celdas alternantes",
+        "🔧 Presión ajustable",
+        "🔇 Operación silenciosa"
+      ],
+      "especificaciones": {
+        "dimensiones": "200 x 90 x 15 cm",
+        "celdas": "130 celdas alternantes",
+        "presion": "20-45 mmHg",
+        "ruido": "< 35 dB",
+        "peso": "8 kg"
+      },
+      "incluye": [
+        "Colchón",
+        "Compresor",
+        "Tubos",
+        "Manual"
+      ],
+      "iconos": {
+        "icon1": "💨",
         "icon2": "🔧",
-        "icon3": "💼",
-        "text1": "Sonido Claro",
-        "text2": "Ajustable",
-        "text3": "Estuche"
+        "icon3": "🔇",
+        "text1": "Celdas Alternantes",
+        "text2": "Presión Ajustable",
+        "text3": "Operación Silenciosa"
+      }
+    },
+    {
+      "id": "monitor-funciones",
+      "nombre": "Monitor de Funciones Vitales",
+      "descripcion": "Monitor multiparámetro para monitoreo continuo de signos vitales del paciente.",
+      "categoria": "equipos",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 2800000,
+      "precioAlquiler": 180000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/products/equipos/Monitor-de-funciones.jpg",
+      "caracteristicas": [
+        "📊 ECG, SpO2, NIBP",
+        "⚠️ Alarmas configurables",
+        "💾 Memoria de datos"
+      ],
+      "especificaciones": {
+        "parametros": "ECG, SpO2, NIBP, Temperatura",
+        "pantalla": "12.1 pulgadas TFT",
+        "alarmas": "Sonoras y visuales",
+        "memoria": "72 horas",
+        "bateria": "4 horas"
+      },
+      "incluye": [
+        "Monitor Principal",
+        "Sensores",
+        "Cables",
+        "Manual"
+      ],
+      "iconos": {
+        "icon1": "📊",
+        "icon2": "⚠️",
+        "icon3": "💾",
+        "text1": "ECG, SpO2, NIBP",
+        "text2": "Alarmas Configurables",
+        "text3": "Memoria de Datos"
+      }
+    },
+    {
+      "id": "silla-ruedas",
+      "nombre": "Silla de Ruedas",
+      "descripcion": "Silla de ruedas plegable para movilidad y transporte de pacientes.",
+      "categoria": "equipos",
+      "tipo": ["venta", "alquiler"],
+      "precioVenta": 650000,
+      "precioAlquiler": 50000,
+      "periodoAlquiler": "mes",
+      "imagen": "/src/assets/images/products/equipos/Silla-de-ruedas.webp",
+      "caracteristicas": [
+        "🔄 Plegable",
+        "🛞 Ruedas grandes",
+        "🪑 Respaldo ajustable"
+      ],
+      "especificaciones": {
+        "dimensiones": "100 x 60 x 90 cm",
+        "peso_max": "100 kg",
+        "peso_silla": "12 kg",
+        "material": "Acero cromado",
+        "ruedas": "24 pulgadas"
+      },
+      "incluye": [
+        "Silla Principal",
+        "Frenos",
+        "Reposapiés",
+        "Manual"
+      ],
+      "iconos": {
+        "icon1": "🔄",
+        "icon2": "🛞",
+        "icon3": "🪑",
+        "text1": "Plegable",
+        "text2": "Ruedas Grandes",
+        "text3": "Respaldo Ajustable"
       }
     },
     {
@@ -201,7 +353,7 @@
       "precioVenta": 25000,
       "unidad": "caja",
       "cantidadUnidad": 100,
-      "imagen": "/src/assets/images/services/equipos.webp",
+      "imagen": "/src/assets/images/products/materiales/JERINGAS.webp",
       "caracteristicas": [
         "🩹 Estériles",
         "📏 Múltiples tamaños",
@@ -247,6 +399,469 @@
         "text1": "Estériles",
         "text2": "Múltiples Tamaños",
         "text3": "Caja x 100"
+      }
+    },
+    {
+      "id": "aguja-huber",
+      "nombre": "Aguja Huber",
+      "descripcion": "Aguja especializada para acceso a puertos implantables y catéteres centrales.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 45000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/AGUJA-HUBER.jpg",
+      "caracteristicas": [
+        "💉 Punta biselada",
+        "🔒 Seguridad",
+        "📏 Múltiples calibres"
+      ],
+      "especificaciones": {
+        "calibres": "19G, 20G, 22G",
+        "longitud": "1.5 pulgadas",
+        "material": "Acero inoxidable",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Puertos implantables",
+        "Catéteres centrales",
+        "Quimioterapia",
+        "Nutrición parenteral"
+      ],
+      "incluye": [
+        "Aguja Huber",
+        "Embalaje estéril",
+        "Certificado"
+      ],
+      "iconos": {
+        "icon1": "💉",
+        "icon2": "🔒",
+        "icon3": "📏",
+        "text1": "Punta Biselada",
+        "text2": "Seguridad",
+        "text3": "Múltiples Calibres"
+      }
+    },
+    {
+      "id": "cateter-abocath",
+      "nombre": "Catéter Abocath",
+      "descripcion": "Catéter intravenoso periférico para administración de medicamentos y fluidos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 35000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/CATETER-ABOCATH.jpg",
+      "caracteristicas": [
+        "💉 Punta biselada",
+        "🔒 Válvula de seguridad",
+        "📏 Múltiples calibres"
+      ],
+      "especificaciones": {
+        "calibres": "14G, 16G, 18G, 20G, 22G",
+        "longitud": "45 mm",
+        "material": "Teflón",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Administración IV",
+        "Extracción de sangre",
+        "Fluidoterapia",
+        "Medicamentos"
+      ],
+      "incluye": [
+        "Catéter",
+        "Aguja",
+        "Embalaje estéril"
+      ],
+      "iconos": {
+        "icon1": "💉",
+        "icon2": "🔒",
+        "icon3": "📏",
+        "text1": "Punta Biselada",
+        "text2": "Válvula Seguridad",
+        "text3": "Múltiples Calibres"
+      }
+    },
+    {
+      "id": "cateter-intima",
+      "nombre": "Catéter Intima",
+      "descripcion": "Catéter intravenoso de seguridad para administración de medicamentos y fluidos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 40000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/CATETER-INTIMA.png",
+      "caracteristicas": [
+        "🛡️ Protección contra pinchazos",
+        "💉 Punta biselada",
+        "🔒 Válvula de seguridad"
+      ],
+      "especificaciones": {
+        "calibres": "16G, 18G, 20G, 22G",
+        "longitud": "45 mm",
+        "material": "Teflón",
+        "seguridad": "Protección automática",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Administración IV",
+        "Extracción de sangre",
+        "Fluidoterapia",
+        "Medicamentos"
+      ],
+      "incluye": [
+        "Catéter",
+        "Aguja con protección",
+        "Embalaje estéril"
+      ],
+      "iconos": {
+        "icon1": "🛡️",
+        "icon2": "💉",
+        "icon3": "🔒",
+        "text1": "Protección Pinchazos",
+        "text2": "Punta Biselada",
+        "text3": "Válvula Seguridad"
+      }
+    },
+    {
+      "id": "llave-tres-vias",
+      "nombre": "Llave de Tres Vías",
+      "descripcion": "Llave de tres vías para conexión de múltiples líneas intravenosas y medicamentos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 20000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/LLAVE-3-VIAS.webp",
+      "caracteristicas": [
+        "🔀 Tres vías",
+        "💧 Flujo libre",
+        "🔒 Cierre hermético"
+      ],
+      "especificaciones": {
+        "conexiones": "Luer Lock",
+        "material": "Policarbonato",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA",
+        "volumen": "0.2 ml"
+      },
+      "aplicaciones": [
+        "Conexión IV múltiple",
+        "Administración de medicamentos",
+        "Extracción de muestras",
+        "Fluidoterapia"
+      ],
+      "incluye": [
+        "Llave de tres vías",
+        "Embalaje estéril",
+        "Certificado"
+      ],
+      "iconos": {
+        "icon1": "🔀",
+        "icon2": "💧",
+        "icon3": "🔒",
+        "text1": "Tres Vías",
+        "text2": "Flujo Libre",
+        "text3": "Cierre Hermético"
+      }
+    },
+    {
+      "id": "jeringa-alimentacion",
+      "nombre": "Jeringa de Alimentación",
+      "descripcion": "Jeringa especializada para administración de alimentación enteral y medicamentos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 18000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/JERINGA-ALIMENTACION.webp",
+      "caracteristicas": [
+        "🍽️ Para alimentación",
+        "💧 Graduación clara",
+        "🔒 Conexión segura"
+      ],
+      "especificaciones": {
+        "capacidad": "50 ml",
+        "material": "Polipropileno",
+        "conexion": "Luer Lock",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Alimentación enteral",
+        "Administración de medicamentos",
+        "Irrigación",
+        "Aspiración"
+      ],
+      "incluye": [
+        "Jeringa de alimentación",
+        "Embalaje estéril",
+        "Certificado"
+      ],
+      "iconos": {
+        "icon1": "🍽️",
+        "icon2": "💧",
+        "icon3": "🔒",
+        "text1": "Para Alimentación",
+        "text2": "Graduación Clara",
+        "text3": "Conexión Segura"
+      }
+    },
+    {
+      "id": "sonda-urinaria",
+      "nombre": "Sonda Urinaria",
+      "descripcion": "Sonda vesical para drenaje urinario y procedimientos urológicos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 30000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/SONDA-URINARIA.jpg",
+      "caracteristicas": [
+        "🚽 Drenaje urinario",
+        "🛡️ Recubrimiento antibacteriano",
+        "📏 Múltiples calibres"
+      ],
+      "especificaciones": {
+        "calibres": "8FR, 10FR, 12FR, 14FR, 16FR",
+        "longitud": "40 cm",
+        "material": "Silicón",
+        "recubrimiento": "Antibacteriano",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Drenaje urinario",
+        "Procedimientos urológicos",
+        "Cirugía",
+        "Cuidados intensivos"
+      ],
+      "incluye": [
+        "Sonda vesical",
+        "Guía",
+        "Embalaje estéril"
+      ],
+      "iconos": {
+        "icon1": "🚽",
+        "icon2": "🛡️",
+        "icon3": "📏",
+        "text1": "Drenaje Urinario",
+        "text2": "Recubrimiento Antibacteriano",
+        "text3": "Múltiples Calibres"
+      }
+    },
+    {
+      "id": "almohadilla-antiescara",
+      "nombre": "Almohadilla Antiescaras",
+      "descripcion": "Almohadillas especializadas para prevención de úlceras por presión en pacientes encamados.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 35000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/ALMOHADILLA-ANTIESCARA.jpg",
+      "caracteristicas": [
+        "🛡️ Prevención úlceras",
+        "💨 Material transpirable",
+        "🧼 Fácil limpieza"
+      ],
+      "especificaciones": {
+        "dimensiones": "40 x 40 x 5 cm",
+        "material": "Espuma de poliuretano",
+        "cobertura": "Vinilo antimicrobiano",
+        "peso_max": "150 kg",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Prevención úlceras por presión",
+        "Comodidad del paciente",
+        "Redistribución de peso",
+        "Cuidados de larga duración"
+      ],
+      "incluye": [
+        "Almohadilla antiescaras",
+        "Funda protectora",
+        "Manual de uso"
+      ],
+      "iconos": {
+        "icon1": "🛡️",
+        "icon2": "💨",
+        "icon3": "🧼",
+        "text1": "Prevención Úlceras",
+        "text2": "Material Transpirable",
+        "text3": "Fácil Limpieza"
+      }
+    },
+    {
+      "id": "guantes-desechables",
+      "nombre": "Guantes Desechables",
+      "descripcion": "Guantes de nitrilo desechables para protección médica y procedimientos estériles.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 15000,
+      "unidad": "caja",
+      "cantidadUnidad": 100,
+      "imagen": "/src/assets/images/products/materiales/GUANTES.webp",
+      "caracteristicas": [
+        "🧤 Nitrilo hipoalergénico",
+        "🛡️ Protección química",
+        "📏 Múltiples tallas"
+      ],
+      "especificaciones": {
+        "material": "Nitrilo",
+        "tallas": "XS, S, M, L, XL",
+        "espesor": "0.12 mm",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Procedimientos médicos",
+        "Protección personal",
+        "Manipulación de medicamentos",
+        "Limpieza y desinfección"
+      ],
+      "incluye": [
+        "Guantes de nitrilo",
+        "Embalaje individual",
+        "Certificado"
+      ],
+      "iconos": {
+        "icon1": "🧤",
+        "icon2": "🛡️",
+        "icon3": "📏",
+        "text1": "Nitrilo Hipoalergénico",
+        "text2": "Protección Química",
+        "text3": "Múltiples Tallas"
+      }
+    },
+    {
+      "id": "gasas-algodon",
+      "nombre": "Gasas y Algodón",
+      "descripcion": "Gasas estériles y algodón hidrófilo para curación y procedimientos médicos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 12000,
+      "unidad": "paquete",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/GASAS-Y-ALGODON.webp",
+      "caracteristicas": [
+        "🩹 Estériles",
+        "💧 Absorbentes",
+        "📦 Embalaje individual"
+      ],
+      "especificaciones": {
+        "gasas": "7.5 x 7.5 cm",
+        "algodon": "25g",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA",
+        "almacenamiento": "Temperatura ambiente"
+      },
+      "aplicaciones": [
+        "Curación de heridas",
+        "Limpieza de piel",
+        "Aplicación de medicamentos",
+        "Procedimientos estériles"
+      ],
+      "incluye": [
+        "Gasas estériles",
+        "Algodón hidrófilo",
+        "Embalaje estéril"
+      ],
+      "iconos": {
+        "icon1": "🩹",
+        "icon2": "💧",
+        "icon3": "📦",
+        "text1": "Estériles",
+        "text2": "Absorbentes",
+        "text3": "Embalaje Individual"
+      }
+    },
+    {
+      "id": "sonda-alimentacion",
+      "nombre": "Sonda de Alimentación",
+      "descripcion": "Sonda nasogástrica para alimentación enteral y administración de medicamentos.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 25000,
+      "unidad": "unidad",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/SANDA-ALIMENTACION.webp",
+      "caracteristicas": [
+        "🍽️ Alimentación enteral",
+        "💊 Administración medicamentos",
+        "📏 Múltiples calibres"
+      ],
+      "especificaciones": {
+        "calibres": "8FR, 10FR, 12FR, 14FR",
+        "longitud": "110 cm",
+        "material": "Poliuretano",
+        "esterilizacion": "Óxido de Etileno",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Alimentación enteral",
+        "Administración de medicamentos",
+        "Aspiración gástrica",
+        "Descompresión"
+      ],
+      "incluye": [
+        "Sonda nasogástrica",
+        "Guía",
+        "Embalaje estéril"
+      ],
+      "iconos": {
+        "icon1": "🍽️",
+        "icon2": "💊",
+        "icon3": "📏",
+        "text1": "Alimentación Enteral",
+        "text2": "Administración Medicamentos",
+        "text3": "Múltiples Calibres"
+      }
+    },
+    {
+      "id": "epp-medico",
+      "nombre": "Equipo de Protección Personal",
+      "descripcion": "Kit completo de equipo de protección personal para procedimientos médicos y de enfermería.",
+      "categoria": "materiales",
+      "tipo": ["venta"],
+      "precioVenta": 45000,
+      "unidad": "kit",
+      "cantidadUnidad": 1,
+      "imagen": "/src/assets/images/products/materiales/EPP.jpg",
+      "caracteristicas": [
+        "🛡️ Protección completa",
+        "🧤 Guantes incluidos",
+        "😷 Mascarillas N95"
+      ],
+      "especificaciones": {
+        "guantes": "Par de nitrilo",
+        "mascarilla": "N95",
+        "bata": "Desechable",
+        "gorro": "Quirúrgico",
+        "certificacion": "CE, FDA"
+      },
+      "aplicaciones": [
+        "Procedimientos médicos",
+        "Protección contra infecciones",
+        "Cirugía",
+        "Cuidados intensivos"
+      ],
+      "incluye": [
+        "Guantes de nitrilo",
+        "Mascarilla N95",
+        "Bata desechable",
+        "Gorro quirúrgico"
+      ],
+      "iconos": {
+        "icon1": "🛡️",
+        "icon2": "🧤",
+        "icon3": "😷",
+        "text1": "Protección Completa",
+        "text2": "Guantes Incluidos",
+        "text3": "Mascarillas N95"
       }
     }
   ]
