@@ -12,7 +12,7 @@ import imgInfo from "../assets/images/services/laboratorio.webp";
     imgSrc={img}
     imgAlt="imagen del servicio de laboratorio a domicilio"
     title="Laboratorio a Domicilio"
-    subTitle="Análisis a Domicilio"
+    subTitle="Tomas de Muestras a Domicilio"
     tagText="Análisis Clínicos"
     icon1="🧪"
     icon2="🔬"
@@ -23,46 +23,205 @@ import imgInfo from "../assets/images/services/laboratorio.webp";
   />
   
   <InfoSection imgSrc={imgInfo} imgAlt="imagen de laboratorio a domicilio">
-    <p>
-      Los análisis de laboratorio son pruebas rutinarias que se realizan para detectar cambios en su salud, diagnosticar condiciones clínicas, planificar tratamientos y controlar enfermedades.
-    </p>
-    <p>
-      Tenemos a su disposición más de 4,000 análisis de laboratorios (bioquímica, inmunología, hematología, microbiología) que puede realizar desde casa con nuestro personal altamente entrenado y calificado. Contamos con un riguroso control de calidad y protección del paciente dentro de un servicio integral de laboratorio e investigación.
-    </p>
-    <p>
-      Nuestro personal está altamente entrenado y calificado para brindar resultados oportunos y precisos para el diagnóstico clínico.
-    </p>
+    <div class="space-y-6">
+      <div>
+        <h2 class="text-3xl font-bold text-primary-blue mb-4">¿Qué son los Análisis de Laboratorio?</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Los análisis de laboratorio son pruebas rutinarias que se realizan para detectar cambios en su salud, diagnosticar condiciones clínicas, planificar tratamientos y controlar enfermedades.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-r from-primary-blue/5 to-accent-blue/10 p-6 rounded-xl border-l-4 border-primary-blue">
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Nuestro Servicio Integral</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Tenemos a su disposición más de <strong class="text-primary-blue">4,000 análisis de laboratorios</strong> (bioquímica, inmunología, hematología, microbiología) que puede realizar desde casa con nuestro personal altamente entrenado y calificado. Contamos con un riguroso control de calidad y protección del paciente dentro de un servicio integral de laboratorio e investigación.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-primary-blue/20">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">👨‍⚕️</span>
+            <h3 class="text-xl font-semibold text-primary-blue">Personal Calificado</h3>
+          </div>
+          <p class="text-gray-700">
+            Nuestro personal está altamente entrenado y calificado para brindar resultados oportunos y precisos para el diagnóstico clínico.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-primary-blue/20">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🚚</span>
+            <h3 class="text-xl font-semibold text-primary-blue">Proceso a Domicilio</h3>
+          </div>
+          <p class="text-gray-700 text-sm">
+            Profesional especializado asiste a su domicilio, toma la muestra y la transporta con control de temperatura (6-8°C) al laboratorio para procesamiento inmediato.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 p-6 rounded-xl">
+        <h3 class="text-xl font-semibold text-primary-blue mb-4 flex items-center gap-2">
+          <span>⏰</span>
+          Tiempos de Resultado
+        </h3>
+        <div class="grid md:grid-cols-3 gap-4 text-center">
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl font-bold text-primary-blue">8-12h</div>
+            <div class="text-sm text-gray-600">Análisis Generales</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl font-bold text-primary-blue">48-72h</div>
+            <div class="text-sm text-gray-600">Cultivos</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl font-bold text-accent-blue">Récord</div>
+            <div class="text-sm text-gray-600">Casos Urgentes</div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mt-4 text-center italic">
+          * Consultar tiempo específico para cada examen médico
+        </p>
+      </div>
+    </div>
     
     <div class="mt-8">
-      <h3 class="text-2xl font-semibold text-primary-blue mb-4">Tipos de Muestras que Recogemos:</h3>
-      <ul class="space-y-2 text-lg">
-        <li class="flex items-center gap-3">
-          <span class="text-accent-blue text-xl">🩸</span>
-          <span>Muestras de sangre</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="text-accent-blue text-xl">💩</span>
-          <span>Muestras de heces</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="text-accent-blue text-xl">💧</span>
-          <span>Muestras de orina</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="text-accent-blue text-xl">🔬</span>
-          <span>Biopsias</span>
-        </li>
-        <li class="flex items-center gap-3">
-          <span class="text-accent-blue text-xl">🧪</span>
-          <span>Cultivos de secreciones</span>
-        </li>
-      </ul>
+      <h3 class="text-2xl font-semibold text-primary-blue mb-6 text-center">Tipos de Muestras que Recogemos</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white p-4 rounded-xl shadow-md border border-primary-blue/20 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">🩸</span>
+            <h4 class="font-semibold text-primary-blue">Sangre</h4>
+          </div>
+          <p class="text-sm text-gray-600">Análisis completos de sangre, glucosa, colesterol, hemograma</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md border border-primary-blue/20 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">💧</span>
+            <h4 class="font-semibold text-primary-blue">Orina</h4>
+          </div>
+          <p class="text-sm text-gray-600">Análisis de orina completa, cultivos, proteínas</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md border border-primary-blue/20 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">💩</span>
+            <h4 class="font-semibold text-primary-blue">Heces</h4>
+          </div>
+          <p class="text-sm text-gray-600">Cultivos, parásitos, sangre oculta</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md border border-primary-blue/20 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">🔬</span>
+            <h4 class="font-semibold text-primary-blue">Biopsias</h4>
+          </div>
+          <p class="text-sm text-gray-600">Análisis histopatológicos especializados</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md border border-primary-blue/20 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">🧪</span>
+            <h4 class="font-semibold text-primary-blue">Secreciones</h4>
+          </div>
+          <p class="text-sm text-gray-600">Cultivos de esputo, secreciones vaginales</p>
+        </div>
+        <div class="bg-white p-4 rounded-xl shadow-md border border-primary-blue/20 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-3 mb-2">
+            <span class="text-2xl">🦠</span>
+            <h4 class="font-semibold text-primary-blue">Otros</h4>
+          </div>
+          <p class="text-sm text-gray-600">Muestras especiales según indicación médica</p>
+        </div>
+      </div>
     </div>
     
     <div class="self-start mt-8">
       <ButtonLink />
     </div>
   </InfoSection>
+
+  <!-- Sección de Proceso Paso a Paso -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-primary-blue mb-6">
+          ¿Cómo Funciona Nuestro Servicio?
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Un proceso simple y profesional para realizar sus análisis de laboratorio desde la comodidad de su hogar
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            1
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Solicitud</h3>
+          <p class="text-gray-600">
+            Contacte con nosotros vía WhatsApp o teléfono para programar su cita
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            2
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Visita a Domicilio</h3>
+          <p class="text-gray-600">
+            Nuestro profesional especializado acude a su domicilio en el horario acordado
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            3
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Toma de Muestra</h3>
+          <p class="text-gray-600">
+            Recolección profesional de la muestra con todos los protocolos de seguridad
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            4
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Resultados</h3>
+          <p class="text-gray-600">
+            Entrega de resultados en el tiempo establecido según el tipo de análisis
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-gradient-to-r from-primary-blue/5 to-accent-blue/10 p-8 rounded-2xl">
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Ventajas de Nuestro Servicio</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">🏠</span>
+              <div>
+                <h4 class="font-semibold text-primary-blue">Comodidad</h4>
+                <p class="text-sm text-gray-600">Sin desplazamientos ni esperas</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">⚡</span>
+              <div>
+                <h4 class="font-semibold text-primary-blue">Rapidez</h4>
+                <p class="text-sm text-gray-600">Resultados en tiempo récord</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">🛡️</span>
+              <div>
+                <h4 class="font-semibold text-primary-blue">Seguridad</h4>
+                <p class="text-sm text-gray-600">Protocolos de bioseguridad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- Sección de Preparativos -->
   <section class="bg-bg-light py-24">
@@ -78,63 +237,109 @@ import imgInfo from "../assets/images/services/laboratorio.webp";
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
         <!-- Preparativos Comunes -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-semibold text-primary-blue mb-6">
-            ¿Cuáles son los preparativos más comunes?
-          </h3>
-          <ul class="space-y-4 text-lg text-gray-700">
-            <li class="flex items-start gap-3">
-              <span class="text-accent-blue text-xl mt-1">🚫</span>
-              <span>Evitar alimentos y bebidas específicos como carnes cocidas, tés de hierbas o alcohol</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-blue text-xl mt-1">🍽️</span>
-              <span>No comer en forma excesiva el día antes de la prueba</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-blue text-xl mt-1">🚭</span>
-              <span>No fumar</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-blue text-xl mt-1">🏃‍♂️</span>
-              <span>Evitar actividades específicas, como el ejercicio vigoroso o tener relaciones sexuales (según sea el caso)</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <span class="text-accent-blue text-xl mt-1">💊</span>
-              <span>Evitar ciertos medicamentos o suplementos. Converse con nosotros sobre los medicamentos que está tomando, incluyendo los de <strong class="text-red-600">venta sin receta</strong>, las vitaminas y los suplementos antes de realizar cualquier análisis.</span>
-            </li>
-          </ul>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-primary-blue/20">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">📋</span>
+            <h3 class="text-2xl font-semibold text-primary-blue">
+              Preparativos Más Comunes
+            </h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex items-start gap-4 p-4 bg-red-50 rounded-lg border-l-4 border-red-400">
+              <span class="text-2xl mt-1">🚫</span>
+              <div>
+                <h4 class="font-semibold text-red-800 mb-1">Alimentos y Bebidas</h4>
+                <p class="text-red-700">Evitar carnes cocidas, tés de hierbas o alcohol</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-orange-50 rounded-lg border-l-4 border-orange-400">
+              <span class="text-2xl mt-1">🍽️</span>
+              <div>
+                <h4 class="font-semibold text-orange-800 mb-1">Alimentación</h4>
+                <p class="text-orange-700">No comer en exceso el día antes de la prueba</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
+              <span class="text-2xl mt-1">🚭</span>
+              <div>
+                <h4 class="font-semibold text-yellow-800 mb-1">Tabaco</h4>
+                <p class="text-yellow-700">No fumar antes de la prueba</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400">
+              <span class="text-2xl mt-1">🏃‍♂️</span>
+              <div>
+                <h4 class="font-semibold text-purple-800 mb-1">Actividades</h4>
+                <p class="text-purple-700">Evitar ejercicio vigoroso o relaciones sexuales</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+              <span class="text-2xl mt-1">💊</span>
+              <div>
+                <h4 class="font-semibold text-blue-800 mb-1">Medicamentos</h4>
+                <p class="text-blue-700">Consultar sobre medicamentos, incluyendo <strong class="text-red-600">venta sin receta</strong>, vitaminas y suplementos</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Información adicional del recuadro verde -->
+          <div class="mt-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
+            <p class="text-green-700 font-medium text-base italic">
+              Para mayor información, consultar condiciones preanalíticas para cada examen médico
+            </p>
+          </div>
         </div>
 
         <!-- Preparativos Especiales -->
-        <div class="bg-white p-8 rounded-2xl shadow-lg">
-          <h3 class="text-2xl font-semibold text-primary-blue mb-6">
-            ¿Qué tipos de pruebas requieren preparativos especiales?
-          </h3>
-          <div class="space-y-4 text-lg text-gray-700">
-            <div class="p-4 bg-blue-50 rounded-lg">
-              <h4 class="font-semibold text-primary-blue mb-2">Prueba de glucosa en la sangre</h4>
-              <p>Requiere ayuno de 8-12 horas antes de la prueba.</p>
+        <div class="bg-white p-8 rounded-2xl shadow-lg border border-primary-blue/20">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="text-3xl">⚡</span>
+            <h3 class="text-2xl font-semibold text-primary-blue">
+              Preparativos Especiales
+            </h3>
+          </div>
+          <div class="space-y-4">
+            <div class="p-4 bg-gradient-to-r from-blue-50 to-blue-100 rounded-lg border border-blue-200">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🩸</span>
+                <h4 class="font-semibold text-primary-blue">Glucosa en Sangre</h4>
+              </div>
+              <p class="text-gray-700 text-sm">Ayuno de 8-12 horas antes de la prueba</p>
             </div>
-            <div class="p-4 bg-blue-50 rounded-lg">
-              <h4 class="font-semibold text-primary-blue mb-2">Prueba de niveles de colesterol</h4>
-              <p>Ayuno de 12-14 horas, evitar grasas 24 horas antes.</p>
+            <div class="p-4 bg-gradient-to-r from-green-50 to-green-100 rounded-lg border border-green-200">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">💚</span>
+                <h4 class="font-semibold text-primary-blue">Colesterol</h4>
+              </div>
+              <p class="text-gray-700 text-sm">Ayuno de 12-14 horas, evitar grasas 24h antes</p>
             </div>
-            <div class="p-4 bg-blue-50 rounded-lg">
-              <h4 class="font-semibold text-primary-blue mb-2">Prueba de triglicéridos</h4>
-              <p>Ayuno de 12-14 horas, dieta baja en grasas 3 días antes.</p>
+            <div class="p-4 bg-gradient-to-r from-yellow-50 to-yellow-100 rounded-lg border border-yellow-200">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🧈</span>
+                <h4 class="font-semibold text-primary-blue">Triglicéridos</h4>
+              </div>
+              <p class="text-gray-700 text-sm">Ayuno 12-14h, dieta baja en grasas 3 días</p>
             </div>
-            <div class="p-4 bg-blue-50 rounded-lg">
-              <h4 class="font-semibold text-primary-blue mb-2">Prueba de creatinina</h4>
-              <p>Puede requerir ayuno o evitar carnes cocidas.</p>
+            <div class="p-4 bg-gradient-to-r from-purple-50 to-purple-100 rounded-lg border border-purple-200">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🫁</span>
+                <h4 class="font-semibold text-primary-blue">Creatinina</h4>
+              </div>
+              <p class="text-gray-700 text-sm">Ayuno o evitar carnes cocidas</p>
             </div>
-            <div class="p-4 bg-blue-50 rounded-lg">
-              <h4 class="font-semibold text-primary-blue mb-2">Prueba de cortisol</h4>
-              <p>Descanso previo, evitar comer, beber o cepillarse los dientes por tiempo determinado.</p>
+            <div class="p-4 bg-gradient-to-r from-pink-50 to-pink-100 rounded-lg border border-pink-200">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">😴</span>
+                <h4 class="font-semibold text-primary-blue">Cortisol</h4>
+              </div>
+              <p class="text-gray-700 text-sm">Descanso previo, evitar comer/beber/cepillarse</p>
             </div>
-            <div class="p-4 bg-blue-50 rounded-lg">
-              <h4 class="font-semibold text-primary-blue mb-2">Prueba 5-HIAA</h4>
-              <p>Evitar aguacates, bananas, piñas, nueces y berenjenas.</p>
+            <div class="p-4 bg-gradient-to-r from-indigo-50 to-indigo-100 rounded-lg border border-indigo-200">
+              <div class="flex items-center gap-3 mb-2">
+                <span class="text-2xl">🍌</span>
+                <h4 class="font-semibold text-primary-blue">5-HIAA</h4>
+              </div>
+              <p class="text-gray-700 text-sm">Evitar aguacates, bananas, piñas, nueces, berenjenas</p>
             </div>
           </div>
         </div>

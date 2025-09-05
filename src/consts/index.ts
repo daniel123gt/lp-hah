@@ -21,17 +21,7 @@ export const NAV_LINKS = [
   },
   {
     label: "Opciones de Cuidado",
-    href: null,
-    children: [
-      {
-        label: "Cuidadoras Internas",
-        href: "/lp-hah/cuidadoras-internas",
-      },
-      {
-        label: "Cuidadoras Externas",
-        href: "/lp-hah/cuidadoras-internas",
-      },
-    ],
+    href: "/lp-hah/opciones-cuidado",
   },
   {
     label: "Procedimientos",
@@ -100,7 +90,7 @@ export const SERVICES = [
     title: "Cuidados en Casa\n Enfermeras técnicas a domicilio",
     description:
       "Servicio de médicos a domicilio, contamos con diferentes especialidades: GERIATRIA – CARDIOLOGIA – INTERNISTA – ONCOLOGIA – GASTROENTEROLOGIA – NEUMOLOGIA entre otras especialidades",
-    href: "/lp-hah/cuidadoras-internas",
+    href: "/lp-hah/opciones-cuidado",
   },
   {
     img: {
@@ -110,7 +100,7 @@ export const SERVICES = [
     title: "Enfermeras a domicilio\n Atención especializada",
     description:
       "Atención de enfermería diseñada para pacientes con diferentes patologías que requieren cuidados especializados:  monitoreo continuo, procedimientos de enfermería invasivos, cuidados paliativos, cuidados post operatorios entre otros.",
-    href: "/lp-hah/cuidadoras-internas",
+    href: "/lp-hah/opciones-cuidado",
   },
   {
     img: {
@@ -160,7 +150,7 @@ export const SERVICES = [
     title: "Oxígeno Medicinal",
     description:
       "Servicio de  recarga de balones de oxígeno, instalación y suministro de accesorios,  las 24 horas del día con atención oportuna en el menor tiempo posible.",
-    href: "/lp-hah/cuidadoras-internas",
+    href: "/lp-hah/opciones-cuidado",
   },
   {
     img: {
@@ -170,7 +160,7 @@ export const SERVICES = [
     title: "Cóctel vitamínicos\n Administración de vitaminas",
     description:
       "Por Vena, Vitamina C, Vitamina B12, Acido Folico, Glutathione, Sueros Vitaminados Diseñados Para Pacientes Que Desean Recibir Atencion En Casa.",
-    href: "/lp-hah/cuidadoras-internas",
+    href: "/lp-hah/opciones-cuidado",
   },
 ];
 
@@ -212,9 +202,9 @@ export const TESTIMONY = [
 
 export const CARDS_BENEFICTS = [
   {
-    title: "🕐 CUIDADORES/AS Y ENFERMERAS POR HORAS",
+    title: "🕐 CUIDADORES/AS Y ENFERMERAS POR TURNOS 12 HORAS Y 24 HORAS",
     description:
-      "Horario adaptado a necesidad del caso y familia. profesionales titulados y experiencia constatada.",
+      "Diseñado para pacientes que requieren atención completa durante el día, dos opciones: atención durante el día (12 horas) se entrega al paciente listo para dormir (24 horas), vigilancia y cuidado durante las 24 horas",
   },
   {
     title: "📅 CUIDADORES/AS Y ENFERMERAS EN FINES DE SEMANA",
@@ -222,19 +212,29 @@ export const CARDS_BENEFICTS = [
       "Diseñado para personas/pacientes dependientes y necesidad de servicios los fines de semana.",
   },
   {
-    title: "🌙 CUIDADORES/AS Y ENFERMERAS 24 HORAS",
+    title: "🌙 CUIDADORES/AS Y ENFERMERAS 365 DÍAS DEL AÑO 7 DÍAS A LA SEMANA",
     description:
-      "Servicio continuo día y noche Los 365 días del año. profesionales titulados y experiencia constatada.",
+      "Servicio continuo día y noche los 365 días del año. Profesionales titulados y experiencia constatada.",
   },
   {
-    title: "⏰ CUIDADORES/AS Y ENFERMERAS 12 HORAS (DIA Y/O NOCHE)",
+    title: "⏰ CUIDADORES/AS Y ENFERMERAS 12 HORAS (DÍA Y/O NOCHE)",
     description:
-      "Establecido con un diseño de cuidados adaptados a la necesidad  de persona/paciente. profesionales titulados y experiencia constatada.",
+      "Establecido con un diseño de cuidados adaptados a la necesidad de persona/paciente. Profesionales titulados y experiencia constatada.",
   },
   {
-    title: "🚑 TRASLADOS DE PACIENTES 24 HORAS/365 DIAS AL AÑO",
+    title: "🏠 CUIDADORES Y ENFERMERAS CAMA ADENTRO",
     description:
-      "Diseñado para el paciente que requiere traslado bajo supervisión y cuidados de nuestros profesionales de la salud. Clínica u hospital – casa. casa-casa. Ciudad- Ciudad. Pais-Pais..",
+      "Diseñado para pacientes de atención permanente que requieren cumplir rutinas diurnas y por las noches asistencia básicas como acompañamiento al baño o cambio de pañal y de postura",
+  },
+  {
+    title: "⏱️ CUIDADORES Y ENFERMERAS PART TIME",
+    description:
+      "Diseñado para pacientes que requieren atención durante 6 u 8 horas para cuidados integrales: alimentación, higiene y confort, medicamentos vía oral, entre otros cuidados de enfermería",
+  },
+  {
+    title: "🔄 CUIDADORES Y ENFERMERAS TURNOS INTERDIARIOS",
+    description:
+      "Diseñado para pacientes que solo requieren atención y cuidado para su rutina de forma interdiaria dos o tres veces por semana en horarios completos o part time",
   },
 ];
 

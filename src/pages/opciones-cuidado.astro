@@ -1,0 +1,120 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSubPage from "../components/organism/HeroSubPage.astro";
+import InfoSection from "../components/organism/InfoSection.astro";
+import ButtonLink from "../components/atom/ButtonLink.astro";
+import SectionCardCare from "../components/organism/SectionCardCare.astro";
+import img from "../assets/images/hero/hero1.webp";
+import imgInfo from "../assets/images/Ayuda.jpg"
+---
+
+<BaseLayout>
+  <HeroSubPage 
+    imgSrc={img} 
+    imgAlt="imagen del servicio enfermeras por turnos" 
+    title="Cuidados en el Hogar" 
+    subTitle="Enfermeras por turnos"
+    tagText="Cuidado Especializado"
+    icon1="🏠"
+    icon2="👩‍⚕️"
+    icon3="⏰"
+    text1="Domicilio"
+    text2="Profesional"
+    text3="24/7"
+  />
+  <InfoSection imgSrc={imgInfo} imgAlt="imagen de servicio">
+    <div class="space-y-8">
+      <!-- Introducción principal -->
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-primary-blue mb-4">
+          Cuidado Profesional en el Hogar
+        </h2>
+        <p class="text-xl text-gray-700 leading-relaxed">
+          El servicio de cuidado de enfermería a domicilio es una prestación diseñada para el cuidado de un familiar que requiera apoyo para el desarrollo de sus actividades diarias, para el enfermo, adulto mayor o paciente que necesite cuidados profesionales especializados en casa.
+        </p>
+      </div>
+
+      <!-- Tipos de personal destacados -->
+      <div class="grid md:grid-cols-2 gap-8 mb-8">
+        <!-- Técnica en Enfermería -->
+        <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border-l-4 border-primary-blue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-primary-blue rounded-full flex items-center justify-center mr-4">
+              <span class="text-white text-xl">👩‍⚕️</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary-blue">Técnica en Enfermería</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            Para pacientes que no requieren procedimientos invasivos mediante dispositivos. 
+            Cuidados básicos, higiene, confort y acompañamiento.
+          </p>
+        </div>
+
+        <!-- Licenciada en Enfermería -->
+        <div class="bg-gradient-to-br from-accent-blue/10 to-accent-blue/20 p-6 rounded-xl border-l-4 border-accent-blue">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-accent-blue rounded-full flex items-center justify-center mr-4">
+              <span class="text-white text-xl">👩‍⚕️</span>
+            </div>
+            <h3 class="text-xl font-bold text-accent-blue">Licenciada en Enfermería</h3>
+          </div>
+          <p class="text-gray-700 leading-relaxed">
+            Para pacientes que necesitan procedimientos especializados: colocación de sondas, 
+            tratamientos endovenosos, bombas de infusión, oxigenoterapia, entre otros.
+          </p>
+        </div>
+      </div>
+
+      <!-- Objetivos del servicio -->
+      <div class="bg-gray-50 p-6 rounded-xl">
+        <h3 class="text-2xl font-bold text-primary-blue mb-4 text-center">
+          Nuestro Compromiso
+        </h3>
+        <p class="text-lg text-gray-700 text-center leading-relaxed">
+          En ambos casos la atención es integral, con diseños de cuidados personalizados y especializados. 
+          Nuestro objetivo es cubrir todas las necesidades de cuidado del paciente, mantener su bienestar, 
+          retrasar la evolución de las enfermedades, ayudar en la recuperación según sea el caso, 
+          y en todos los casos brindar calidad de vida.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Lista de beneficios mejorada -->
+    <div class="mt-8">
+      <h3 class="text-2xl font-bold text-primary-blue mb-6 text-center">
+        ¿Por qué elegirnos?
+      </h3>
+      <div class="grid md:grid-cols-2 gap-4">
+        <div class="flex items-start space-x-3">
+          <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="text-white text-sm">✓</span>
+          </div>
+          <p class="text-lg text-gray-700">Adaptamos la atención a su caso específico</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="text-white text-sm">✓</span>
+          </div>
+          <p class="text-lg text-gray-700">Asignamos el profesional adecuado para atención personalizada</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="text-white text-sm">✓</span>
+          </div>
+          <p class="text-lg text-gray-700">Personal calificado que brinda orientación familiar</p>
+        </div>
+        <div class="flex items-start space-x-3">
+          <div class="w-6 h-6 bg-primary-blue rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+            <span class="text-white text-sm">✓</span>
+          </div>
+          <p class="text-lg text-gray-700">Seguimiento continuo del caso</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="self-start mt-8">
+        <ButtonLink/>
+    </div>
+  </InfoSection>
+  <SectionCardCare/>
+</BaseLayout>

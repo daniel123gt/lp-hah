@@ -3,25 +3,78 @@ import { CARDS_BENEFICTS } from "../../consts";
 ---
 
 <section class="container mx-auto py-[80px]">
-  <h2
-    class="uppercase text-4xl font-semibold text-primary-blue text-center pb-[40px]"
-  >
-    Nuestros Servicios de Cuidado
-  </h2>
+  <div class="text-center mb-16">
+    <h2 class="text-4xl font-bold text-primary-blue mb-4">
+      Nuestros Servicios de Cuidado
+    </h2>
+    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+      Ofrecemos una amplia gama de servicios de cuidado profesional adaptados a las necesidades específicas de cada paciente y familia
+    </p>
+  </div>
+  
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
     {
-      CARDS_BENEFICTS.map((card) => {
+      CARDS_BENEFICTS.map((card, index) => {
+        // Dos estilos sutiles que se alternan usando la paleta oficial
+        const isEven = index % 2 === 0;
+        
+        const cardStyle = isEven 
+          ? 'bg-white border border-primary-blue/30 hover:border-primary-blue shadow-lg hover:shadow-xl' 
+          : 'bg-gradient-to-br from-primary-blue/5 to-accent-blue/10 border border-primary-blue/20 hover:border-primary-blue/40 shadow-lg hover:shadow-xl';
+        
+        const titleStyle = isEven 
+          ? 'text-primary-blue' 
+          : 'text-primary-blue';
+        
+        const textStyle = isEven 
+          ? 'text-gray-700' 
+          : 'text-gray-600';
+        
+        const hoverStyle = isEven 
+          ? 'group-hover:text-primary-blue' 
+          : 'group-hover:text-primary-blue';
+        
         return (
-          <div class="bg-bg-light p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-            <h3 class="text-2xl font-semibold text-primary-blue mb-4">
-              {card.title}
-            </h3>
-            <p class="text-text-medium leading-relaxed">
+          <div class={`${cardStyle} p-6 rounded-xl transition-all duration-300 hover:-translate-y-2 group`}>
+            <div class="mb-4">
+              <h3 class={`text-xl font-bold ${titleStyle} group-hover:scale-105 transition-transform duration-300`}>
+                {card.title}
+              </h3>
+            </div>
+            <p class={`${textStyle} leading-relaxed text-sm mb-4`}>
               {card.description}
             </p>
+            
+            <!-- Indicador de hover -->
+            <div class={`flex items-center text-sm font-medium text-gray-500 ${hoverStyle} transition-colors duration-300`}>
+              <span class="mr-2">Más información</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+              </svg>
+            </div>
           </div>
         );
       })
     }
+  </div>
+  
+  <!-- Call to action adicional -->
+  <div class="text-center mt-16">
+    <div class="bg-gradient-to-r from-primary-blue to-accent-blue p-8 rounded-2xl text-white">
+      <h3 class="text-2xl font-bold mb-4">
+        ¿Necesitas más información sobre nuestros servicios?
+      </h3>
+      <p class="text-lg mb-6 opacity-90">
+        Nuestro equipo está listo para asesorarte y encontrar la solución perfecta para tu familia
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <button class="bg-white text-primary-blue px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300">
+          Consultar Ahora
+        </button>
+        <button class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-blue transition-colors duration-300">
+          Ver Precios
+        </button>
+      </div>
+    </div>
   </div>
 </section>
