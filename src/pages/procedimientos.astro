@@ -23,39 +23,162 @@ import SectionAccordionsPrecedures from "../components/organism/SectionAccordion
     text3="Cuidados"
   />
   <InfoSection imgSrc={imgInfo} imgAlt="imagen de servicio">
-    <p>
-      <span style="font-weight: 400;"
-        >Tenemos disponibles para usted todos los procedimientos de enfermería
-        desde la colocación de inyectables (intramuscular, subcutánea,
-        endovenosa) hasta transfusión Sanguínea, curas, administración de
-        hierro, vitaminas endovenosas incluyendo la vitamina C, colocación de
-        Sondas de alimentación y urinarias entre otros.</span
-      >
-    </p><p>
-      <span style="font-weight: 400;"
-        >El hecho de contratar los servicios para procedimientos de Enfermería a
-        domicilio tiene muchas ventajas, sobre todo para el paciente. Hay
-        personas que tienen problemas a la hora de desplazarse y otras que
-        prefieren recibir asistencia en su casa. El hecho de que acudan a HEALTH
-        AT HOME,
-      </span><b>&nbsp;les mejorará la calidad de vida</b><span
-        style="font-weight: 400;"
-        >. Sobre todo porque no tendrán que acudir a un hospital o centro médico
-        para hacerse curas, ponerse inyecciones, hacerse controles de diabetes o
-        glucemia, aperturar su catéter port, colocar catéter íntima, tomarse
-        pruebas para laboratorios, recibir transfusión sanguínea, entre otros
-        procederes de Enfermería.</span
-      >
-    </p><p>
-      <span style="font-weight: 400;"
-        >Todos los procedimientos se realizan bajo un esquema de protocolos
-        desde el uso&nbsp; de equipo de Bioseguridad, normas correctas de
-        asepsia y antisepsia hasta verificar datos, e indicaciones médicas.</span
-      >
-    </p>
-    <div class="self-start">
+    <div class="space-y-6">
+      <div>
+        <h2 class="text-3xl font-bold text-primary-blue mb-4">¿Qué son los Procedimientos de Enfermería?</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">
+          Tenemos disponibles para usted todos los procedimientos de enfermería desde la colocación de inyectables (intramuscular, subcutánea, endovenosa) hasta transfusión sanguínea, curas, administración de hierro, vitaminas endovenosas incluyendo la vitamina C, colocación de sondas de alimentación y urinarias entre otros.
+        </p>
+      </div>
+
+      <div class="bg-gradient-to-r from-primary-blue/5 to-accent-blue/10 p-6 rounded-xl border-l-4 border-primary-blue">
+        <h3 class="text-xl font-semibold text-primary-blue mb-3">Características del Servicio a Domicilio</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Los procedimientos de enfermería a domicilio ofrecen una alternativa conveniente para pacientes que requieren atención especializada. Este servicio es especialmente beneficioso para personas con limitaciones de movilidad o que prefieren recibir atención en su entorno familiar. Los procedimientos incluyen curas, administración de inyecciones, controles de diabetes o glucemia, apertura de catéter port, colocación de catéter íntima, toma de muestras para laboratorios, administración de transfusiones sanguíneas, entre otros procedimientos de enfermería especializados.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-primary-blue/20">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🛡️</span>
+            <h3 class="text-xl font-semibold text-primary-blue">Protocolos de Seguridad</h3>
+          </div>
+          <p class="text-gray-700">
+            Todos los procedimientos se realizan bajo un esquema de protocolos desde el uso de equipo de Bioseguridad, normas correctas de asepsia y antisepsia hasta verificar datos, e indicaciones médicas.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-lg border border-primary-blue/20">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">🏠</span>
+            <h3 class="text-xl font-semibold text-primary-blue">Atención Personalizada</h3>
+          </div>
+          <p class="text-gray-700">
+            Servicio especializado en la comodidad de su hogar, adaptado a las necesidades específicas de cada paciente y su familia.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-blue-50 p-6 rounded-xl">
+        <h3 class="text-xl font-semibold text-primary-blue mb-4 flex items-center gap-2">
+          <span>⚕️</span>
+          Tipos de Procedimientos Disponibles
+        </h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-center">
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl mb-2">💉</div>
+            <div class="text-sm font-semibold text-primary-blue">Inyectables</div>
+            <div class="text-xs text-gray-600">IM, SC, IV</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl mb-2">🩺</div>
+            <div class="text-sm font-semibold text-primary-blue">Monitoreo</div>
+            <div class="text-xs text-gray-600">Signos vitales</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl mb-2">🩹</div>
+            <div class="text-sm font-semibold text-primary-blue">Cuidados</div>
+            <div class="text-xs text-gray-600">Curas y heridas</div>
+          </div>
+          <div class="bg-white p-4 rounded-lg">
+            <div class="text-2xl mb-2">🔌</div>
+            <div class="text-sm font-semibold text-primary-blue">Dispositivos</div>
+            <div class="text-xs text-gray-600">Sondas y catéteres</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="self-start mt-8">
       <ButtonLink />
     </div>
   </InfoSection>
+
+  <!-- Sección de Proceso Paso a Paso -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-primary-blue mb-6">
+          Proceso de Atención
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Metodología establecida para la realización de procedimientos de enfermería en el domicilio del paciente
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            1
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Solicitud</h3>
+          <p class="text-gray-600">
+            El paciente o familiar contacta para coordinar la programación del procedimiento
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            2
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Evaluación</h3>
+          <p class="text-gray-600">
+            El profesional evalúa las necesidades del paciente y prepara el material requerido
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            3
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Procedimiento</h3>
+          <p class="text-gray-600">
+            Ejecución del procedimiento siguiendo los protocolos de seguridad establecidos
+          </p>
+        </div>
+
+        <div class="text-center">
+          <div class="bg-primary-blue text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
+            4
+          </div>
+          <h3 class="text-xl font-semibold text-primary-blue mb-3">Seguimiento</h3>
+          <p class="text-gray-600">
+            Monitoreo post-procedimiento y programación de próximas citas según indicación médica
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 bg-gradient-to-r from-primary-blue/5 to-accent-blue/10 p-8 rounded-2xl">
+        <div class="text-center">
+          <h3 class="text-2xl font-semibold text-primary-blue mb-4">Características del Servicio</h3>
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">🏠</span>
+              <div>
+                <h4 class="font-semibold text-primary-blue">Comodidad</h4>
+                <p class="text-sm text-gray-600">Atención en el domicilio del paciente</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">⚡</span>
+              <div>
+                <h4 class="font-semibold text-primary-blue">Rapidez</h4>
+                <p class="text-sm text-gray-600">Atención programada y eficiente</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="text-3xl">🛡️</span>
+              <div>
+                <h4 class="font-semibold text-primary-blue">Seguridad</h4>
+                <p class="text-sm text-gray-600">Protocolos de bioseguridad</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <SectionAccordionsPrecedures/>
 </BaseLayout>

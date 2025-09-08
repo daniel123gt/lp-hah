@@ -3,68 +3,101 @@ import AccordionSimple from "../molecule/AccordionSimple.astro";
 import { ACCORDION_PROCEDURE } from "../../consts";
 ---
 
-<section class="container mx-auto py-[80px]">
-  <h2 class="text-4xl font-semibold text-primary-blue text-center pb-[40px]">
-    NUESTROS PROCEDIMIENTOS A DOMICILIO
-  </h2>
-  
-  <!-- Filtros por categoría -->
-  <div class="flex flex-wrap justify-center gap-4 mb-12">
-    <button 
-      class="filter-btn active px-6 py-3 rounded-full bg-primary-blue text-white font-semibold hover:bg-accent-blue transition-colors duration-300"
-      data-category="todos"
-    >
-      🏥 Todos los Procedimientos
-    </button>
-    <button 
-      class="filter-btn px-6 py-3 rounded-full bg-gray-200 text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-colors duration-300"
-      data-category="tratamiento"
-    >
-      💉 Tratamientos
-    </button>
-    <button 
-      class="filter-btn px-6 py-3 rounded-full bg-gray-200 text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-colors duration-300"
-      data-category="monitoreo"
-    >
-      ❤️ Monitoreo
-    </button>
-    <button 
-      class="filter-btn px-6 py-3 rounded-full bg-gray-200 text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-colors duration-300"
-      data-category="cuidado"
-    >
-      🩹 Cuidados
-    </button>
-    <button 
-      class="filter-btn px-6 py-3 rounded-full bg-gray-200 text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-colors duration-300"
-      data-category="procedimiento"
-    >
-      🔌 Procedimientos
-    </button>
-    <button 
-      class="filter-btn px-6 py-3 rounded-full bg-gray-200 text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-colors duration-300"
-      data-category="postoperatorio"
-    >
-      ✂️ Postoperatorio
-    </button>
-  </div>
+<section class="bg-bg-light py-20">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-primary-blue mb-6">
+        Nuestros Procedimientos a Domicilio
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Amplia gama de procedimientos de enfermería especializados realizados con los más altos estándares de calidad y seguridad
+      </p>
+    </div>
+    
+    <!-- Filtros por categoría -->
+    <div class="flex flex-wrap justify-center gap-4 mb-12">
+      <button 
+        class="filter-btn active px-6 py-3 rounded-full bg-primary-blue text-white font-semibold hover:bg-accent-blue transition-all duration-300 shadow-lg hover:shadow-xl"
+        data-category="todos"
+      >
+        🏥 Todos los Procedimientos
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full bg-white text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-all duration-300 shadow-md hover:shadow-lg border border-primary-blue/20"
+        data-category="tratamiento"
+      >
+        💉 Tratamientos
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full bg-white text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-all duration-300 shadow-md hover:shadow-lg border border-primary-blue/20"
+        data-category="monitoreo"
+      >
+        ❤️ Monitoreo
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full bg-white text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-all duration-300 shadow-md hover:shadow-lg border border-primary-blue/20"
+        data-category="cuidado"
+      >
+        🩹 Cuidados
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full bg-white text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-all duration-300 shadow-md hover:shadow-lg border border-primary-blue/20"
+        data-category="procedimiento"
+      >
+        🔌 Procedimientos
+      </button>
+      <button 
+        class="filter-btn px-6 py-3 rounded-full bg-white text-primary-blue font-semibold hover:bg-accent-blue hover:text-white transition-all duration-300 shadow-md hover:shadow-lg border border-primary-blue/20"
+        data-category="postoperatorio"
+      >
+        ✂️ Postoperatorio
+      </button>
+    </div>
 
-  <!-- Grid de acordeones -->
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="accordion-grid">
-    {
-      ACCORDION_PROCEDURE.map((acc) => {
-        return (
-          <div class="accordion-wrapper" data-category={acc.category}>
-            <AccordionSimple 
-              title={acc.title} 
-              icon={acc.icon}
-              category={acc.category}
-            >
-              <p class="pt-4 text-lg leading-relaxed text-text-medium">{acc.description}</p>
-            </AccordionSimple>
+    <!-- Grid de acordeones -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" id="accordion-grid">
+      {
+        ACCORDION_PROCEDURE.map((acc) => {
+          return (
+            <div class="accordion-wrapper" data-category={acc.category}>
+              <AccordionSimple 
+                title={acc.title} 
+                icon={acc.icon}
+                category={acc.category}
+              >
+                <p class="pt-4 text-lg leading-relaxed text-gray-700">{acc.description}</p>
+              </AccordionSimple>
+            </div>
+          );
+        })
+      }
+    </div>
+
+    <!-- Información adicional -->
+    <div class="text-center mt-16">
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-primary-blue/20 max-w-4xl mx-auto">
+        <h3 class="text-2xl font-semibold text-primary-blue mb-4">
+          ¿Necesita un Procedimiento Específico?
+        </h3>
+        <p class="text-lg text-gray-600 mb-6">
+          Si no encuentra el procedimiento que necesita en nuestra lista, no dude en contactarnos. Nuestro equipo de profesionales puede evaluar y realizar procedimientos especializados según sus necesidades médicas.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <div class="flex items-center gap-2 text-primary-blue">
+            <span class="text-xl">✅</span>
+            <span class="font-medium">Protocolos de Seguridad</span>
           </div>
-        );
-      })
-    }
+          <div class="flex items-center gap-2 text-primary-blue">
+            <span class="text-xl">✅</span>
+            <span class="font-medium">Personal Calificado</span>
+          </div>
+          <div class="flex items-center gap-2 text-primary-blue">
+            <span class="text-xl">✅</span>
+            <span class="font-medium">Equipos Especializados</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -132,8 +165,21 @@ import { ACCORDION_PROCEDURE } from "../../consts";
 
 <style>
   .filter-btn.active {
-    background-color: #1e40af;
+    background-color: var(--color-primary-blue);
     color: white;
+    box-shadow: 0 4px 12px rgba(30, 64, 175, 0.3);
+  }
+  
+  .filter-btn:not(.active) {
+    background-color: white;
+    color: var(--color-primary-blue);
+    border: 1px solid rgba(30, 64, 175, 0.2);
+  }
+  
+  .filter-btn:not(.active):hover {
+    background-color: var(--color-accent-blue);
+    color: white;
+    transform: translateY(-2px);
   }
   
   @keyframes fadeIn {
