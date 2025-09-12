@@ -50,7 +50,7 @@ export const NAV_LINKS = [
     ],
   },
   {
-    label: "Equipamiento Médico",
+    label: "Clínica en Casa",
     href: "/lp-hah/equipos-medicos",
   },
   {
