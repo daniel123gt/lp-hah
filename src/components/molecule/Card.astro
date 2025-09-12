@@ -4,20 +4,22 @@ import { Image } from 'astro:assets';
 
 ---
 
-<article class="group w-[312px] h-full rounded-xl overflow-hidden shadow bg-white cursor-pointer">
-  <figure class="w-full h-[208px] overflow-hidden">
-    <Image 
-      src={imgSrc} 
-      alt={imgAlt} 
-      class="w-full h-full object-cover group-hover:scale-120 transition-all duration-500"
-      loading="lazy"
-      decoding="async"
-    />
-  </figure>
-  <div class="py-4 px-6 flex flex-col gap-2">
-    <h3 class="text-primary-blue text-xl font-semibold">{title}</h3>
-    <p class="text-text-medium">
-      {description}
-    </p>
-  </div>
-</article>
+<a href={href} class="block">
+  <article class="group w-[312px] h-full rounded-xl overflow-hidden shadow bg-white cursor-pointer hover:shadow-lg transition-all duration-300">
+    <figure class="w-full h-[208px] overflow-hidden">
+      <Image 
+        src={imgSrc} 
+        alt={imgAlt} 
+        class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
+        loading="lazy"
+        decoding="async"
+      />
+    </figure>
+    <div class="py-4 px-6 flex flex-col gap-2">
+      <h3 class="text-primary-blue text-xl font-semibold group-hover:text-accent-blue transition-colors duration-300">{title}</h3>
+      <p class="text-text-medium">
+        {description}
+      </p>
+    </div>
+  </article>
+</a>

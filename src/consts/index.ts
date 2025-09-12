@@ -160,7 +160,7 @@ export const SERVICES = [
     title: "Cóctel vitamínicos\n Administración de vitaminas",
     description:
       "Por Vena, Vitamina C, Vitamina B12, Acido Folico, Glutathione, Sueros Vitaminados Diseñados Para Pacientes Que Desean Recibir Atencion En Casa.",
-    href: "/lp-hah/opciones-cuidado",
+    href: "/lp-hah/procedimientos",
   },
 ];
 
