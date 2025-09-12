@@ -150,7 +150,7 @@ export const SERVICES = [
     title: "Oxígeno Medicinal",
     description:
       "Servicio de  recarga de balones de oxígeno, instalación y suministro de accesorios,  las 24 horas del día con atención oportuna en el menor tiempo posible.",
-    href: "/lp-hah/opciones-cuidado",
+    href: "/lp-hah/equipos-medicos",
   },
   {
     img: {
