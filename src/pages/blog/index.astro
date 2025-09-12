@@ -34,7 +34,7 @@ const sortedPosts = posts.sort((a: any, b: any) => new Date(b.data.publishDate).
           <!-- Imagen del Post -->
           <div class="relative">
             <img 
-              src={post.data.image} 
+              src={post.data.image.replace('/src/assets/', '/lp-hah/')} 
               alt={post.data.title}
               class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
               loading="lazy"
@@ -50,7 +50,7 @@ const sortedPosts = posts.sort((a: any, b: any) => new Date(b.data.publishDate).
           <!-- Contenido del Post -->
           <div class="p-6">
             <h2 class="text-xl font-bold text-primary-blue mb-4 hover:underline cursor-pointer">
-              <a href={`#`} class="block">
+              <a href={`/lp-hah/blog/${post.slug}`} class="block">
                 {post.data.title}
               </a>
             </h2>
@@ -61,7 +61,7 @@ const sortedPosts = posts.sort((a: any, b: any) => new Date(b.data.publishDate).
             
             <!-- Enlace Leer Más -->
             <a 
-              href={`/blog/${post.slug}`}
+              href={`/lp-hah/blog/${post.slug}`}
               class="text-primary-blue font-semibold hover:underline inline-block mb-4 transition-colors duration-300 hover:text-accent-blue"
             >
               LEER MÁS
@@ -82,7 +82,7 @@ const sortedPosts = posts.sort((a: any, b: any) => new Date(b.data.publishDate).
           
           <!-- Overlay clickeable para toda la tarjeta -->
           <a 
-            href={`/blog/${post.slug}`}
+            href={`/lp-hah/blog/${post.slug}`}
             class="absolute inset-0 z-10"
             aria-label={`Leer post: ${post.data.title}`}
           ></a>
