@@ -20,7 +20,7 @@ export const NAV_LINKS = [
     href: "/lp-hah/",
   },
   {
-    label: "Opciones de Cuidado",
+    label: "Opciones de Cuidados",
     href: "/lp-hah/opciones-cuidado",
   },
   {
@@ -202,9 +202,19 @@ export const TESTIMONY = [
 
 export const CARDS_BENEFICTS = [
   {
+    title: "⏱️ CUIDADORES Y ENFERMERAS PART TIME",
+    description:
+      "Diseñado para pacientes que requieren atención durante 6 u 8 horas para cuidados integrales: alimentación, higiene y confort, medicamentos vía oral, entre otros cuidados de enfermería",
+  },
+  {
     title: "🕐 CUIDADORES/AS Y ENFERMERAS POR TURNOS 12 HORAS Y 24 HORAS",
     description:
       "Diseñado para pacientes que requieren atención completa durante el día, dos opciones: atención durante el día (12 horas) se entrega al paciente listo para dormir (24 horas), vigilancia y cuidado durante las 24 horas",
+  },
+  {
+    title: "🔄 CUIDADORES Y ENFERMERAS TURNOS INTERDIARIOS",
+    description:
+      "Diseñado para pacientes que solo requieren atención y cuidado para su rutina de forma interdiaria dos o tres veces por semana en horarios completos o part time",
   },
   {
     title: "📅 CUIDADORES/AS Y ENFERMERAS EN FINES DE SEMANA",
@@ -217,24 +227,9 @@ export const CARDS_BENEFICTS = [
       "Servicio continuo día y noche los 365 días del año. Profesionales titulados y experiencia constatada.",
   },
   {
-    title: "⏰ CUIDADORES/AS Y ENFERMERAS 12 HORAS (DÍA Y/O NOCHE)",
-    description:
-      "Establecido con un diseño de cuidados adaptados a la necesidad de persona/paciente. Profesionales titulados y experiencia constatada.",
-  },
-  {
     title: "🏠 CUIDADORES Y ENFERMERAS CAMA ADENTRO",
     description:
       "Diseñado para pacientes de atención permanente que requieren cumplir rutinas diurnas y por las noches asistencia básicas como acompañamiento al baño o cambio de pañal y de postura",
-  },
-  {
-    title: "⏱️ CUIDADORES Y ENFERMERAS PART TIME",
-    description:
-      "Diseñado para pacientes que requieren atención durante 6 u 8 horas para cuidados integrales: alimentación, higiene y confort, medicamentos vía oral, entre otros cuidados de enfermería",
-  },
-  {
-    title: "🔄 CUIDADORES Y ENFERMERAS TURNOS INTERDIARIOS",
-    description:
-      "Diseñado para pacientes que solo requieren atención y cuidado para su rutina de forma interdiaria dos o tres veces por semana en horarios completos o part time",
   },
 ];
 
