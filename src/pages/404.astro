@@ -1,0 +1,79 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import img from "../assets/images/Ayuda.jpg";
+---
+
+<BaseLayout 
+  title="Página no encontrada - Health At Home"
+  description="La página que buscas no existe. Regresa al inicio para encontrar nuestros servicios médicos a domicilio."
+>
+  <main class="min-h-screen flex items-center justify-center bg-bg-light">
+    <div class="container mx-auto px-4 text-center">
+      <div class="max-w-2xl mx-auto">
+        <!-- Imagen de error -->
+        <div class="mb-8">
+          <Image
+            src={img}
+            alt="Página no encontrada"
+            width={400}
+            height={300}
+            class="mx-auto rounded-lg shadow-lg"
+          />
+        </div>
+        
+        <!-- Contenido de error -->
+        <h1 class="text-6xl font-bold text-primary-blue mb-4">404</h1>
+        <h2 class="text-3xl font-semibold text-text-dark mb-6">
+          Página no encontrada
+        </h2>
+        <p class="text-xl text-text-medium mb-8 max-w-lg mx-auto">
+          Lo sentimos, la página que buscas no existe o ha sido movida. 
+          Pero no te preocupes, nuestros servicios médicos siguen disponibles.
+        </p>
+        
+        <!-- Botones de acción -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/"
+            class="inline-flex items-center gap-2 bg-primary-blue hover:bg-accent-blue text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>🏠</span>
+            Ir al Inicio
+          </a>
+          
+          <a
+            href="https://api.whatsapp.com/send?phone=51961853894&text=Hola%2C%20necesito%20ayuda%20con%20sus%20servicios"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            <span>💬</span>
+            Contactar por WhatsApp
+          </a>
+        </div>
+        
+        <!-- Enlaces útiles -->
+        <div class="mt-12">
+          <h3 class="text-xl font-semibold text-text-dark mb-6">
+            Enlaces útiles:
+          </h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="/opciones-cuidado" class="text-primary-blue hover:text-accent-blue hover:underline">
+              Cuidados en Casa
+            </a>
+            <a href="/medicos-a-domicilio" class="text-primary-blue hover:text-accent-blue hover:underline">
+              Médicos a Domicilio
+            </a>
+            <a href="/laboratorios" class="text-primary-blue hover:text-accent-blue hover:underline">
+              Laboratorio
+            </a>
+            <a href="/equipos-medicos" class="text-primary-blue hover:text-accent-blue hover:underline">
+              Equipos Médicos
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</BaseLayout>

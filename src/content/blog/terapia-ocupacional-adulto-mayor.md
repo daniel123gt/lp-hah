@@ -2,7 +2,7 @@
 title: "TERAPIA OCUPACIONAL EN EL CUIDADO DEL ADULTO MAYOR"
 description: "La terapia ocupacional es una disciplina fundamental en el cuidado de adultos mayores, especialmente cuando se realiza en el entorno domiciliario. Esta especialidad se enfoca en ayudar a las personas a mantener su independencia y calidad de vida a través de actividades significativas y terapéuticas."
 publishDate: 2025-05-06
-image: "/lp-hah/images/blog/terapia-ocupacional/card-blog.jpg"
+image: "/images/blog/terapia-ocupacional/card-blog.jpg"
 category: "TERAPIA OCUPACIONAL"
 author: "Health at Home"
 tags: ["terapia ocupacional", "adultos mayores", "cuidados domiciliarios", "rehabilitación"]
@@ -17,7 +17,7 @@ La terapia ocupacional (TO) es una disciplina de la salud enfocada en ayudar a l
 
 Las actividades de terapia ocupacional proporcionan satisfacción personal, sentido de utilidad y colaboración con la comunidad, manteniendo a las personas conectadas con su entorno. Mantenerse ocupado contribuye al envejecimiento activo y saludable.
 
-![Terapia ocupacional con adultos mayores](/lp-hah/images/blog/terapia-ocupacional/blog1.png)
+![Terapia ocupacional con adultos mayores](/images/blog/terapia-ocupacional/blog1.png)
 
 ## Beneficios específicos de la terapia ocupacional
 
@@ -29,7 +29,7 @@ Las enfermedades neurodegenerativas suelen llevar a una pérdida progresiva de l
 
 Las enfermedades neurodegenerativas, como el Alzheimer, el Parkinson y la esclerosis múltiple, representan desafíos significativos para los pacientes y sus familias. Estas condiciones, caracterizadas por la degeneración progresiva del sistema nervioso, impactan profundamente la calidad de vida y la capacidad funcional. La terapia ocupacional se presenta como una herramienta invaluable que ofrece tanto esperanza como soluciones prácticas para mejorar el bienestar diario.
 
-![Profesional de salud ayudando a adulto mayor](/lp-hah/images/blog/terapia-ocupacional/blog2.jpg)
+![Profesional de salud ayudando a adulto mayor](/images/blog/terapia-ocupacional/blog2.jpg)
 
 ## Mejorar la movilidad y la coordinación y prevención de caídas
 
@@ -47,7 +47,7 @@ La pérdida de memoria y las dificultades cognitivas son comunes en condiciones 
 
 Los cuidadores y familiares de personas con enfermedades neurodegenerativas enfrentan desafíos significativos. Los terapeutas ocupacionales ofrecen educación sobre la enfermedad y técnicas de manejo, junto con apoyo emocional, enseñando a los cuidadores cómo brindar asistencia efectiva sin comprometer su propio bienestar, fomentando así un ambiente de cuidado saludable.
 
-![Actividad de terapia ocupacional](/lp-hah/images/blog/terapia-ocupacional/blog3.jpg)
+![Actividad de terapia ocupacional](/images/blog/terapia-ocupacional/blog3.jpg)
 
 La terapia ocupacional juega un papel fundamental en la mejora de la calidad de vida de personas con enfermedades neurodegenerativas como el Alzheimer y el Parkinson. A través de actividades personalizadas, se busca estimular las capacidades cognitivas y motoras, retardando el deterioro y promoviendo la autonomía. Actividades como puzzles, juegos de memoria, ejercicios de coordinación y tareas de la vida diaria adaptadas, ayudan a mantener la mente activa y las habilidades funcionales. Además, la terapia ocupacional puede reducir la ansiedad y mejorar el estado de ánimo, proporcionando una sensación de logro y propósito.
 
@@ -55,13 +55,13 @@ La terapia ocupacional juega un papel fundamental en la mejora de la calidad de 
 
 La tecnología ofrece nuevas y emocionantes posibilidades para la terapia ocupacional. Las aplicaciones móviles con juegos cognitivos, la realidad virtual para ejercicios de rehabilitación, los robots de asistencia para tareas domésticas y los dispositivos de seguimiento de actividad física son solo algunos ejemplos. Estas herramientas permiten un tratamiento más personalizado, hacen que las sesiones sean más atractivas y motivadoras, y facilitan el seguimiento del progreso. La integración de la tecnología en la terapia ocupacional amplía significativamente las posibilidades de mejorar la calidad de vida de los adultos mayores.
 
-![Adulto mayor usando tablet](/lp-hah/images/blog/terapia-ocupacional/blog4.jpg)
+![Adulto mayor usando tablet](/images/blog/terapia-ocupacional/blog4.jpg)
 
 # El papel de la familia en la terapia ocupacional
 
 La familia desempeña un papel crucial en el proceso de terapia ocupacional. Los terapeutas ocupacionales trabajan en estrecha colaboración con las familias para establecer objetivos terapéuticos realistas, proporcionar educación sobre la enfermedad y las estrategias de afrontamiento, y enseñar actividades que se pueden realizar en el hogar. El apoyo familiar es fundamental para mantener la motivación y el compromiso del paciente, y para garantizar la continuidad del tratamiento.
 
-![Familia apoyando a adulto mayor](/lp-hah/images/blog/terapia-ocupacional/blog5.jpg)
+![Familia apoyando a adulto mayor](/images/blog/terapia-ocupacional/blog5.jpg)
 
 ## OBJETIVOS DE LAS TERAPIAS OCUPACIONALES EN HEALTH AT HOME
 

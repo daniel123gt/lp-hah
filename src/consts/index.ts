@@ -17,15 +17,15 @@ import galery3Img from "../assets/images/galery/galery3.webp";
 export const NAV_LINKS = [
   {
     label: "Inicio",
-    href: "/lp-hah/",
+    href: "/",
   },
   {
     label: "Opciones de Cuidados",
-    href: "/lp-hah/opciones-cuidado",
+    href: "/opciones-cuidado",
   },
   {
     label: "Procedimientos",
-    href: "/lp-hah/procedimientos",
+    href: "/procedimientos",
   },
   {
     label: "Servicios",
@@ -33,41 +33,41 @@ export const NAV_LINKS = [
     children: [
       {
         label: "Médicos a Domicilio",
-        href: "/lp-hah/medicos-a-domicilio",
+        href: "/medicos-a-domicilio",
       },
       {
         label: "Pruebas Covid 19",
-        href: "/lp-hah/pruebas-covid-19",
+        href: "/pruebas-covid-19",
       },
       {
         label: "Laboratorio a Domicilio",
-        href: "/lp-hah/laboratorios",
+        href: "/laboratorios",
       },
       {
         label: "Radiografías (RX) y Ecografías a Domicilio",
-        href: "/lp-hah/radiografias-y-ecografias",
+        href: "/radiografias-y-ecografias",
       },
     ],
   },
   {
     label: "Clínica en Casa",
-    href: "/lp-hah/equipos-medicos",
+    href: "/equipos-medicos",
   },
   {
     label: "Galería",
-    href: "/lp-hah/galeria",
+    href: "/galeria",
   },
   {
     label: "Blog",
-    href: "/lp-hah/blog",
+    href: "/blog",
   },
   {
     label: "Empresas",
-    href: "/lp-hah/empresas",
+    href: "/empresas",
   },
   {
     label: "Nosotros",
-    href: "/lp-hah/nosotros",
+    href: "/nosotros",
   },
 ];
 
@@ -77,20 +77,20 @@ export const SERVICES = [
       src: medicalServiceImg,
       alt: "Imagen del servicio de Medicos en casa",
     },
-    title: "Médico en Casa",
+    title: "Médicos a Domicilio",
     description:
       "Servicio de médicos a domicilio, contamos con diferentes especialidades: GERIATRIA – CARDIOLOGIA – INTERNISTA – ONCOLOGIA – GASTROENTEROLOGIA – NEUMOLOGIA entre otras especialidades",
-    href: "/lp-hah/medicos-a-domicilio",
+    href: "/medicos-a-domicilio",
   },
   {
     img: {
       src: cuidadoImg,
       alt: "Imagen del servicio de cuidados en casa",
     },
-    title: "Cuidados en Casa\n Enfermeras técnicas a domicilio",
+    title: "Servicios de Enfermería a Domicilio\n (Cuidados en Casa)",
     description:
       "Servicio de médicos a domicilio, contamos con diferentes especialidades: GERIATRIA – CARDIOLOGIA – INTERNISTA – ONCOLOGIA – GASTROENTEROLOGIA – NEUMOLOGIA entre otras especialidades",
-    href: "/lp-hah/opciones-cuidado",
+    href: "/opciones-cuidado",
   },
   {
     img: {
@@ -100,7 +100,7 @@ export const SERVICES = [
     title: "Enfermeras a domicilio\n Atención especializada",
     description:
       "Atención de enfermería diseñada para pacientes con diferentes patologías que requieren cuidados especializados:  monitoreo continuo, procedimientos de enfermería invasivos, cuidados paliativos, cuidados post operatorios entre otros.",
-    href: "/lp-hah/opciones-cuidado",
+    href: "/opciones-cuidado",
   },
   {
     img: {
@@ -110,7 +110,7 @@ export const SERVICES = [
     title: "Procedimientos\n Enfermeras licenciadas a domicilio",
     description:
       "Inyectables, tratamientos por vía endovenosa, toma de muestras para laboratorios, colocación de sondas, catéter, curas de escaras, hidratación, sueros endovenosos.",
-    href: "/lp-hah/procedimientos",
+    href: "/procedimientos",
   },
   {
     img: {
@@ -120,7 +120,7 @@ export const SERVICES = [
     title: "Laboratorio a Domicilio",
     description:
       "Tenemos a su disposición más de 4 mil análisis de laboratorios que puede realizar desde casa con nuestro personal altamente entrenado y calificado.",
-    href: "/lp-hah/laboratorios",
+    href: "/laboratorios",
   },
   {
     img: {
@@ -130,7 +130,7 @@ export const SERVICES = [
     title: "Radiografía y Ecografía",
     description:
       "Contamos con los mejores equipos y un sistema avanzado deDoppler. Las mejores imágenes con calidad uniforme para un mejor diagnóstico.",
-    href: "/lp-hah/radiografias-y-ecografias",
+    href: "/radiografias-y-ecografias",
   },
   {
     img: {
@@ -140,7 +140,7 @@ export const SERVICES = [
     title: "Clínica en casa\n Equipos médicos",
     description:
       "Servicio de equipamiento en casa, camas clínicas, monitores, accesorios para pacientes encamados o postrados, materiales médicos entre otros.",
-    href: "/lp-hah/equipos-medicos",
+    href: "/equipos-medicos",
   },
   {
     img: {
@@ -150,7 +150,7 @@ export const SERVICES = [
     title: "Oxígeno Medicinal",
     description:
       "Servicio de  recarga de balones de oxígeno, instalación y suministro de accesorios,  las 24 horas del día con atención oportuna en el menor tiempo posible.",
-    href: "/lp-hah/equipos-medicos",
+    href: "/equipos-medicos",
   },
   {
     img: {
@@ -160,7 +160,7 @@ export const SERVICES = [
     title: "Cóctel vitamínicos\n Administración de vitaminas",
     description:
       "Por Vena, Vitamina C, Vitamina B12, Acido Folico, Glutathione, Sueros Vitaminados Diseñados Para Pacientes Que Desean Recibir Atencion En Casa.",
-    href: "/lp-hah/procedimientos",
+    href: "/procedimientos",
   },
 ];
 
@@ -183,19 +183,19 @@ export const TESTIMONY = [
   {
     name: "Rosa Quintana",
     rol: "Hija del paciente",
-    audio: "/lp-hah/audio/testimony3.mp3",
+    audio: "/audio/testimony3.mp3",
     avatar: "RS",
   },
   {
     name: "Olga María Ramos Salazar",
     rol: "Hija del paciente",
-    audio: "/lp-hah/audio/testimony2.mp3",
+    audio: "/audio/testimony2.mp3",
     avatar: "OS",
   },
   {
     name: "Johnny Barrón",
     rol: "Hijo del paciente",
-    audio: "/lp-hah/audio/testimony1.mp3",
+    audio: "/audio/testimony1.mp3",
     avatar: "JB",
   },
 ];

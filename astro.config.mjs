@@ -4,11 +4,13 @@ import preact from '@astrojs/preact';
 
 export default defineConfig({
   site: 'https://daniel123gt.github.io',
-  base: '/lp-hah',
+  base: '/',
+  compressHTML: true,
   vite: {
     plugins: [tailwindcss()],
     build: {
       cssCodeSplit: true,
+      minify: 'esbuild',
       rollupOptions: {
         output: {
           manualChunks: {

@@ -2,7 +2,7 @@
 title: "SERVICIO DE ENFERMERIA A DOMICILIO"
 description: "El servicio de enfermería a domicilio está disponible para diversos tipos de pacientes: adultos mayores independientes o dependientes, con Alzheimer o Parkinson, pacientes oncológicos o que requieren cuidados paliativos, pacientes postrados y pacientes con diversas patologías como diabetes e hipertensión."
 publishDate: 2025-04-16
-image: "/lp-hah/images/blog/servicio-enfermeria-a-domicilio/card-blog.png"
+image: "/images/blog/servicio-enfermeria-a-domicilio/card-blog.png"
 category: "ENFERMERÍA"
 author: "Health at Home"
 tags: ["enfermería", "domicilio", "cuidados", "adultos mayores", "crónicos"]
@@ -17,13 +17,13 @@ El servicio de enfermería a domicilio está disponible para diversos tipos de p
 
 Muchas veces, la falta de tiempo o conocimiento impide que las familias puedan brindar los cuidados deseados, por lo que es importante conocer el trabajo de las enfermeras a domicilio, cómo solicitar sus servicios y el protocolo de selección.
 
-![Enfermera profesional en domicilio](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog1.png)
+![Enfermera profesional en domicilio](/images/blog/servicio-enfermeria-a-domicilio/blog1.png)
 
 # Las funciones de las enfermeras a domicilio
 
 Si algún familiar tiene una enfermedad crónica o temporal, o una limitación que afecte su independencia, o requiere hospitalización domiciliaria bajo supervisión médica, es muy recomendable contratar servicios de enfermería a domicilio. El profesional de enfermería se dedica al cuidado de la salud de los pacientes en casa, complementando las visitas y tratamientos que realiza el médico tratante.
 
-![Monitoreo de funciones vitales](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog2.png)
+![Monitoreo de funciones vitales](/images/blog/servicio-enfermeria-a-domicilio/blog2.png)
 
 Existen diferentes funciones de las enfermeras a domicilio: y no se limitan solo a tratar al paciente, sino que también orienta a toda la familia.
 
@@ -39,7 +39,7 @@ Las funciones más recurrentes de las enfermeras a domicilio son:
 8. **Controlar la alimentación y nutrición del paciente**
 9. **Brindar apoyo emocional y psicológico**
 
-![Cuidados especializados](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog3.png)
+![Cuidados especializados](/images/blog/servicio-enfermeria-a-domicilio/blog3.png)
 
 10. **Hacer controles de diabetes y glucemia, así como proporcionarle el tratamiento que necesite**
 11. **Estar pendiente de su alimentación, evitando alimentos que puedan perjudicar al enfermo y a las horas adecuadas**
@@ -52,7 +52,7 @@ El hecho de contratar los servicios de cuidado de enfermería a domicilio tiene 
 
 En otros casos le facilita la oportunidad de poder hospitalizar a su familiar en casa, con un médico que pueda llevar su estado de salud, y que las enfermeras técnicas o licenciadas sigan todas las indicaciones dadas y sean el complemento perfecto del médico para cumplir la misión de restablecer la salud del paciente o brindar calidad de vida en casos críticos.
 
-![Enfermeras cuidando pacientes](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog4.png)
+![Enfermeras cuidando pacientes](/images/blog/servicio-enfermeria-a-domicilio/blog4.png)
 
 # Ventajas y facilidades que ofrece el servicio de enfermería en casa:
 
@@ -66,7 +66,7 @@ En otros casos le facilita la oportunidad de poder hospitalizar a su familiar en
 
 - **Disminuye riesgos por desplazamientos:** Las caídas suelen ocurrir al trasladar a un paciente a un centro de cuidados. Al tener cuidados de enfermería a domicilio, se pueden evitar lesiones o fatiga extrema por movilizar al paciente.
 
-![Procedimiento médico en domicilio](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog5.png)
+![Procedimiento médico en domicilio](/images/blog/servicio-enfermeria-a-domicilio/blog5.png)
 
 # Aspectos a tener en cuenta para contratar servicio de enfermería en casa:
 
@@ -78,12 +78,12 @@ En otros casos le facilita la oportunidad de poder hospitalizar a su familiar en
 
 - **Puedes contratar el servicio de enfermeras en casa siempre que lo necesites:** El servicio se adapta tanto a enfermedades crónicas como temporales, permitiendo que el cliente decida la duración de los servicios de enfermería a domicilio, con diversos planes temporales y permanentes disponibles.
 
-![Enfermera trabajando con laptop](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog6.png)
+![Enfermera trabajando con laptop](/images/blog/servicio-enfermeria-a-domicilio/blog6.png)
 
 # HEALTH AT HOME SE CENTRA EN BRINDAR CALIDAD DE CUIDADOS
 
 Nuestro Plan de cuidados de enfermería en casa incluye supervisión por parte de licenciadas especialistas en cuidados a pacientes; quienes supervisan de manera constante virtual y presencial con el objetivo de proporcionar orientaciones necesarias para cada caso o situación que se presente, las técnicas asignadas cuentan con asesoría de nuestro fisioterapista encargado de las terapias ocupacionales, para ello, se realizan reuniones para evaluar cada caso y estado del paciente y así decidir la terapia ocupacional adecuada que proporcione prevención de complicaciones, retrasos de la evolución de enfermedades, salud emocional y calidad de vida.
 
-![Equipo de salud trabajando](/lp-hah/images/blog/servicio-enfermeria-a-domicilio/blog7.png)
+![Equipo de salud trabajando](/images/blog/servicio-enfermeria-a-domicilio/blog7.png)
 
 Puede ver el siguiente tema: **TERAPIA OCUPACIONAL EN TODO TIPO DE PACIENTES: ¿EN QUÉ CONSISTE?**

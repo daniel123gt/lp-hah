@@ -2,7 +2,7 @@
 title: "TODO LO QUE NECESITA SABER SOBRE LAS INYECTABLES"
 description: "Las inyectables son medicamentos que se administran directamente en el cuerpo a través de diferentes vías. En Health at Home, contamos con personal sanitario calificado para administrar inyectables de forma segura en el domicilio del paciente."
 publishDate: 2025-01-15
-image: "/lp-hah/images/blog/inyectables/card-blog.jpg"
+image: "/images/blog/inyectables/card-blog.jpg"
 category: "INYECTABLES"
 author: "Health at Home"
 tags: ["inyectables", "inyecciones", "domicilio", "medicamentos", "cuidados"]
@@ -17,7 +17,7 @@ Las inyectables son medicamentos que se administran directamente en el cuerpo a 
 
 Algunos medicamentos necesitan ser administrados en el músculo para que funcionen correctamente. Una inyección IM es una inyección de medicamento administrado en un músculo (intramuscular).
 
-![Preparación de inyección intramuscular](/lp-hah/images/blog/inyectables/blog1.jpg)
+![Preparación de inyección intramuscular](/images/blog/inyectables/blog1.jpg)
 
 # DÓNDE APLICAR LA INYECCIÓN
 
@@ -33,7 +33,7 @@ Los sitios más comunes para inyecciones intramusculares incluyen:
 - **Ventroglútea** (cuadrante superior externo del glúteo)
 - **Dorsoglútea** (parte central del glúteo)
 
-![Sitios de punción intramuscular](/lp-hah/images/blog/inyectables/blog2.jpg)
+![Sitios de punción intramuscular](/images/blog/inyectables/blog2.jpg)
 
 # CONOZCA LOS POSIBLES RIESGOS DE UNA INYECCIÓN INTRAMUSCULAR MAL APLICADA
 
@@ -57,7 +57,7 @@ Los síntomas que pueden indicar inflamación o lesión después de recibir una 
 7. **Sarpullido**
 8. **Incapacidad para caminar**
 
-![Síntomas de complicaciones](/lp-hah/images/blog/inyectables/blog3.jpg)
+![Síntomas de complicaciones](/images/blog/inyectables/blog3.jpg)
 
 # PERSONAL SANITARIO CALIFICADO A DOMICILIO
 
@@ -65,7 +65,7 @@ Los síntomas que pueden indicar inflamación o lesión después de recibir una 
 
 Nuestras enfermeras le enseñarán y aclararán todas las dudas que usted tenga sobre las inyecciones.
 
-![Enfermera administrando inyección](/lp-hah/images/blog/inyectables/blog4.jpg)
+![Enfermera administrando inyección](/images/blog/inyectables/blog4.jpg)
 
 # PARA PONER UNA INYECCIÓN SEGUIMOS PROTOCOLOS DE BIOSEGURIDAD Y, ADEMÁS:
 
@@ -88,7 +88,7 @@ Se inocula el medicamento en los tejidos musculares cuando se requiere velocidad
 ## Subcutánea
 Si se pretende una absorción medicamentosa lenta y sostenida, la vía subcutánea es la mejor.
 
-![Tipos de inyectables](/lp-hah/images/blog/inyectables/blog5.jpg)
+![Tipos de inyectables](/images/blog/inyectables/blog5.jpg)
 
 # VENTAJAS DE PONER LAS INYECCIONES A DOMICILIO
 
@@ -104,7 +104,7 @@ No solo se atienden personas con problemas de salud de edad media, hay personas 
 ## Evita problemas hospitalarios
 Evita infecciones que se adquieren dentro del ambiente hospitalario, más si se trata de una persona con el sistema inmunológico bajo. El entorno doméstico es el sitio donde uno se siente más protegido.
 
-![Ventajas del servicio a domicilio](/lp-hah/images/blog/inyectables/blog6.jpg)
+![Ventajas del servicio a domicilio](/images/blog/inyectables/blog6.jpg)
 
 # NOTA IMPORTANTE
 

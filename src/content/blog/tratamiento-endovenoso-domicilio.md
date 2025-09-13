@@ -2,7 +2,7 @@
 title: "TODO LO QUE USTED DEBE SABER SOBRE TRATAMIENTO ENDOVENOSO A DOMICILIO"
 description: "El tratamiento endovenoso (IV), significa administrar medicamentos o líquidos a través de una aguja o una sonda (catéter) que se introduce en una vena. Esta vía de administración permite que los medicamentos actúen más rápidamente y de manera más efectiva."
 publishDate: 2022-12-14
-image: "/lp-hah/images/blog/tratamientos-endovenosos/blog1.jpg"
+image: "/images/blog/tratamientos-endovenosos/blog1.jpg"
 category: "TRATAMIENTOS"
 author: "Health at Home"
 tags: ["tratamiento endovenoso", "IV", "domicilio", "medicamentos", "cuidados"]
@@ -13,7 +13,7 @@ featured: false
 
 El tratamiento endovenoso (IV), significa administrar medicamentos o líquidos a través de una aguja o una sonda (catéter) que se introduce en una vena. La sonda o el catéter puede ser uno de los siguientes:
 
-![Catéter venoso central](/lp-hah/images/blog/tratamientos-endovenosos/blog1.jpg)
+![Catéter venoso central](/images/blog/tratamientos-endovenosos/blog1.jpg)
 
 ## Tipos de Catéteres
 
@@ -23,12 +23,12 @@ Un catéter venoso central es un tubo largo y delgado que se coloca en una vena 
 ### Catéter central colocado por vía periférica (PICC LINE)
 Un PICC LINE es un catéter que se inserta en una vena del brazo y se extiende hasta una vena más grande cerca del corazón. Es ideal para tratamientos de larga duración.
 
-![PICC LINE y canalización IV](/lp-hah/images/blog/tratamientos-endovenosos/blog2.jpg)
+![PICC LINE y canalización IV](/images/blog/tratamientos-endovenosos/blog2.jpg)
 
 ### Canalización Vía IV normal
 La canalización IV normal es la que se introduce en una vena justo por debajo de la piel, generalmente en el brazo o la mano. Es la más común para tratamientos cortos.
 
-![Canalización IV en la mano](/lp-hah/images/blog/tratamientos-endovenosos/blog3.jpg)
+![Canalización IV en la mano](/images/blog/tratamientos-endovenosos/blog3.jpg)
 
 # ¿Cuándo se necesita tratamiento endovenoso a domicilio?
 
@@ -40,7 +40,7 @@ Los antibióticos endovenosos se pueden usar para tratar infecciones en:
 - Las vías urinarias
 - El cerebro
 
-![Preparación de medicamentos endovenosos](/lp-hah/images/blog/tratamientos-endovenosos/blog4.jpg)
+![Preparación de medicamentos endovenosos](/images/blog/tratamientos-endovenosos/blog4.jpg)
 
 # OTROS TRATAMIENTOS ENDOVENOSOS QUE USTED PUEDE RECIBIR:
 
@@ -63,7 +63,7 @@ Antes y después de recibir el medicamento endovenoso la Licenciada en Enfermer�
 
 Las agujas usadas se deben colocar en un recipiente para agujas (objetos cortopunzantes). Las sondas endovenosas, las bolsas, los guantes y otros suministros desechables usados deben desecharse en bolsas especiales de desechos tóxicos de color rojo y ser llevada a su destino correcto.
 
-![Procedimiento de administración](/lp-hah/images/blog/tratamientos-endovenosos/blog5.jpg)
+![Procedimiento de administración](/images/blog/tratamientos-endovenosos/blog5.jpg)
 
 # PROBLEMAS A VIGILAR
 
@@ -80,7 +80,7 @@ Las agujas usadas se deben colocar en un recipiente para agujas (objetos cortopu
 
 Si la IV se sale de la vena: Primero, ejerza presión sobre la abertura donde la IV estaba hasta que el sangrado se detenga.
 
-![Monitoreo y cuidados](/lp-hah/images/blog/tratamientos-endovenosos/blog6.jpg)
+![Monitoreo y cuidados](/images/blog/tratamientos-endovenosos/blog6.jpg)
 
 # NOTA IMPORTANTE
 

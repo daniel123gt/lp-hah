@@ -267,8 +267,8 @@ import { NAV_LINKS } from "../consts";
     }
 
     // Caso especial para home
-    if (currentPath === "/" || currentPath === "/lp-hah/" || currentPath === "") {
-      const homeLink = document.querySelector('.nav-link[data-href="/lp-hah/"], .mobile-nav-link[data-href="/lp-hah/"]');
+    if (currentPath === "/" || currentPath === "/" || currentPath === "") {
+      const homeLink = document.querySelector('.nav-link[data-href="/"], .mobile-nav-link[data-href="/"]');
       if (homeLink) {
         homeLink.classList.add("active-nav", "bg-white/30", "text-white", "shadow-lg");
       }
